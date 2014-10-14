@@ -1,7 +1,7 @@
 // 17. Optimus Prime (**)
 
-System.out.print("Please enter a number: ");				// take the input
-String s = System.console().readLine();						// and initialize the variables
+System.out.print("Please enter a number: ");		// take the input
+String s = System.console().readLine();				// and initialize the variables
 int firstDividend = Integer.parseInt(s);
 int dividend = firstDividend;
 int divisor = 2;
@@ -11,7 +11,7 @@ int largestNegativePrime = 0;
 int positiveCount = 0;
 int negativeCount = 0;
 
-while(true) {												// check for the closest prime going forward
+while(true) {										// check for the closest prime going forward
 	while (dividend>divisor) {
 		if (dividend%divisor == 0) {
 			prime = false;
@@ -31,11 +31,11 @@ while(true) {												// check for the closest prime going forward
 	}
 }
 
-dividend = firstDividend;									// re-initialize the basic variables
+dividend = firstDividend;							// re-initialize the basic variables
 divisor = 2;
 prime = true;
 
-while(true) {												// check for the closest prime going backwards
+while(true) {										// check for the closest prime going backwards
 	while (dividend>divisor) {
 		if (dividend%divisor == 0) {
 			prime = false; 
