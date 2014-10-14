@@ -1,7 +1,8 @@
-// 2 - Command-line calculator (*)
-
-// doesn't work with addition, it makes some weird concatenation;
-// still have to find out why.
+/* 2 - Command-line calculator (*)
+	 this doesn't work exactly from command line yet;
+	 also doesn't work with addition, it makes some weird concatenation;
+	 still have to find out why.
+*/
 
 System.out.println("Command-line calculator for the four basic operations.");
 while (true) {
