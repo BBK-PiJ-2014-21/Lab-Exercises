@@ -1,7 +1,5 @@
 /* 2 - Command-line calculator (*)
-	 this doesn't work exactly from command line yet;
-	 also doesn't work with addition, it makes some weird concatenation;
-	 still have to find out why.
+	 this doesn't work exactly from command line yet
 */
 
 System.out.println("Command-line calculator for the four basic operations.");
@@ -12,7 +10,6 @@ while (true) {
 	String operation, operationValues = "";
 	for (i=1; i<s.length()-1; i++) {
 		if (s.charAt(i) == '+') {
-			System.out.print(i);
 			operation = "+";
 			break;
 		} else if (s.charAt(i) == '-') {
