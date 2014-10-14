@@ -24,7 +24,7 @@ while(true) {
 	} else if (operation == 3) {
 		println(n1*n2);
 		break;
-	} else eif (operation == 4) {
+	} else if (operation == 4) {
 		println(n1/n2);
 		break;
 	} else {
