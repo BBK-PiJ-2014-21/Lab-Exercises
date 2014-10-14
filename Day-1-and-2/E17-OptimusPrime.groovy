@@ -38,7 +38,7 @@ prime = true;
 while(true) {												// check for the closest prime going backwards
 	while (dividend>divisor) {
 		if (dividend%divisor == 0) {
-			prime = false;
+			prime = false; 
 			break;
 		} else {
 			divisor++;
@@ -54,14 +54,16 @@ while(true) {												// check for the closest prime going backwards
 		break;
 	}
 }
-	
+
 if (firstDividend <= 1) {
 	System.out.println("The closest prime is 2, " + (2-firstDividend) + " digits away.");
 } else if (positiveCount == 0) {
 	System.out.println("The number is a prime.");
-
 } else if (positiveCount > negativeCount) {
-	System.out.println("The closest prime is " + largestPositivePrime + ", " + positiveCount + " digits away.");
-} else if (positiveCount < negativeCount) {
 	System.out.println("The closest prime is " + largestNegativePrime + ", " + negativeCount + " digits away.");
+} else if (positiveCount < negativeCount) {
+	System.out.println("The closest prime is " + largestPositivePrime + ", " + positiveCount + " digits away.");
+} else if (positiveCount == negativeCount) {
+	System.out.print("The closest primes are " + largestNegativePrime + " and " + largestPositivePrime);
+	System.out.println(", " + positiveCount + " digits away.");
 }
