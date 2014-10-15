@@ -4,9 +4,9 @@ System.out.print("Please enter a short string: >> ");
 String shortString = System.console().readLine();
 System.out.print("Please enter some longer text: >> ");
 String longerText = System.console().readLine();
-int n = 0;														// to search charAt() through longerText 
-int x = 1;														// to search charAt() through shortString
-int y = 0;														// to search charAt() through longerText after first match
+int n = 0;						// to search charAt() through longerText 
+int x = 1;						// to search charAt() through shortString
+int y = 0;						// to search charAt() through longerText after first match
 int count = 0;
 for (n=0; n<longerText.length(); n++) {
 	if (longerText.charAt(n) == shortString.charAt(0)) {
