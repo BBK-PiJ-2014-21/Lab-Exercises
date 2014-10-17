@@ -42,9 +42,6 @@ System.out.print("The distance between the second point and the third point is "
 double distanceTwoThree = (Math.sqrt(Math.pow((point2.x-point3.x),2) + Math.pow((point2.y-point3.y),2)));
 System.out.println(distanceTwoThree);
 
-double point2Sum = point2.x+point2.y;
-double point3Sum = point3.x+point2.y;
-
 if (distanceOneTwo < distanceOneThree) {
 	if (distanceOneTwo < distanceTwoThree) {
 		System.out.println("The distance first-second point is the closest.");
