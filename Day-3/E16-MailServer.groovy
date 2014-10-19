@@ -9,25 +9,33 @@
 	*/
 
 String s = "";
+String recipient = "";
+String sender = "";
+String data = "";
 System.out.println("Welcome to My Mail Server!");
 while(true) {
 	int n = 0;
 	int count = 0;
 	System.out.print(">>> ");
-	s = System.console().readLine();
-	if (s.equals("QUIT")) {
+	sender = System.console().readLine();
+	if (sender.equals("QUIT")) {
+		System.out.println("Bye!");
 		System.exit(0);
-	}
-	else if (s.length() < 11) {
+	} else if (sender.length() < 11) {
 		System.out.println("Invalid command.");
-	} else if (s.substring(0,11) != "MAIL FROM: ") {
+	} else if (sender.substring(0,11) != "MAIL FROM: ") {
 		System.out.println("Invalid command.");
 	} else {
-		if (s.charAt(n) == "@" || s.charAt(s.length()-1) == "@") {
+		sender = sender.substring(11);
+		while (sender.charAt(n) == " ") {
+			n++;
+		}
+		sender = sender.substring(n);
+		if (sender.charAt(n) == "@" || sender.charAt(sender.length()-1) == "@") {
 			System.out.println("Invalid email address.");
 		} else {
-			for (n=n; n<s.length(); n++) {
-				if (s.charAt(n) == "@") {
+			for (n=n; n<sender.length(); n++) {
+				if (sender.charAt(n) == "@") {
 					count++;
 				}
 			}
@@ -45,20 +53,25 @@ while(true) {
 	int n = 0;
 	int count = 0;
 	System.out.print(">>> ");
-	s = System.console().readLine();
-	if (s.equals("QUIT")) {
+	recipient = System.console().readLine();
+	if (recipient.equals("QUIT")) {
+		System.out.println("Bye!");
 		System.exit(0);
-	}
-	else if (s.length() < 9) {
-		System.out.println("Invalid command1.");
-	} else if (s.substring(0,9) != "RCPT TO: ") {
-		System.out.println("Invalid command2.");
+	} else if (recipient.length() < 9) {
+		System.out.println("Invalid command.");
+	} else if (recipient.substring(0,9) != "RCPT TO: ") {
+		System.out.println("Invalid command.");
 	} else {
-		if (s.charAt(n) == "@" || s.charAt(s.length()-1) == "@") {
+		recipient = recipient.substring(9);
+		while (recipient.charAt(n).equals(" ")) {
+			n++;
+		}
+		recipient = recipient.substring(n);
+		if (recipient.charAt(n) == "@" || recipient.charAt(recipient.length()-1) == "@") {
 			System.out.println("Invalid email address.");
 		} else {
-			for (n=n; n<s.length(); n++) {
-				if (s.charAt(n) == "@") {
+			for (n=n; n<recipient.length(); n++) {
+				if (recipient.charAt(n) == "@") {
 					count++;
 				}
 			}
@@ -71,3 +84,43 @@ while(true) {
 		}
 	}
 }
+
+while(true) {
+	data = "";
+	System.out.print(">>> ");
+	s = System.console().readLine();
+	if (s.equals("QUIT")) {
+		System.out.println("Bye!");
+		System.exit(0);
+	} else if (s.length() != 4) {
+		System.out.println("Invalid command.");
+	} else if (s.substring(0,4) != "DATA") {
+		System.out.println("Invalid command");
+	} else {
+		s = System.console().readLine();
+		if (s.equals(".")) {
+			data = ("<empty message>");
+		} else {
+			data = data + s;
+		}
+		while (!s.equals(".")) {
+			s = System.console().readLine();
+			if (!s.equals(".")) {
+				data = data + "\n" + s;
+			}
+		}
+	}
+	System.out.println("Sending email...");
+	System.out.println("from: " + sender);
+	System.out.println("to: " + recipient);
+	System.out.println(data);
+	System.out.println("...done!");
+}
+		
+	
+	
+	
+	
+	
+	
+	
