@@ -2,11 +2,7 @@
 	as per exercise instructions, this program is case-sensitive (e.g. "quit" is not accepted);
 	and will consider just the "@" char for validating the e-mail address 
 	(e.g. it won't check for a ".domain" at the end);
-	the recipient has the format "RCPT TO: " as in the example, not "RCPT FROM:" as in the exercise description.
-	
-	FIRST TWO PARTS DONE - NOT COMPLETED
-	
-	*/
+*/
 
 String s = "";
 String recipient = "";
@@ -21,12 +17,12 @@ while(true) {
 	if (sender.equals("QUIT")) {
 		System.out.println("Bye!");
 		System.exit(0);
-	} else if (sender.length() < 11) {
+	} else if (sender.length() < 10) {
 		System.out.println("Invalid command.");
-	} else if (sender.substring(0,11) != "MAIL FROM: ") {
+	} else if (sender.substring(0,10) != "MAIL FROM:") {
 		System.out.println("Invalid command.");
 	} else {
-		sender = sender.substring(11);
+		sender = sender.substring(10);
 		while (sender.charAt(n) == " ") {
 			n++;
 		}
@@ -109,12 +105,12 @@ while(true) {
 				data = data + "\n" + s;
 			}
 		}
-	}
 	System.out.println("Sending email...");
 	System.out.println("from: " + sender);
 	System.out.println("to: " + recipient);
 	System.out.println(data);
 	System.out.println("...done!");
+	}	
 }
 		
 	
