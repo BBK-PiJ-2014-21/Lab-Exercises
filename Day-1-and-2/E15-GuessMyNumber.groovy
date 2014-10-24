@@ -18,11 +18,9 @@ while(true) {
 	}
 }
 if (count == 1) {
-	System.out.println("You needed just one guess... you read my mind!")
-} else if (count > 10) {
-	System.out.println("Finally. I was starting to get bored. You needed " + count + " guesses, shame on you.");
+	System.out.println("You needed just one guess!")
 } else {
-		System.out.println("You needed " + count + " guesses.");
-	}
+	System.out.println("You needed " + count + " guesses.");
+}
 
 	
