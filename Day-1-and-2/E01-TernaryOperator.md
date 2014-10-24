@@ -11,7 +11,7 @@ Read the following code and, without executing it first, explain what it does.
 	String result = (ageAprox > 17) ? "" : "not "
 	println "It seems you are " + result + "an adult."
 
-	Hint: look at section “The Ternary Operator”.
+Hint: look at section “The Ternary Operator”.
 ```
 	
 This piece of code will ask the user to enter the year of birth,
