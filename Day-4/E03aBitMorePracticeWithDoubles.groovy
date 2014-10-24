@@ -1,38 +1,49 @@
-// Day Four - 03. A bit more practice with doubles
+/* 3. A bit more practice with doubles
+	to fix: double values should be rounded
+*/
 
-// JUST A FIRST DRAFT - TO BE COMPLETED
 class Mortgage {
-	double c = 0;
-	int y = 0;
-	double r = 0;
-	double t = 0;
+	double cost = 0;
+	double rate = 0;
+	int years = 0;
+	double totalAmount = 0;
+	double yearlyPayment = 0;
 	
-	void printTotalAmount() {
-		t = c * (1+r/100);
-		System.out.println(t);
+	double getTotalAmount() {
+		totalAmount = cost*(1+rate/100)
+		return totalAmount;
 		
 	}
 	
-	double printYearlyPayment() {
-		double yearlyPayment = t/12;
+	double getYearlyPayment() {
+		double yearlyPayment = totalAmount/years;
 		return yearlyPayment;
 	
-}
+	}
+
+	double getYearsToCleanInterest(Mortgage mortgage) {
+		mortgage.getTotalAmount();
+		mortgage.getYearlyPayment();
+		double yearsToCleanInterest = (mortgage.totalAmount-cost)/mortgage.yearlyPayment;
+		return(yearsToCleanInterest);
+	
+	}
 
 }
 
 Mortgage myMortgage = new Mortgage();
-myMortgage.t = 0;
 System.out.print("Please enter the total amount borrowed: ");
 String s = System.console().readLine();
-myMortgage.c = Double.parseDouble(s);
-System.out.print("Please enter the number of years to pay it back: ");
-s = System.console().readLine();
-myMortgage.y = Integer.parseInt(s);
+myMortgage.cost = Double.parseDouble(s);
 System.out.print("Please enter the interest rate: ");
 s = System.console().readLine();
-myMortgage.r = Double.parseDouble(s);
+myMortgage.rate = Double.parseDouble(s);
+System.out.print("Please enter the number of years to pay it back: ");
+s = System.console().readLine();
+myMortgage.years = Integer.parseInt(s);
 System.out.print("The total amount to be paid is ");
-myMortgage.printTotalAmount();
-System.out.println("The money to be paid every year is ");
-myMortgage.printYearlyPayment();
+System.out.println(myMortgage.getTotalAmount());
+System.out.print("The money to be paid every year is ");
+System.out.println(myMortgage.getYearlyPayment());
+System.out.print("The number of years before the interest is paid is ");
+System.out.println(myMortgage.getYearsToCleanInterest(myMortgage));
