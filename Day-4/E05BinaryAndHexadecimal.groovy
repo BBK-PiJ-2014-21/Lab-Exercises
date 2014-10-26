@@ -1,7 +1,4 @@
-/* 5. Binary and hexadecimal (*)
-	this program is not case-sensitive for hex letters `x` and `a-f`.
-	convertToHex() still to be done
-*/
+// 5. Binary and hexadecimal (*)
 
 public static void main(String[] args) {
 
@@ -9,8 +6,9 @@ public static void main(String[] args) {
 	String str = System.console().readLine();
 	if (isDecimal(str) == true) {
 		System.out.println("This is a decimal number.");
-		System.out.println("I will implement a method to convert to Hex very soon.");
-		System.exit(0);
+		System.out.println("Converting to hex...");
+		System.out.println("...");
+		System.out.println(convertToHex(str));
 	} else if (isHex(str) == true) {
 		System.out.println("This is an hexadecimal number.");
 		System.out.println("Converting to decimal...");
@@ -68,12 +66,10 @@ public static void main(String[] args) {
 						break;
 					} 
 				}
-				if (isPositionHex == false) {
-					for(value="A"; value <"G"; value++) {
-						if (s.charAt(position) == (value)) {
-							isPositionHex = true;
-							break;
-						}
+				for(value="A"; value <"G"; value++) {
+					if (s.charAt(position) == (value)) {
+						isPositionHex = true;
+						break;
 					}
 				}
 			}
@@ -112,3 +108,45 @@ public static void main(String[] args) {
 		}
 		return decimal;
 	}
+	
+	String convertToHex(String s) {
+		int decimal = Integer.parseInt(s);
+		String hex = "";
+		String letter = "";
+		int remainder = 0;
+		while(decimal != 0) {
+			remainder = decimal%16;
+			decimal = decimal/16;
+			if (remainder > 9) {
+				int count = 10;
+				for (letter = "a"; letter<"g"; letter++) {
+					if (count.equals(remainder)) {
+						hex = letter + hex;
+						break;
+					} else {
+						count++;
+					}
+				}
+			} else {
+				hex = remainder + hex;
+			}
+		}
+	hex = "0x" + hex;
+	return hex;
+	}
+					
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
