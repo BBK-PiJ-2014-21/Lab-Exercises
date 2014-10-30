@@ -9,7 +9,7 @@ int binary2decimal(String s) {
 		if (s.charAt(i) == "1") {
 			binary = binary + (1*Math.pow(2,count));
 		} else if (s.charAt(i) != "0") {
-			System.out.println("Invalid output");
+			System.out.println("Invalid input.");
 			System.out.println();
 			return binary;
 		}
@@ -63,7 +63,7 @@ while(true) {
 			decimal2binary(number);
 			break;
 		case "0" :
-			System.out.println("Goodbye");	
+			System.out.println("Goodbye.");	
 			System.exit(0);
 		default :
 			System.out.println("Invalid input.");
