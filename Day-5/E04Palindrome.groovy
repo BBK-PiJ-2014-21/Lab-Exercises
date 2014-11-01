@@ -2,12 +2,17 @@
 
 boolean isPalindrome(String s) {
 	s = s.toUpperCase();
-	if (s.charAt(0)!=s.charAt(s.length()-1)) {
-		return false;
+	if (s.length() <= 1) {
+		return true;
 	} else {
-		isPalindrome(s.substring(1,s.length()-2));
+		if (s.charAt(0) == s.charAt(s.length()-1)) {
+			return isPalindrome(s.substring(1,s.length()-1));
+		}
 	}
-	return true;
+	return false;
 }
 
-println(isPalindrome("Ejababbaje"));
+System.out.print("Enter a text >> ");
+String s = System.console().readLine();
+String result = (isPalindrome(s)) ? "" : "not ";
+System.out.println("'" + s + "'" + " is " + result + "a relaxed palindrome.");
