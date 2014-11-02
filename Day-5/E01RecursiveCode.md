@@ -8,8 +8,8 @@ What number would the following method print on screen if you called `printNumbe
 
 <pre>
 <i>1</i> 	void printNumbers(int n) {
-<i>2</i>		if (n<=0) {
-<i>3</i>                return;
+<i>2</i>		if `(n<=0)` {
+<i>3</i>
 <i>4</i>		}
 <i>5</i>		println(n);
 <i>6</i>		printNumbers(n-2);
