@@ -8,9 +8,9 @@ public class ArrayCopier_Tester {
 		int[] sameSizeSource = {5,6,7,8};
 		int[] sameSizeDestination = {1,2,3,4,};
 		int[] longerSource = {55,66,77};
-		int[] shorterDestination = {3999};
+		int[] shorterDestination = new int[0];
 		int[] shorterSource = {6, 2};
-		int[] longerDestination = new int[10];
+		int[] longerDestination = {1,2,3,4,5,6,7,8,9};
 		
 		System.out.println("Array source = " + Arrays.toString(sameSizeSource));
 		System.out.println("Array destination = " + Arrays.toString(sameSizeDestination));
