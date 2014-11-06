@@ -1,25 +1,20 @@
 // 3. Creating matrices
 
+// should find some method to replace inelegant for-ifs code 
+//	for setRow and setColumn (some digits-symbols parser for Strings)
+// also need to fix toString() method (it prints the memory address)
+// StringBuffer() seems to be a good solution
+
+import java.util.Arrays;
+
 public class Matrix {
 	private int[][] matrix;
 	
 	public Matrix(int sizeX, int sizeY) {
 		matrix = new int[sizeX][sizeY];
-		int i=0;
-		int j=0;
-		if (sizeX>=sizeY) {
-			for(; i<sizeX; i++) {
-				j=0;
-				for (; j<sizeY; j++) {
-					matrix[i][j] = 1;
-				}
-			}
-		} else {
-			for(; j<sizeY; j++) {
-				i=0;
-				for (; i<sizeX; i++) {
-					matrix[i][j] = 1;
-				}
+		for(int i=0; i<sizeX; i++) {
+			for (int j=0; j<sizeY; j++) {
+				matrix[i][j] = 1;
 			}
 		}
 	}	
@@ -33,12 +28,12 @@ public class Matrix {
 	}	
 	
 	public void setRow(int x, String s) {
-		int count = 0;
-		String nString = "";
-		int i = 1;
-		int y = 0;
-		char character = 'a';
-		int n = 0;
+		int count = 0;			// count to match number of columns
+		String nString = "";	// will be assigned to each new array value
+		int n = 0;				// will be nString parsed to int
+		char character = 'a';	// initialized at random value, will check char '0' to '9'
+		int i = 1;				// will check position of variable character
+		int y = 0;				// represent the columns of array
 		if (x>=matrix.length) {
 			return;
 		} else {
@@ -48,45 +43,101 @@ public class Matrix {
 			} else {									
 				for(; i<s.length(); i++) {
 					character = s.charAt(i);
-					if (!Character.isDigit(character)) {
-						if(character == ',') {
-							count++;
-						} else {
-							return;
-						}
-					}
-					i++;
-					character = s.charAt(i);
-					if (Character.isDigit(character) == false) {
+					if (Character.isDigit(character)) {
+						continue;
+					} else if (character == ',') {
+						count++;
+					} else {
 						return;
 					}
 				}
-				char lastChar = s.charAt(s.length()-1);
-				if (Character.isDigit(lastChar) == false) {
-					return;
-				} else {
+				if (Character.isDigit(character)) {
 					count++;
+				} else {
+					return;
 				}
-			}
-			if (count!=matrix[x].length) {
-				return;
-			} else {
-				for (i = 0; i<s.length(); i++) {
-					character = s.charAt(i);
-					if (Character.isDigit(character)) {
-						nString = nString + character;
-					} else {
-						n = Integer.parseInt(nString);
-						matrix[x][y] = n;
-						nString = "";
-					}
-				}
-				n = Integer.parseInt(nString);
-				y = matrix.length-1;
-				matrix[x][y] = n;
 			}
 		}
+		if(count != matrix[x].length) {
+			return;
+		} else {
+			for (i=0; i<s.length(); i++) {
+				character = s.charAt(i);
+				if (Character.isDigit(character)) {
+					nString = nString + character;
+				} else {
+					n = Integer.parseInt(nString);
+					matrix[x][y] = n;
+					nString = "";
+					y++;
+				}
+			}
+			n = Integer.parseInt(nString);
+			matrix[x][y] = n;
+		}
 	}
+	
+		public void setColumn(int y, String s) {
+		int count = 0;			// count to match number of columns
+		String nString = "";	// will be assigned to each new array value
+		int n = 0;				// will be nString parsed to int
+		char character = 'a';	// initialized at random value, will check char '0' to '9'
+		int i = 1;				// will check position of variable character
+		int x = 0;				// represent the rows of array
+		if (y>=matrix[0].length) {
+			return;
+		} else {
+			character = s.charAt(0);
+			if (!Character.isDigit(character)) {
+				return;
+			} else {									
+				for(; i<s.length(); i++) {
+					character = s.charAt(i);
+					if (Character.isDigit(character)) {
+						continue;
+					} else if (character == ',') {
+						count++;
+					} else {
+						return;
+					}
+				}
+				if (Character.isDigit(character)) {
+					count++;
+				} else {
+					return;
+				}
+			}
+		}
+		if(count != matrix.length) {
+			return;
+		} else {
+			for (i=0; i<s.length(); i++) {
+				character = s.charAt(i);
+				if (Character.isDigit(character)) {
+					nString = nString + character;
+				} else {
+					n = Integer.parseInt(nString);
+					matrix[x][y] = n;
+					nString = "";
+					x++;
+				}
+			}
+			n = Integer.parseInt(nString);
+			matrix[x][y] = n;
+		}
+	}
+	
+	public String toString() {
+		String s = "[";
+		for (int i=0; i<matrix.length; i++) {
+			for(int j=0; j<matrix[0].length; j++) {
+				s = s + Arrays.toString(matrix[i][j]);
+				s= s + ',';
+			}
+			s = s + ';';
+		}
+		return s.substring(0,s.length()-1);
+	}			
 	
 	public void prettyPrint() {
 		for(int i=0; i<matrix.length; i++) {
