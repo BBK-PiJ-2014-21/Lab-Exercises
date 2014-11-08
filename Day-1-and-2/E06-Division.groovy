@@ -30,15 +30,19 @@ if (count > Math.abs(dividend)) {
 	count = count - Math.abs(divisor)
 }
 
-}
+} // groovysh shows that if dividend is negative the remainder is always negative
+  // and viceversa
 if ((dividend > 0 && negativeDivisor) || (dividend < 0 && !negativeDivisor)) {
 	resultInteger = - resultInteger;
 }
 print(dividend + " divided by " + divisor + " is " + resultInteger)
 print(", remainder ")
 if (Math.abs(dividend) < Math.abs(divisor)) {
-	println(Math.abs(dividend))
+	println(dividend);
 } else {
-	println(Math.abs(Math.abs(dividend) - count))
-
+	if(dividend<0) {
+		println(-((Math.abs(dividend-(divisor*resultInteger)))));
+	} else {
+		println(Math.abs(dividend-(divisor*resultInteger)));	
+	}
 }
