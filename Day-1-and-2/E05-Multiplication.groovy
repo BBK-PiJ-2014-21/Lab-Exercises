@@ -16,16 +16,11 @@ if (firstNumber == 0 || secondNumber == 0) {
 		secondNumber2--;
 		result = result + firstNumber;
 	}
-	if (firstNumber < 0) {
-		result = - result;
-	}
 } else if (secondNumber < 0) {
 	while (secondNumber2 < -1) {
 		secondNumber2++;
 		result = result + firstNumber;
 	}
-	if (firstNumber>0) {
-		result = - result;
-	}
+	result = - result;
 }
 println(firstNumber + " multiplied by " + secondNumber + " is " + result + ".");
