@@ -21,8 +21,8 @@ public class Matrix {
 	}
 			
 	public void setElement(int x, int y, int newValue) {
-			if(x<matrix.length && x>0) {
-				if(y<matrix[x].length && y>0) {
+			if(x<matrix.length && x>=0) {
+				if(y<matrix[x].length && y>=0) {
 					matrix[x][y] = newValue;
 				}
 			}			
@@ -153,10 +153,28 @@ public class Matrix {
 		}
 	}
 	
-// 4. One-liners for matrices(*)
-
+/* 4. One-liners for matrices(*)
+		this piece of code will start setting the elements
+		and stop at the row where some input is wrong,
+		should probably be rewritten to discard changes
+		for all the rows as soon as it finds an input error
+		(see line 65 of Matrix_test.groovy)
+*/
+	
 	public void setMatrix(String s) {
-			
+		int countX = 0;
+		if(!Character.isDigit(s.charAt(0))) {
+			return;
+		}
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(i) == ';') {
+				setRow(countX, s.substring(0,i));
+				countX++;
+				s = s.substring(i+1);
+				i=0;
+			}
+		}
+		setRow(countX,s);
 	}
 	
 // 5. Symmetry looks pretty (new methods to test MatrixChecker class)
@@ -169,7 +187,7 @@ public class Matrix {
 	}
 	
 	public void setElement(int x, int newValue) {
-		if(x<array.length && x>0) {
+		if(x<array.length && x>=0) {
 			array[x] = newValue;
 		}
 	}
