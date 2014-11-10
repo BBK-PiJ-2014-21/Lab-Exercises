@@ -62,10 +62,10 @@
 	Matrix m3 = new Matrix(3,3);
 	m3.setMatrix("0,1,2;1;2;2,2,0");
 	System.out.println("new matrix(3,3)");
-	System.out.println("test error setMatrix(\"0,1,2;1;2;2,2,0\") // should ignore it");	// KIND OF FAILED 
-	m3.prettyPrint();
+	System.out.println("test error setMatrix(\"0,1,2;1;2;2,2,0\") // should ignore it");  // KIND OF FAILED: 
+	m3.prettyPrint();											      // it's ignored only after input error
 	System.out.println();
-	m3.setMatrix("0,1,2;1,0,2;2,2,0");	// FAILED ----------------------------------
+	m3.setMatrix("0,1,2;1,0,2;2,2,0");
 	System.out.println("test setMatrix(\"0,1,2;1,0,2;2,2,0\")");
 	m3.prettyPrint();
 	System.out.println("\ntesting isSymmetrical // should print 'true'");
@@ -77,7 +77,7 @@
 	System.out.println(m3.isSymmetrical());
 	System.out.println();
 		
-/* testing setMatrix and isTriangular
+// testing setMatrix and isTriangular
 	int[][] triangular1 = {{1,1,1},{0,1,1},{0,0,1}};
 	int[][] triangular2 = {{0,0,0},{0,0,0},{0,0,0}};
 	int[][] notTriangular1 = {{1,2,3},{1,2,3},{1,2,3}};
@@ -86,7 +86,7 @@
 	System.out.println(m.isTriangular(triangular2));	// should print 'true';
 	System.out.println(m.isTriangular(notTriangular1));	// should print 'false';	
 	System.out.println(m.isTriangular(notTriangular2));	// should print 'false';
-*/		
+	
 // testing 1D array methods - constructor, setElement(), isSymmetrical()
 	Matrix array = new Matrix(3);
 	System.out.println("testing new Matrix[3] - 1D array constructor and prettyPrint()");
