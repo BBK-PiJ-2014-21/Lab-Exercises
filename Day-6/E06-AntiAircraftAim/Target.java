@@ -25,7 +25,7 @@ public class Target {
 		int randomY = (int) Math.abs(matrix[0].length * Math.random());
 		int randomZ = (int) Math.abs(matrix[0][0].length * Math.random());
 		matrix[randomX][randomY][randomZ] = 1;
-		System.out.println(randomX + " " + randomY + " " + randomZ);
+//		System.out.println(randomX + " " + randomY + " " + randomZ);	//
 		
 	}
 				
