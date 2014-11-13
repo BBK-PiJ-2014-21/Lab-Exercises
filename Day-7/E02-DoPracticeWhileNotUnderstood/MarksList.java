@@ -19,13 +19,15 @@ public class MarksList {
 			if(n<-1 || n>100) {
 				invalid++;
 			} else {
-				students++;
-				if(n>=0 && n<50) {
-					fails++;
-				} else if (n<70) {
-					pass++;
-				} else {
-					distinctions++;
+				if (n!=-1) {
+					students++;
+					if(n>=0 && n<50) {
+						fails++;
+					} else if (n<70) {
+						pass++;
+					} else {
+						distinctions++;
+					}
 				}
 			}
 		} while (n!=-1);
