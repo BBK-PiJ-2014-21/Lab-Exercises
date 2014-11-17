@@ -57,5 +57,27 @@ public class Patient {
 			this.nextPatient.printList();	
 		}
 	}
+	
+	public void deletePatient(Patient patient) {
+		if(this.nextPatient == null) {
+			System.out.println("Patient to delete not found.");
+		} else if (this.nextPatient.equals(patient)) {
+			this.nextPatient = nextPatient.nextPatient;
+			return;
+		} else {
+			this.nextPatient.deletePatient(patient);
+		}
+	}
+
+// 4. Queue length
+
+	public int getListLength() {
+		if(this.nextPatient == null) {
+			return 1;
+		} else {
+			return 1 + this.nextPatient.getListLength();
+		}
+	}
 
 }
+

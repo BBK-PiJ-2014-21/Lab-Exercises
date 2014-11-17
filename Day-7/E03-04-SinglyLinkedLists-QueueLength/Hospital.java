@@ -20,22 +20,38 @@ public class Hospital {
 		p.addPatient(hanks);
 		Patient zetajones = new Patient("Catherine", 45, "Bipolar disorder");
 		p.addPatient(zetajones);
-		printList(p);
-		System.out.println();			// trying equality of both methods
-		p.printList();				// one created from class Patient other from Hospital
+		System.out.println();
+		p.printList();
+		System.out.println("NUMBER OF PATIENTS: " + p.getListLength() + '\n');
+		System.out.println("Deleting patient fox...");
+		p.deletePatient(fox);
+		p.printList();
+		System.out.println("NUMBER OF PATIENTS: " + p.getListLength() + '\n');
+		System.out.println("Deleting patient weaving...");
+		p.deletePatient(weaving);
+		p.printList();
+		System.out.println("NUMBER OF PATIENTS: " + p.getListLength() + '\n');
+		System.out.println("Deleting patient allen...");
+		p.deletePatient(allen);		// not found, has to be deleted from outside the list
+		p.printList();
+		System.out.println("NUMBER OF PATIENTS: " + p.getListLength() + '\n');
+		System.out.println("Deleting patient allen...");
+		deleteFirstPatient();
+		p.printList();
+		System.out.println("NUMBER OF PATIENTS: " + p.getListLength() + '\n');
+	
 	}
 
-	 public static void main(String[] args) {
+	public static void main(String[] args) {
 		Hospital h = new Hospital();
 		h.launch();
 	}
 	
-	public void printList(Patient list) {
-		System.out.println(list.getName() + ", " + list.getAge() + ", " + list.getIllness());
-		if(list.getNextPatient() == null) {
-			return;
+	public void deleteFirstPatient() {
+		if (p == null) {
+			System.out.println("The list is empty.");
 		} else {
-			printList(list.getNextPatient());
+			p = p.getNextPatient();
 		}
 	}
 	
