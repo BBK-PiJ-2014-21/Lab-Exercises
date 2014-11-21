@@ -5,16 +5,22 @@ public class Patient {
 	private int age;
 	private String illness;
 	private Patient nextPatient;
+	private Patient previousPatient;		// 5. Double-linked lists
 	
 	public Patient(String name, int age, String illness) {
 		this.name = name;
 		this.age = age;
 		this.illness = illness;
 		this.nextPatient = null;
+		this.previousPatient = null;	// 5. Double-linked lists
 	}
 	
 	public Patient getNextPatient() {
 		return this.nextPatient;
+	}
+	
+	public Patient getPreviousPatient() {	// 5. Double-linked lists
+		return this.previousPatient;
 	}
 	
 	public String getName() {
@@ -44,9 +50,14 @@ public class Patient {
 	public void addPatient(Patient newPatient) {
 		if (this.nextPatient == null) {
 			this.nextPatient = newPatient;
+			newPatient.previousPatient = this;	// 5. Double-linked lists
 		} else {
 			this.nextPatient.addPatient(newPatient);
 		}
+	}
+	
+	public void printPatient() {
+		System.out.println(this.getName() + ", " + this.getAge() + ", " + this.getIllness());
 	}
 	
 	public void printList() {
@@ -58,11 +69,19 @@ public class Patient {
 		}
 	}
 	
+	public void printListBackwards() {	// 5. Double-linked lists
+		System.out.println(this.name + ", " + this.age + ", " + this.illness);		
+		if(this.previousPatient == null) {
+			return;
+		} else {
+			this.previousPatient.printListBackwards();
+	
 	public void deletePatient(Patient patient) {
 		if(this.nextPatient == null) {
 			System.out.println("Patient to delete not found.");
 		} else if (this.nextPatient.equals(patient)) {
 			this.nextPatient = nextPatient.nextPatient;
+			this.nextPatient.previousPatient = this;	// 5. Double-linked lists
 			return;
 		} else {
 			this.nextPatient.deletePatient(patient);
