@@ -54,10 +54,11 @@ public class PatientCircularSinglyList implements LinkedList {
 			System.out.println("The list is empty");
 			return;
 		} else {
+			printDetails(first);
 			Patient aux = first;
 			while(aux.getNext()!=first) {
+				aux = aux.getNext();				
 				printDetails(aux);
-				aux = aux.getNext();
 			}
 		}
 	}

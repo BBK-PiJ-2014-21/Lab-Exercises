@@ -35,13 +35,14 @@ public class Test {
 		h.delete(allen);
 		System.out.println();
 		printListForwardVerbose(h);
+		System.out.println();
 		System.out.println("Last patient: ");
 		h.printDetails(h.getLastPatient());
-		System.out.println();
 	}
 	
 	public void launchDoublyTest() {
 		PatientDoublyLinkedList h = new PatientDoublyLinkedList();
+		System.out.println("===================");		
 		System.out.println("DOUBLY-LINKED LIST - (TEST)");
 		System.out.println("===================");
 		Patient allen = new Patient("Woody", 78, "Hypochondriasis");
@@ -71,6 +72,7 @@ public class Test {
 		System.out.println();
 		System.out.println("Deleting patient allen...");
 		h.delete(allen);
+		System.out.println();
 		printListForwardVerbose(h);
 		printListBackwardsVerbose(h);
 		System.out.println();
@@ -78,22 +80,23 @@ public class Test {
 		h.add(hanks);
 		printListForwardVerbose(h);
 		printListBackwardsVerbose(h);
+		System.out.println();
 		System.out.println("Deleting patient fox...");
 		h.delete(fox);
+		System.out.println();
 		System.out.println("Last patient: ");
 		h.printDetails(h.getLastPatient());
-		System.out.println();
 	}
 	
 	public void launchCircularSinglyTest() {
 		PatientCircularSinglyList h = new PatientCircularSinglyList();
+		System.out.println("===========================");
 		System.out.println("CIRCULAR-SINGLY-LINKED LIST - (TEST)");
 		System.out.println("===========================");
 		Patient allen = new Patient("Woody", 78, "Hypochondriasis");
 		h.add(allen);
 		Patient fox = new Patient("Michael J.", 53, "Parkinson");
 		h.add(fox);
-		printListForwardVerbose(h);
 		Patient weaving = new Patient("Hugo", 54, "Epilepsy");
 		h.add(weaving);
 		Patient bates = new Patient("Kathy", 66, "Breast cancer");
@@ -115,16 +118,18 @@ public class Test {
 		System.out.println();
 		System.out.println("Deleting patient allen...");
 		h.delete(allen);
+		System.out.println();
 		printListForwardVerbose(h);
 		System.out.println();
 		Patient hanks = new Patient("Tom", 58, "Diabetes");
 		h.add(hanks);
 		printListForwardVerbose(h);
+		System.out.println();
 		System.out.println("Deleting patient fox...");
 		h.delete(fox);
+		System.out.println();
 		System.out.println("Last patient: ");
 		h.printDetails(h.getLastPatient());
-		System.out.println();
 	}
 
 	public static void main(String[] args) {
@@ -133,25 +138,21 @@ public class Test {
 		System.out.println("========================================");
 		System.out.println("             HOSPITAL LIST");            
 		System.out.println("========================================");
-/*		t.launchSinglyTest();
+		t.launchSinglyTest();
 		System.out.println();
 		t.launchDoublyTest();
 		System.out.println();
-*/		t.launchCircularSinglyTest();
+		t.launchCircularSinglyTest();
 	}
 
 	public void printListForwardVerbose(LinkedList x) {
 		System.out.println("LIST GOING FORWARD:");
-		System.out.println("===================");
 		x.printList();
 	}
 	
 	public void printListBackwardsVerbose(PatientDoublyLinkedList x) {
-		System.out.println("=====================");
 		System.out.println("LIST GOING BACKWARDS:");
-		System.out.println("=====================");
 		x.printListBackwards();
-		System.out.println("=====================");
 	}
 
 }
