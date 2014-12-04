@@ -13,13 +13,11 @@ public class PatientDoublyLinkedList implements LinkedList {
 			return;
 		} else {
 			Patient aux = first;
-			Patient previous = first;
 			while(aux.getNext()!=null) {
 				aux = aux.getNext();
-				previous = aux;
 			}
 			aux.setNext(newPatient);
-			newPatient.setPrevious(previous);
+			newPatient.setPrevious(aux);
 		}
 	}
 	
