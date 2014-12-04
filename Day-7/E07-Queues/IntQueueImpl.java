@@ -11,14 +11,22 @@ public class IntQueueImpl {
 	
 	public void insert(int n) {
 		System.out.println("Inserting request " + n + "...");
-		count++;
 		IntegerNode newInt = new IntegerNode(n);
 		if(first==null) {
 			first = newInt;
 		} else {
+			IntegerNode search = first;
+			while(search.getNext()!=null) {
+				if(search.getNext().getValue()==n) {
+					System.out.println("Request " + n + " is already in the queue.");
+					return;
+				}
+				search = search.getNext();
+			}
 			newInt.setNext(first);
 			first = newInt;
 		}
+		count++;
 	}
 	
 	public void retrieve(int n) {
@@ -31,7 +39,7 @@ public class IntQueueImpl {
 				System.out.println("done.");
 				first = null;
 			} else {
-				System.out.println("failed. Different request at the end of the queue.");
+				System.out.println("failed. Different request at the head of the queue.");
 				return;
 			}
 		} else {
@@ -40,31 +48,29 @@ public class IntQueueImpl {
 				aux = aux.getNext();
 			}
 			if(aux.getValue()!=n) {
-				System.out.println("failed. Different request at the end of the queue.");
+				System.out.println("failed. Different request at the head of the queue.");
 				return;
 			} else {
-				if(first.getNext()!=null) {
-					IntegerNode previous = first;
-					while(previous.getNext()!=aux) {
-						previous = previous.getNext();
-					}
-					previous.setNext(null);
-					System.out.println("done.");
+				IntegerNode previous = first;
+				while(previous.getNext()!=aux) {
+					previous = previous.getNext();
 				}
+				previous.setNext(null);
+				System.out.println("done.");
 			}
 		}
 		count--;
 	}
 	
-	public int size() {
+	public int getSize() {
 		return count;
 	}
 	
 	public void printSize() {
 		if(count!=1) {
-			System.out.println("There are " + count + " requests in the queue.");
+			System.out.println("There are " + getSize() + " requests in the queue.");
 		} else {
-			System.out.println("There is " + count + " request in the queue.");
+			System.out.println("There is " + getSize() + " request in the queue.");
 		}
 	}
 	
