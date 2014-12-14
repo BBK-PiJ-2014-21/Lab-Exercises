@@ -15,18 +15,19 @@ public class SupermarketTest {
 		s.addPerson(jimmy);
 		s.addPerson(timmy);
 		s.addPerson(timmy);	// this should be ignored
+		System.out.println("Added jack, donnie, jimmy, timmy");
 		s.printList();
-		System.out.println();
-		s.serveClustered();
+		s.servePerson();
+		System.out.println('\n' + "servePerson()");
 		s.printList();
-		System.out.println();
-		s.serveClustered();		
+		s.servePerson();
+		System.out.println('\n' + "servePerson()");
 		s.printList();
-		System.out.println();
-		s.serveClustered();
+		s.servePerson();
+		System.out.println('\n' + "servePerson()");
 		s.printList();
-		System.out.println();
-		s.serveClustered();
+		s.servePerson();
+		System.out.println('\n' + "servePerson()");
 		s.printList();
 		System.out.println();
 	}

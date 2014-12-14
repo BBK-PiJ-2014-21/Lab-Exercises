@@ -1,7 +1,8 @@
 // 1. Supermarket queue
 
 public class Supermarket {
-	PersonQueueImpl q = new PersonQueueImpl();
+//	PersonQueueLinkedListImpl q = new PersonQueueLinkedListImpl();	// 1st implementation test
+	PersonQueuePriorityListImpl q = new PersonQueuePriorityListImpl();	// 2nd implementation test
 	
 	public void addPerson(Person newPerson) {
 		q.insert(newPerson);
@@ -11,20 +12,8 @@ public class Supermarket {
 		q.retrieve();
 	}
 	
-	public void serveOldest() {
-		q.retrieveOldest();
-	}
-	
-	public void serveOver(int age) {
-		q.retrieveOver(age);
-	}
-	
-	public void serveClustered() {
-		q.retrieveClustered();
-	}
-	
 	public void printList() {
 		q.printList();
 	}
-	
+
 }
