@@ -1,8 +1,8 @@
 // 8. Noah's Ark (*)
 
-public class Amphibian extends EggLaying {
+public class Reptile extends EggLaying {
 	
-	public Amphibian(String name) {
+	public Reptile(String name) {
 		super(name);
 	}
 	
