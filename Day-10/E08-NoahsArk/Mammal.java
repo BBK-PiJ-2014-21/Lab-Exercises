@@ -10,7 +10,7 @@ public abstract class Mammal extends Animal {
 		giveBirth();
 	}
 	
-	public void giveBirth() {
+	private void giveBirth() {
 		System.out.println("Giving birth...");
 	}
 	

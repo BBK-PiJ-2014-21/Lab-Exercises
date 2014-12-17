@@ -10,7 +10,7 @@ public abstract class EggLaying extends Animal {
 		layEggs();
 	}
 	 
-	public void layEggs() {
+	private void layEggs() {
 		System.out.println("Laying Eggs...");
 	}
 	
