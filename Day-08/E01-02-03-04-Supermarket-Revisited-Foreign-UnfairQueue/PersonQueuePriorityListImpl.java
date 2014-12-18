@@ -40,18 +40,13 @@ public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 	}
 	
 	@Override
-	public Person retrieve() {	// 4.2 Unfair queue (*) Clustered (don't let in the queue under 18)
-		if(last==null) {
-			return null;
-		} else {
-			Person aux = null;
-			aux = retrieveOver(65);
-			if(aux==null) {
-				aux = retrieveOver(18);
-			} 
-			return aux;
-		}
-		
+	public Person retrieve() {	// 4.2 Unfair queue (*) Clustered (don't retrieve under 18s)
+		Person aux = null;
+		aux = retrieveOver(65);
+		if(aux==null) {
+			aux = retrieveOver(18);
+		} 
+		return aux;
 	}
 
 }	
