@@ -1,15 +1,19 @@
-// 8. Maximising
+/* 8. Maximising
+ *	Write a program that read a (arbitrary long) sequence 
+ *	of positive numbers. The sequence is ended when the users
+ *	enters "-1". At that point, the program must output the 
+ *	highest number in the sequence.
+ */
 
-String s = "";
-long n1, n2 = 0;
-boolean start = true;
-while (start) {
+long n1 = 0;
+long n2 = 0;
+while (true) {
 	println("Please enter a series of positive numbers, end with -1: ")
-	s = System.console().readLine()
-	n = Long.parseLong(s)
-	if (n == -1) {
+	String s = System.console().readLine()
+	n1 = Long.parseLong(s)
+	if (n1 == -1) {
 		println("You would have to enter at least one number.");
-	} else if (n <= 0) {
+	} else if (n1 <= 0) {
 		println("You need to enter positive numbers.");
 	} else {
 		break;
