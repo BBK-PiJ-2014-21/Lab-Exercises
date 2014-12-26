@@ -1,5 +1,8 @@
-// 5. Multiplication
-
+/* 5. Multiplication
+ *	Write a program that requests two numbers from the user
+ *	and then outputs its product. You cannot use the "*" operator.
+ */
+ 
 println("Please enter the first number: ")
 String s = System.console().readLine()
 int firstNumber = Integer.parseInt(s)
