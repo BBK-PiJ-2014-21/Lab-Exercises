@@ -1,7 +1,12 @@
-// 17. Optimus Prime (**)
+/* 17. Optimus Prime (**)
+ *	Write a program that reads an integer number from the user,
+ *	and then outputs the closest prime number.
+ *	If there are two prime numbers at the same distance, it should output both.
+ *	For instance, if the user enters 5116, the output should be 5113 and 5119.
+ */
 
-System.out.print("Please enter a number: ");			// take the input
-String s = System.console().readLine();				// and initialize the variables
+System.out.print("Please enter a number: ");
+String s = System.console().readLine();
 int firstDividend = Integer.parseInt(s);
 int dividend = firstDividend;
 int divisor = 2;
@@ -11,7 +16,7 @@ int largestNegativePrime = 0;
 int positiveCount = 0;
 int negativeCount = 0;
 
-while(true) {							// check for the closest prime going forward
+while(true) {
 	while (dividend>divisor) {
 		if (dividend%divisor == 0) {
 			prime = false;
@@ -31,11 +36,11 @@ while(true) {							// check for the closest prime going forward
 	}
 }
 
-dividend = firstDividend;					// re-initialize the basic variables
+dividend = firstDividend;
 divisor = 2;
 prime = true;
 
-while(true) {							// check for the closest prime going backwards
+while(true) {
 	while (dividend>divisor) {
 		if (dividend%divisor == 0) {
 			prime = false; 

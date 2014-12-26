@@ -1,4 +1,7 @@
-// 14. Up to 1,000 primes (*)
+/* 14. Up to 1,000 primes (*)
+ *	Modify the program that you wrote for the former exercise so that
+ *	it writes on screen the first 1,000 primes.
+ */
 
 int dividend = 2;
 int divisor = 2;
