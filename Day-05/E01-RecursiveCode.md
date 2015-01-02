@@ -129,6 +129,7 @@ before the recursive calls:
 Calculate the result of calling this method with arguments 50, 73, and 95. 
 Note that the recursion on line 5 is a double.
 
+```
 	int mcCarthy91(int n) {
 		if (n > 100) {
 			return n - 10;
@@ -139,7 +140,9 @@ Note that the recursion on line 5 is a double.
 	
 	(Hint: If you get too confused, maybe writing a slightly modified version of this code 
 	that prints the numbers on screen can help.)
-	
+
+This is the calculation for input `50`:
+
 	mcCarthy91(50)
 	mcCarthy91(mcCarthy91(61)
 	mcCarthy91(mcCarthy91(mcCarthy91(72)
@@ -176,7 +179,7 @@ Note that the recursion on line 5 is a double.
 	mcCarthy91(100)
 	mcCarthy91(mcCarthy91(111)
 	mcCarthy91(110)
-	**91**
+	91
 
 The mechanism is the same for input `73` and `95` - actually, for any input which is less or equal than 101,
 it seems like the result would be **91** (hence the name). Several layers will open up adding 11 to the input 
