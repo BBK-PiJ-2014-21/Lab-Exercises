@@ -129,7 +129,6 @@ before the recursive calls:
 Calculate the result of calling this method with arguments 50, 73, and 95. 
 Note that the recursion on line 5 is a double.
 
-```
 	int mcCarthy91(int n) {
 		if (n > 100) {
 			return n - 10;
