@@ -1,7 +1,8 @@
 /** 8. Noah's Ark (*)
  * This is the superclass Animal; the name field name will be passed from the specific race object.
- * Two abstract subclasses are descendant of Animal: EggLaying and Mammal: they will implement reproduce() method
- * while keeping makeSound() abstract to be implemented by the specie/race.
+ * Two abstract subclasses are descendant of Animal: EggLaying and Mammal; they will implement the reproduce() and makeSound() methods;
+ * Below that, the abstract classes Bird, Insect, Fish, Amphibian and Reptile implements some specific specie's behaviour
+ * (e.g. Fish and Bird override the call() method as per this specs).
  */
 public abstract class Animal {
 	private String name;
