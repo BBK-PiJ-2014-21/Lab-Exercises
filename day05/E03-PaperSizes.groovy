@@ -17,16 +17,37 @@ print("Please enter a Din-SIZE: ");
 String s = System.console().readLine();
 println(calculateSize(s));
 
+String[2] result
+
+result = [841] [1189]
+
+result = calc(smaller).1 = result[2]
+
+result = dinLong + "x" + dinShort*2 
+
 String calculateSize(String size) {
-	int dinShort = 841;
-	int dinLong = 1189;
-	int temp = 0;
-	String result = dinShort + "mm x " + dinLong + "mm";
+	int dinLong;
+	int dinShort;
+	int temp;
 	if(!validInput(size)) {
 		return "Invalid input";
 	} else if(size.equals("A0")) {
-		return result;
-	}
+		dinShort = 841;
+		dinLong = 1189;
+		result = 841*1189;
+	} else if(size.length()>2) {
+		result = calculateSize(size.substring(0,size.length()-2);
+
+		
+		
+		dinLong = temp;
+		dinLong = dinShort*2;
+		dinShort = dinLong;
+		
+		
+	}	
+	String result = dinShort + "mm x " + dinLong + "mm";
+	return result;
 
 }
 	
