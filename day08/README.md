@@ -77,7 +77,7 @@ System.out.println("0 < " smallHash + " < 1000");
 
 Create a class that implements the following [interface] [11] of a simple map from integers to strings. (...)
 
-*created class* [SimpleMapImpl] [9]
+(*created class* [SimpleMapImpl] [9])
 
 #### 5.3 Hash table (*)
 
