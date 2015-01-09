@@ -1,5 +1,6 @@
 // 5.1 Hash function
 
+package E05_maps;
 
 public class HashUtilities {
 	
