@@ -75,13 +75,13 @@ System.out.println("0 < " smallHash + " < 1000");
 
 #### 5.2 Simple map
 
-Create a class that implements the following [interface] of a simple map from integers to strings. (...)
+Create a class that implements the following [interface] [11] of a simple map from integers to strings. (...)
 
 *created class* [SimpleMapImpl] [9]
 
 #### 5.3 Hash table (*)
 
-Create a class that implements the following [interface] of a simple map from integers to strings:
+Create a class that implements the following [interface] [12] of a simple map from integers to strings:
 it is a one-to-many mapping. A similar map is used in some countries to classify the citizens into groups
 for tax purposes (so that each department has a limited number of citizens to examine and process).
 
@@ -105,3 +105,5 @@ you will receive for every key.
 [8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e05_maps/HashTest.java
 [9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e05_maps/SimpleMapImpl.java
 [10]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e05_maps/HashTableImpl.java
+[11]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e05_maps/SimpleMap.java
+[12]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e05_maps/HashTable.java
