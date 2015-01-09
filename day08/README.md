@@ -13,21 +13,21 @@ Use the interface [PersonQueue] [1] that represents a queue of people waiting at
 You can reuse any version of class [Person] [2] from past days. (...) Then create a class [Supermarket] [3] that has two methods:
 `addPerson(Person)` and `servePerson()`. These methods must call appropriate methods of **PersonQueue**.
 
-*created class* [PersonQueueLinkedListImpl] [4]
+(*created class* [PersonQueueLinkedListImpl] [4])
 
 ### 2. Supermarket queue revisited (*)
 
 Implement the interface [PersonQueue] [1] in a different way. Then check that it works exactly the same without 
 changing either the interface or your class [Supermarket] [3].
 
-*to be implemented*
+(*to be implemented*)
 
 ### 3. Foreign people, different queues (*)
 
 Get a queue implementation from one of your colleagues. Use it and check that it works exactly the same
 without changing either the interface or your class [Supermarket] [3] (...).
 
-*to be implemented*
+(*to be implemented*)
 
 ### 4. Unfair queue (*)
 
@@ -36,7 +36,7 @@ without changing either the interface or your class [Supermarket] [3] (...).
 Implement the interface queue in a way that the person at the end (i.e. the person that is retrieved
 next time the method `retrieve()` is called) is always the oldest person.
 
-*created class* [PersonQueueOldestImpl] [5] 
+(*created class* [PersonQueueOldestImpl] [5])
 
 #### 4.2 Clustered
 
@@ -50,7 +50,7 @@ disk's head is at position 555 and the queue of request is
 	4, 99, 234, 500, 101, 43, 881, 77
 your disk may decide to move to position 500 to reduce movement, time, and energy consumption.
 
-*created class* [PersonQueuePriorityListImpl] [6]
+(*created class* [PersonQueuePriorityListImpl] [6])
 
 ### 5. Maps
 
@@ -88,7 +88,7 @@ for tax purposes (so that each department has a limited number of citizens to ex
 Hint: You can implement it with arrays or with linked lists. You do **not** know in advance how many strings
 you will receive for every key.
 
-*created class* [HashTableImpl] [10]
+(*created class* [HashTableImpl] [10])
 
 	
 
