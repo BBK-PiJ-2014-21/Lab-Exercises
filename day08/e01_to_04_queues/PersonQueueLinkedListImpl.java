@@ -1,4 +1,3 @@
-// 1. Supermarket queue - implementation
 
 public class PersonQueueLinkedListImpl implements PersonQueue {
 	Person last;
@@ -11,51 +10,27 @@ public class PersonQueueLinkedListImpl implements PersonQueue {
 		if(last==null) {
 			last = newPerson;
 		} else {
-			Person aux = last;
-			while(aux.getNext()!=null) {	// don't insert() duplicates
-				if(aux.equals(newPerson)) {
-					return;
-				}
-				aux = aux.getNext();
-			}
 			newPerson.setNext(last);
 			last = newPerson;
 		}
 	}
 	
-	public Person retrieve() {	// 4.1 Unfair queue (*) Simple
+	public Person retrieve() {
 		if(last==null) {
 			return null;
 		} else if(last.getNext()==null) {
-			Person oldest = last;
+			Person copy = last;
 			last = null;
-			return oldest;
+			return copy;
 		} else {
-			Person oldest = last;
-			Person aux = last;
-			while(aux.getNext()!=null) {
-				if(aux.getAge()>=oldest.getAge()) {
-					oldest = aux;
-				}
-				aux = aux.getNext();
+			Person second = last;
+			Person first = last.getNext();
+			while(first.getNext()!=null) {
+				first = first.getNext();
+				second = second.getNext();
 			}
-			Person previous = last;
-			if(aux.getAge()>=oldest.getAge()) {	// the oldest is the last element
-				while(!previous.getNext().equals(aux)) {
-					previous = previous.getNext();
-				}
-				previous.setNext(null);
-				return aux;
-			}
-			if(last.equals(oldest)) {	// the oldest is the first element
-				last = oldest.getNext();
-			} else {
-				while(!previous.getNext().equals(oldest)) {
-					previous = previous.getNext();
-				}
-				previous.setNext(oldest.getNext());
-			}
-		return oldest;	
+			second.setNext(null);
+			return first;
 		}
 	}
 	
@@ -72,6 +47,7 @@ public class PersonQueueLinkedListImpl implements PersonQueue {
 			int list = 1;
 			while(true) {
 				if(last.equals(toPrint)) {
+					System.out.println(list + ". " + toPrint.getName() + ", " + toPrint.getAge());					
 					break;
 				}
 				while(!previous.getNext().equals(toPrint)) {
@@ -82,7 +58,6 @@ public class PersonQueueLinkedListImpl implements PersonQueue {
 				toPrint = previous;
 				previous = last;
 			}
-			System.out.println(list + ". " + toPrint.getName() + ", " + toPrint.getAge());
 		}		
 	}
 

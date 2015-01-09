@@ -1,4 +1,3 @@
-// 1. Supermarket queue - interface
 
 public interface PersonQueue {
 	/**
