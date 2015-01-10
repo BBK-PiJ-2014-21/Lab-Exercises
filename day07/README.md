@@ -16,7 +16,7 @@ Complete the example given in the notes with a class called [Spy] [1]. Your clas
   * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints 
     on the screen the ID of this spy plus the total number of spies so far.
   * a `die()` method that prints on the screen "Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far. 
-  * a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
+  *  a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
   * 
   
 
