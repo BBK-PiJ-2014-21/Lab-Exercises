@@ -20,7 +20,7 @@ Complete the example given in the notes with a class called [Spy] [1]. Your clas
   * 
   
 
- Observe how the static variable is accessed by different objects both to increment and to decrement it.
+Observe how the static variable is accessed by different objects both to increment and to decrement it.
 
  (*created class* [Spy] [1])
  
@@ -52,9 +52,9 @@ Create a linked list following the "hospital and patients" example of the notes:
   2. Go through the list printing out the content of each element.
   3. Delete a couple of elements from the list.
   4. Print the elements in the list again. Check that the deleted elements have been deleted. 
-     Check that you can delete the first element too.
+    Check that you can delete the first element too.
 
-  Hint: Note that you cannot delete the first element from inside the list because you need to update the pointer `patientListStart`.
+Hint: Note that you cannot delete the first element from inside the list because you need to update the pointer `patientListStart`.
 To add or delete the first element of a list, you must do it from outside the list.  
 
 (*created class* [PatientSinglyLinkedList] [3])
