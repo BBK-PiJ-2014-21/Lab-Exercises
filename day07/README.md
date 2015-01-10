@@ -18,7 +18,7 @@ Complete the example given in the notes with a class called [Spy] [1]. Your clas
   * a `die()` method that prints on the screen "Spy XX has been detected and eliminated" (where XX is the spy's ID), 
     decrements the spy counter and prints on the screen the total number of spies so far. 
   * a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
- 
+  * 
  Observe how the static variable is accessed by different objects both to increment and to decrement it.
 
  (*created class* [Spy] [1])
