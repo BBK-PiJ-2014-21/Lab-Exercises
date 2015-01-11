@@ -38,6 +38,9 @@ Thumbs.db
 
 # ECLIPSE #
 ###########
+.settings
+.classpath
+.project
 *.pydevproject
 .metadata
 .gradle
