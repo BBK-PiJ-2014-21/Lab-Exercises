@@ -1,3 +1,4 @@
+
 public class SimpleMapImpl implements SimpleMap {
 	private Node head;
 	private int size;
