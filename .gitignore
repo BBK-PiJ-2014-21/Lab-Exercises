@@ -68,7 +68,7 @@ local.properties
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm#
 ########################################################################
-.MF
+META-INF/
 build.properties
 *.iml
 ## Directory-based project format:
