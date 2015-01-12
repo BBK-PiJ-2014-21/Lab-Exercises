@@ -1,3 +1,4 @@
+package queues;
 
 public class PersonQueueLinkedListImpl implements PersonQueue {
 	Person last;

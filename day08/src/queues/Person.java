@@ -1,4 +1,4 @@
-// 1. Supermarket queue - class Person version 1
+package queues;// 1. queues.Supermarket queue - class queues.Person version 1
 
 public class Person {
 	String name;

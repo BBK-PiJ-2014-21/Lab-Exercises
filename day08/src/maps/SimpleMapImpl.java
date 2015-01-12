@@ -1,3 +1,4 @@
+package maps;
 
 public class SimpleMapImpl implements SimpleMap {
 	private Node head;

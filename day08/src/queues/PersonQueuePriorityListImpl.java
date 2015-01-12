@@ -1,4 +1,4 @@
-// 2. Supermarket queue revisited (*)
+package queues;// 2. queues.Supermarket queue revisited (*)
 
 public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 

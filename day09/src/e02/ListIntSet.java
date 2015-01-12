@@ -1,4 +1,4 @@
-// 2.3 Trees as sets - Implementation as list
+package e02;// 2.3 Trees as sets - Implementation as list
 
 public class ListIntSet implements IntSet {
 	private IntegerListNode first;

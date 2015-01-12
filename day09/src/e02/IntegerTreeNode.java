@@ -1,9 +1,9 @@
-// 2.2 Trees as sets - Implementation as tree
+package e02;// 2.2 Trees as sets - Implementation as tree
 
 public class IntegerTreeNode {
 	int value;
-	IntegerTreeNode right;
-	IntegerTreeNode left;
+	e01.IntegerTreeNode right;
+	e01.IntegerTreeNode left;
 	
 	public IntegerTreeNode(int value) {
 		this.value = value;
@@ -14,13 +14,13 @@ public class IntegerTreeNode {
 	public void add(int newNumber) {
 		if(newNumber>this.value) {
 			if(right==null) {
-				right = new IntegerTreeNode(newNumber);
+				right = new e01.IntegerTreeNode(newNumber);
 			} else {
 				right.add(newNumber);
 			}
 		} else {
 			if(left==null) {
-				left = new IntegerTreeNode(newNumber);
+				left = new e01.IntegerTreeNode(newNumber);
 			} else {
 				left.add(newNumber);
 			}

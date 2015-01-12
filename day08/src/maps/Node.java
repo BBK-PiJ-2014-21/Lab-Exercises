@@ -1,4 +1,4 @@
-// Node class to use for SimpleMapImpl
+package maps;// maps.Node class to use for maps.SimpleMapImpl
 
 public class Node {
 	private int key;

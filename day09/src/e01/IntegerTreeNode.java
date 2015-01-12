@@ -1,4 +1,4 @@
-// 1. Integer Binary Tree
+package e01;// 1. Integer Binary Tree
 
 public class IntegerTreeNode {
 	int value;

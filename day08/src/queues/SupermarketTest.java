@@ -1,10 +1,11 @@
+package queues;
 
 public class SupermarketTest {
 	
 	public static void main(String[] args) {
 		SupermarketTest test = new SupermarketTest();
 		Supermarket s = new Supermarket();
-	//	PersonQueueLinkedListImpl q = new PersonQueueLinkedListImpl();
+	//	queues.PersonQueueLinkedListImpl q = new queues.PersonQueueLinkedListImpl();
 		PersonQueueOldestImpl q = new PersonQueueOldestImpl();
 		System.out.println("======================");
 		System.out.println("WELCOME TO SUPERMARKET");

@@ -1,4 +1,6 @@
-/** 
+package maps;
+
+/**
  * Map from integer to Strings
  */
 public interface SimpleMap {

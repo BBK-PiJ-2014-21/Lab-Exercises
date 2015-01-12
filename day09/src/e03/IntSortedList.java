@@ -1,4 +1,4 @@
-// 3. Trees as (sorted) lists - 3.1 Interface
+package e03;// 3. Trees as (sorted) lists - 3.1 Interface
 
 public interface IntSortedList {
 	

@@ -1,3 +1,5 @@
+package e01;
+
 public class IntegerTreeNodeTest {
 	
 	public static void main(String[] args) {

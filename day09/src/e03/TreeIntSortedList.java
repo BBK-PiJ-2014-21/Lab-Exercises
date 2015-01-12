@@ -1,4 +1,4 @@
-// 3.2 Implementation as tree
+package e03;// 3.2 Implementation as tree
 
 public class TreeIntSortedList implements IntSortedList {
 	private IntegerTreeNode node;

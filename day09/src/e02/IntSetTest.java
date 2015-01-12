@@ -1,4 +1,4 @@
-// 2. Tree as sets - tests
+package e02;// 2. Tree as sets - tests
 
 public class IntSetTest {
 	

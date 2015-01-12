@@ -1,4 +1,4 @@
-// 2.1 Trees as sets - Interface
+package e02;// 2.1 Trees as sets - Interface
 
 public interface IntSet {
 	/**

@@ -1,3 +1,4 @@
+package queues;
 
 public class PersonQueueOldestImpl implements PersonQueue {
 	private Person last;

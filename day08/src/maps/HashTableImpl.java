@@ -1,3 +1,4 @@
+package maps;
 
 public class HashTableImpl implements HashTable {
 	private Node head;

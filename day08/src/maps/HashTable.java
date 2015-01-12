@@ -1,3 +1,5 @@
+package maps;
+
 /**
  * Map from integer to Strings: one to many
  */

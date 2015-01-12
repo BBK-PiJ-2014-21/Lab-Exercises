@@ -1,7 +1,9 @@
-// 2.2 Trees as sets - Implementation as tree
+package e02;// 2.2 Trees as sets - Implementation as tree
+
+import e01.IntegerTreeNode;
 
 public class TreeIntSet implements IntSet {
-	private IntegerTreeNode first;
+	private e01.IntegerTreeNode first;
 	
 	public TreeIntSet() {
 		first = null;
