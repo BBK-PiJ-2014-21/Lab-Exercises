@@ -1,7 +1,10 @@
-import org.junit.*;
-import static org.junit.Assert.*;
+package e03_practiceFindBugsOnce;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 /**
- * JUnit tests for class Person (Exercise 3 - Practice "Find bugs once")
+ * JUnit tests for class e03_practiceFindBugsOnce.Person (Exercise 3 - Practice "Find bugs once")
  */
 public class PersonTest {
 	/**

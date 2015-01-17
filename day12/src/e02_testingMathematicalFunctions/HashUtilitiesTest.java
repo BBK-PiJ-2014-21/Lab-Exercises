@@ -1,8 +1,11 @@
+package e02_testingMathematicalFunctions;
 
 import maps.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
-
+/**
+ * JUnit test for class HashUtilities
+ */
 public class HashUtilitiesTest {
     @Test
     public void testShortHash() {

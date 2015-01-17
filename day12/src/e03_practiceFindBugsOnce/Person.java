@@ -1,7 +1,9 @@
+package e03_practiceFindBugsOnce;
+
 /**
  * Class created in the notes (Day 12 - Software Testing)
  * Exercise 3 - Practice "Find bugs once"
- * to be tested with JUnit (class PersonTest)
+ * to be tested with JUnit (class e03_practiceFindBugsOnce.PersonTest)
  */
 public class Person {
 
