@@ -10,8 +10,8 @@ Before the next day, you should have achieved the following learning goals:
 ### 1. Supermarket queue
 
 Use the interface [PersonQueue] [1] that represents a queue of people waiting at the supermarket and then implement it. (...)
-You can reuse any version of class [Person] [2] from past days. (...) Then create a class [Supermarket] [3] that has two methods:
-`addPerson(Person)` and `servePerson()`. These methods must call appropriate methods of **PersonQueue**.
+You can reuse any version of class [e03_practiceFindBugsOnce.Person] [2] from past days. (...) Then create a class [Supermarket] [3] that has two methods:
+`addPerson(e03_practiceFindBugsOnce.Person)` and `servePerson()`. These methods must call appropriate methods of **PersonQueue**.
 
 (*created class* [PersonQueueLinkedListImpl] [4])
 
@@ -96,7 +96,7 @@ you will receive for every key.
 
 
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/E01-02-03-04-Supermarket-Revisited-Foreign-UnfairQueue/PersonQueue.java
-[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/E01-02-03-04-Supermarket-Revisited-Foreign-UnfairQueue/Person.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/E01-02-03-04-Supermarket-Revisited-Foreign-UnfairQueue/e03_practiceFindBugsOnce.Person.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e01_to_04_queues/Supermarket.java
 [4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e01_to_04_queues/PersonQueueLinkedListImpl.java
 [5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day08/e01_to_04_queues/PersonQueueOldestImpl.java
