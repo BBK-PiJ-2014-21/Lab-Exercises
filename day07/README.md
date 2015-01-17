@@ -78,12 +78,11 @@ patients" example as a starting point.
   4. Traverse it forwards and backwards printing out the content of each element.
   5. Add a new element to the list. Try to delete an element that is NOT in the list.
   6. Traverse it forwards and backwards printing out the content of each element.
-<<<<<<< HEAD
+
  Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
 =======
   
 Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
->>>>>>> 95582be7cef51f579419e513aac3799dce592627
 the `add` and `delete` methods to make sure you do not have loose pointers.
 
 (*created class* [PatientDoublyLinkedList] [4])
