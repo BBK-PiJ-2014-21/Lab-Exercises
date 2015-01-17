@@ -1,3 +1,5 @@
+package e03_to_e06_linkedLists;
+
 /**
 * Interface for Singly-linked, Doubly-linked and Circular lists (exercises 3,4,5)
 */

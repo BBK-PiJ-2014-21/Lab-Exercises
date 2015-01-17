@@ -1,4 +1,4 @@
-// 07. Queues (*)
+package e07_queues;// 07. Queues (*)
 
 public class IntQueueImpl {
 	private int count;

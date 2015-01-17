@@ -10,19 +10,19 @@ Before the next day, you should have achieved the following learning goals:
 
 ### 1. Instance counter
 
-Complete the example given in the notes with a class called [Spy] [1]. Your class must have:
+Complete the example given in the notes with a class called [e01_instanceCounter.Spy] [1]. Your class must have:
   * one and only one `static` variable, an `int` called `spyCount`.
   * an instance variable of type `int` for the spy's ID.
   * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints 
     on the screen the ID of this spy plus the total number of spies so far.
-  * a `die()` method that prints on the screen "Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far. 
-  *  a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
+  * a `die()` method that prints on the screen "e01_instanceCounter.Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far.
+  *  a main method in which several objects `e01_instanceCounter.Spy` are created and some of them killed (their method `die()` is called).
    
   
 
 Observe how the static variable is accessed by different objects both to increment and to decrement it.
 
- (*created class* [Spy] [1])
+ (*created class* [e01_instanceCounter.Spy] [1])
  
 ### 2. do {practice} while (!understood);
 
@@ -43,7 +43,7 @@ Input a mark: -1
 There are 7 students: 2 distinctions, 1 pass, 4 fails (plus 1 invalid).
 ```
 
-(*created class* [MarksList] [2])
+(*created class* [e02_doPracticeWhileNotUnderstood.MarksList] [2])
 
 ### 3. Singly-linked lists
 
@@ -57,7 +57,7 @@ Create a linked list following the "hospital and patients" example of the notes:
 Hint: Note that you cannot delete the first element from inside the list because you need to update the pointer `patientListStart`.
 To add or delete the first element of a list, you must do it from outside the list.  
 
-(*created class* [PatientSinglyLinkedList] [3])
+(*created class* [e03_to_e06_linkedLists.PatientSinglyLinkedList] [3])
 
 ### 4. Queue length
 
@@ -65,7 +65,7 @@ Reuse the code of one of the dynamic list in the former exercise, and add a meth
 (maybe you have done this already). Is it easy to do this both iteratively and recursively? Try both ways and see which is
 more natural for you. If one takes too long, try the other way.
 
-(*added method* `calculateLength()` *to class* [PatientSinglyLinkedList] [3])
+(*added method* `calculateLength()` *to class* [e03_to_e06_linkedLists.PatientSinglyLinkedList] [3])
 
 ### 5. Doubly-linked lists
 
@@ -79,10 +79,10 @@ patients" example as a starting point.
   5. Add a new element to the list. Try to delete an element that is NOT in the list.
   6. Traverse it forwards and backwards printing out the content of each element.
   
-Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
+Hint: First you need to add a new field to e03_to_e06_linkedLists.Patient for the pointer going "backwards". Then you need to modify
 the `add` and `delete` methods to make sure you do not have loose pointers.
 
-(*created class* [PatientDoublyLinkedList] [4])
+(*created class* [e03_to_e06_linkedLists.PatientDoublyLinkedList] [4])
 
 ### 6. Circular lists
 
@@ -97,7 +97,7 @@ circular list using the "hospital and patients" example as a starting point.
   5. Add a new element to the list. Try to delete an element that is NOT in the list.
   6. Traverse it again printing out the content of each element.
 
-(*created class* [PatientCircularSinglyList] [5])
+(*created class* [e03_to_e06_linkedLists.PatientCircularSinglyList] [5])
   
 ### 7. Queues (*)
 
@@ -126,7 +126,7 @@ Retrieving request 13... done.
 etc...
 ```
 
-(*created class* [IntQueueImpl] [6])
+(*created class* [e07_queues.IntQueueImpl] [6])
 
 ### 8. Stacks (*)
 
@@ -152,17 +152,17 @@ Popping.. it's a 5
 Stack is empty
 ```
 
-(*created class* [IntStack] [7])
+(*created class* [e08_stacks.IntStack] [7])
 
 ### 9. From array to list
 
 Create a static method that takes an array of integers and returns a linked list of integers in the same order
-as the original array. You can put this method in a class called [ListUtilities] [] so that you can easily use it
+as the original array. You can put this method in a class called [e09_to_e13_sortingLists.ListUtilities] [] so that you can easily use it
 for the following exercises.
 Initialising an array with 15-20 elements is very easy with curly-brackets-notations, so it is common to create
 an array and then convert it into a dynamic structure automatically.
 
-(*created classes* [ListUtilities] [8] *and* [IntegerList] [9])
+(*created classes* [e09_to_e13_sortingLists.ListUtilities] [8] *and* [e09_to_e13_sortingLists.IntegerList] [9])
 
 ### 10. A sorted list
 
@@ -172,7 +172,7 @@ is always sorted from lower to highest numbers.
 Create the list, insert several numbers into it (around 15 is fine) and then go through the list printing the value
 of each element. Check that the elements are correctly sorted.
 
-(*added method* `insert(int)` to [IntegerList] [9] *and static method* `sortedList(int[])` in [ListUtilitites] [8])
+(*added method* `insert(int)` to [e09_to_e13_sortingLists.IntegerList] [9] *and static method* `sortedList(int[])` in [ListUtilitites] [8])
 
 ### 11. Bubble sort (*)
 
@@ -184,7 +184,7 @@ The bubble sort algorithm is the simplest sorting algorithm there is:
   3. Now you have the highest element at the end of the list.
   4. Move back to the beginning and repeat the whole process until your list is sorted.
   5. Once you pass through the list without swapping elements, your list is sorted.
-Put your implementation in a static method in a class, maybe `ListUtilities.bubbleSort(List)`.
+Put your implementation in a static method in a class, maybe `e09_to_e13_sortingLists.ListUtilities.bubbleSort(List)`.
 The name of the algorithm comes from metaphorical bubbles always moving up in a liquid.
 Try your method with different lists and see how long it takes to sort them. You can use the static method 
 `System.currentTimeMillis()` to print on the screen the current time (measured in milliseconds since 1st January 1970).
@@ -196,7 +196,7 @@ Try your method with different lists and see how long it takes to sort them. You
 Cocktail sort is a combination of two bubble sorts. First the list is traversed in one direction to move the highest 
 element to the end, and then it is traversed in the opposite direction to move the lowest element to the beginning.
 This bidirectional process is repeated until there are no swaps in the list, which shows that the list is sorted.
-Implement cocktail sort in a static method in a class, maybe `ListUtilities.cocktailSort(List)`.
+Implement cocktail sort in a static method in a class, maybe `e09_to_e13_sortingLists.ListUtilities.cocktailSort(List)`.
 The name of the algorithm comes from a metaphorical cocktail shaker moving up and down, up and down...
 Try your method with the same lists as bubble sort and see how long it takes to sort them.
 
@@ -210,12 +210,12 @@ Then compare its performance with the other two methods. In order to see signifi
 
 (*to be implemented*)
 
-[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E01-InstanceCounter/Spy.java
-[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E02-DoPracticeWhileNotUnderstood/MarksList.java
-[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientSinglyLinkedList.java
-[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientDoublyLinkedList.java
-[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientCircularSinglyList.java
-[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E07-Queues/IntQueueImpl.java
-[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E08-Stacks/IntStack.java
-[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/ListUtilities.java
-[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/IntegerList.java
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E01-InstanceCounter/e01_instanceCounter.Spy.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E02-DoPracticeWhileNotUnderstood/e02_doPracticeWhileNotUnderstood.MarksList.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/e03_to_e06_linkedLists.PatientSinglyLinkedList.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/e03_to_e06_linkedLists.PatientDoublyLinkedList.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/e03_to_e06_linkedLists.PatientCircularSinglyList.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E07-Queues/e07_queues.IntQueueImpl.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E08-Stacks/e08_stacks.IntStack.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/e09_to_e13_sortingLists.ListUtilities.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/e09_to_e13_sortingLists.IntegerList.java

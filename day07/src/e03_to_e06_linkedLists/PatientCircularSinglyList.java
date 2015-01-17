@@ -1,4 +1,4 @@
-// 6. Circular lists
+package e03_to_e06_linkedLists;// 6. Circular lists
 
 public class PatientCircularSinglyList implements LinkedList {
 	private Patient first;
@@ -23,7 +23,7 @@ public class PatientCircularSinglyList implements LinkedList {
 	
 	public boolean delete(Patient patient) {
 		if(first==null) {	
-			System.out.println("Patient to delete not found: the list is empty");
+			System.out.println("e03_to_e06_linkedLists.Patient to delete not found: the list is empty");
 			return false;
 		} else if(first==patient) {
 			Patient last = first;
@@ -36,7 +36,7 @@ public class PatientCircularSinglyList implements LinkedList {
 			Patient aux = first;
 			while(true) {
 				if(aux.getNext()==first) {
-					System.out.println("Patient to delete not found");
+					System.out.println("e03_to_e06_linkedLists.Patient to delete not found");
 					return false;
 				} else if(aux.getNext()==patient) {
 					aux.setNext(aux.getNext().getNext());

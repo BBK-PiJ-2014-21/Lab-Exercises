@@ -1,4 +1,4 @@
-// 5. Doubly-linked lists
+package e03_to_e06_linkedLists;// 5. Doubly-linked lists
 
 public class PatientDoublyLinkedList implements LinkedList {
 	private Patient first;
@@ -23,7 +23,7 @@ public class PatientDoublyLinkedList implements LinkedList {
 	
 	public boolean delete(Patient patient) {
 		if(first==null) {
-			System.out.println("Patient to delete not found: the list is empty");
+			System.out.println("e03_to_e06_linkedLists.Patient to delete not found: the list is empty");
 			return false;
 		} else if(first==patient) {	
 			first = first.getNext();
@@ -32,7 +32,7 @@ public class PatientDoublyLinkedList implements LinkedList {
 			Patient aux = first;
 			while(true) {
 				if(aux.getNext()==null) {
-					System.out.println("Patient to delete not found");
+					System.out.println("e03_to_e06_linkedLists.Patient to delete not found");
 					return false;
 				} else	if(aux.getNext()==patient) {
 					aux.setNext(aux.getNext().getNext());

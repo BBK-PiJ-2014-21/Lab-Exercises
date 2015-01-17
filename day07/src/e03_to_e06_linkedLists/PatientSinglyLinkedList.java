@@ -1,4 +1,4 @@
-// 3. Singly-linked lists
+package e03_to_e06_linkedLists;// 3. Singly-linked lists
 
 public class PatientSinglyLinkedList implements LinkedList {
 	private Patient first;
@@ -29,7 +29,7 @@ public class PatientSinglyLinkedList implements LinkedList {
 			Patient aux = first;
 			while(true) {
 				if(aux.getNext()==null) {
-					System.out.println("Patient to delete not found");
+					System.out.println("e03_to_e06_linkedLists.Patient to delete not found");
 					return false;
 				} else	if(aux.getNext()==patient) {
 					aux.setNext(aux.getNext().getNext());

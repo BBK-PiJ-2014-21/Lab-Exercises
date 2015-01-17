@@ -1,4 +1,4 @@
-// 07. Queues (*) - Test
+package e07_queues;// 07. Queues (*) - Test
 
 public class IntQueueTest {
 	

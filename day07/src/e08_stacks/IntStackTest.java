@@ -1,4 +1,4 @@
-// 8. Stacks (*)
+package e08_stacks;// 8. Stacks (*)
 
 public class IntStackTest {
 	public static void main(String[] args) {
