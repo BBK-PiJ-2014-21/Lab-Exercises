@@ -13,11 +13,14 @@ Before the next day, you should have achieved the following learning goals:
 Complete the example given in the notes with a class called [Spy] [1]. Your class must have:
   * one and only one `static` variable, an `int` called `spyCount`.
   * an instance variable of type `int` for the spy's ID.
-  * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints on the screen the ID of this spy plus the total number of spies so far.
+  * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints 
+    on the screen the ID of this spy plus the total number of spies so far.
   * a `die()` method that prints on the screen "Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far. 
-  * a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
- 
- Observe how the static variable is accessed by different objects both to increment and to decrement it.
+  *  a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
+   
+  
+
+Observe how the static variable is accessed by different objects both to increment and to decrement it.
 
  (*created class* [Spy] [1])
  
@@ -48,9 +51,10 @@ Create a linked list following the "hospital and patients" example of the notes:
   1. Create the linked list and add several elements to it (around 10 is fine).
   2. Go through the list printing out the content of each element.
   3. Delete a couple of elements from the list.
-  4. Print the elements in the list again. Check that the deleted elements have been deleted. Check that you can delete the first element too.
+  4. Print the elements in the list again. Check that the deleted elements have been deleted. 
+    Check that you can delete the first element too.
 
-  Hint: Note that you cannot delete the first element from inside the list because you need to update the pointer `patientListStart`.
+Hint: Note that you cannot delete the first element from inside the list because you need to update the pointer `patientListStart`.
 To add or delete the first element of a list, you must do it from outside the list.  
 
 (*created class* [PatientSinglyLinkedList] [3])
@@ -74,7 +78,12 @@ patients" example as a starting point.
   4. Traverse it forwards and backwards printing out the content of each element.
   5. Add a new element to the list. Try to delete an element that is NOT in the list.
   6. Traverse it forwards and backwards printing out the content of each element.
+<<<<<<< HEAD
  Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
+=======
+  
+Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
+>>>>>>> 95582be7cef51f579419e513aac3799dce592627
 the `add` and `delete` methods to make sure you do not have loose pointers.
 
 (*created class* [PatientDoublyLinkedList] [4])
