@@ -1,8 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 /**
- * JUnit test for class Person (Exercise 3 - Practice "Find bugs once")
- *
+ * JUnit tests for class Person (Exercise 3 - Practice "Find bugs once")
  */
 public class PersonTest {
 	/**
@@ -17,19 +16,32 @@ public class PersonTest {
 		assertEquals(output, expected);
 	}
 	/**
-	 * Method which tests a String with two spaces between names:
-	 * it fails (StringIndexOutOfBoundsException: String index out of range: 0)
+	 * Method which tests a String with two spaces between names: originally failed
+	 * java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	 * added " +" to split() to handle multiple spaces: passed the test successfully.
 	 */
 	@Test
 	public void testMultipleSpaces() {
 		Person p = new Person();
 		String input = "Tom W.  OhTwoSpaces";
 		String output = p.getInitials(input);
-		System.out.println(output);
 		String expected = "TWO";
 		assertEquals(output, expected);
 	}
-	
+	/**
+	 * Method which tests a String which begins with spaces: originally failed
+	 * java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	 * added trim() to split() method to trim initial spaces: passed the test successfully.
+ 	 */
+	@Test
+	public void testInitialSpaces() {
+		Person p = new Person();
+		String input = "   Three Initial Spaces  plus BLABLABLA";
+		String output = p.getInitials(input);
+		String expected = "TISPB";
+		assertEquals(output, expected);
+	}
+
 }
 
 
