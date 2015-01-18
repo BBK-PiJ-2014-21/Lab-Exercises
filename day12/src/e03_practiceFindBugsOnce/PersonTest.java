@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 /**
- * JUnit tests for class e03_practiceFindBugsOnce.Person (Exercise 3 - Practice "Find bugs once")
+ * JUnit tests for class Person (Day 12, Exercise 3 - Practice "Find bugs once")
  */
 public class PersonTest {
 	/**
