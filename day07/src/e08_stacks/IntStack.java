@@ -1,7 +1,5 @@
 package e08_stacks;// 8. Stacks (*)
 
-import e07_queues.IntegerNode;
-
 public class IntStack {
 	private IntegerNode first;
 	private int size;
@@ -16,7 +14,7 @@ public class IntStack {
 		if(first==null) {
 			first = new IntegerNode(value);
 		} else {
-			e07_queues.IntegerNode newInt = new IntegerNode(value);
+			IntegerNode newInt = new IntegerNode(value);
 			newInt.setNext(first);
 			first = newInt;
 		}

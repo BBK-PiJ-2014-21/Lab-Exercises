@@ -2,18 +2,18 @@ package e08_stacks;// 8. Stacks (*)
 
 public class IntegerNode {
 	private int value;
-	private e07_queues.IntegerNode next;
+	private IntegerNode next;
 	
 	public IntegerNode(int value) {
 		this.value = value;
 		this.next = null;
 	}
 	
-	public e07_queues.IntegerNode getNext() {
+	public IntegerNode getNext() {
 		return this.next;
 	}
 	
-	public void setNext(e07_queues.IntegerNode node) {
+	public void setNext(IntegerNode node) {
 		this.next = node;
 	}
 	
