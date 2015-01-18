@@ -4,7 +4,7 @@ import maps.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 /**
- * JUnit test for class HashUtilities
+ * JUnit test for class HashUtilities (Day 8, Exercise 5.1 - Hash function)
  */
 public class HashUtilitiesTest {
     @Test
