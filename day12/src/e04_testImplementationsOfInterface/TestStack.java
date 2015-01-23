@@ -18,10 +18,10 @@ import static org.junit.Assert.assertTrue;
  * JUnit tests for interface StringStack (Day 8, package stringStack)
  */
 @RunWith(Parameterized.class)
-public class StackTest {
+public class TestStack {
     private StringStack stack;
     
-    public StackTest(StringStack stack) {
+    public TestStack(StringStack stack) {
         this.stack = stack;
     }
     /**
