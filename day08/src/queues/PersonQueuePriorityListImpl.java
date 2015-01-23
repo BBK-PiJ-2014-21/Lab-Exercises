@@ -2,7 +2,7 @@ package queues;// 2. queues.Supermarket queue revisited (*)
 
 public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 
-	public Person retrieveOver(int age) {
+	private Person retrieveOver(int age) {
 		if(last==null) {
 			return null;
 		} else {
