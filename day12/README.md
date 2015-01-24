@@ -68,14 +68,14 @@ that the class(es) implementing the interface work as expected.
 ### 5. Testing dynamic structures
 
 Write batteries of tests to verify the functionality of the dynamic structures you have created in past weeks:
-    * doubly-linked list (day 7)
-    * circular list (day 7)
-    * simple map (day 8)
-    * sorted list (day 7)
-    Make sure that you test border cases, including situations like:
-    * Adding the first element.
-    * Removing the last element.
-    * Adding the first element and then removing it... and then adding another one.
+ * doubly-linked list (day 7)
+ * circular list (day 7)
+ * simple map (day 8)
+ * sorted list (day 7)
+   Make sure that you test border cases, including situations like:
+ * Adding the first element.
+ * Removing the last element.
+ * Adding the first element and then removing it... and then adding another one.
 
 (*to be implemented*)
 
@@ -84,15 +84,15 @@ Write batteries of tests to verify the functionality of the dynamic structures y
 If you have finished with the other exercises, write additional batteries of tests for other programs (in particular,
 the exercises marked with a star) that you have written in past weeks. Some exercises that provide a harder challenge 
 to test properly are:
-    * the anti-aircraft game from day 6
-    * any of the sort algorithms from day 7
-    * any of the unfair queues from day 8
-    * the hash-table (day 8)
-    * deletion of elements in a tree (day 9)
-    * re-balancing of a tree (day 9)
-    * the abstract syntax tree (day 9)
-    * the pseudo-git tree (day 9)
-    
+ * the anti-aircraft game from day 6
+ * any of the sort algorithms from day 7
+ * any of the unfair queues from day 8
+ * the hash-table (day 8)
+ * deletion of elements in a tree (day 9)
+ * re-balancing of a tree (day 9)
+ * the abstract syntax tree (day 9)
+ * the pseudo-git tree (day 9)
+
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day12/src/e02_testingMathematicalFunctions/HashUtilitiesTest.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day12/src/e03_practiceFindBugsOnce/Person.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day12/src/e03_practiceFindBugsOnce/PersonTest.java
