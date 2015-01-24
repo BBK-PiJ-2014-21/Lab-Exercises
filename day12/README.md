@@ -68,6 +68,7 @@ that the class(es) implementing the interface work as expected.
 ### 5. Testing dynamic structures
 
 Write batteries of tests to verify the functionality of the dynamic structures you have created in past weeks:
+
     * doubly-linked list (day 7)
     * circular list (day 7)
     * simple map (day 8)
@@ -84,6 +85,7 @@ Write batteries of tests to verify the functionality of the dynamic structures y
 If you have finished with the other exercises, write additional batteries of tests for other programs (in particular,
 the exercises marked with a star) that you have written in past weeks. Some exercises that provide a harder challenge 
 to test properly are:
+
     * the anti-aircraft game from day 6
     * any of the sort algorithms from day 7
     * any of the unfair queues from day 8
