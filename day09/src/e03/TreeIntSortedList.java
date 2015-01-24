@@ -29,7 +29,7 @@ public class TreeIntSortedList implements IntSortedList {
         }
     }
 
-//TODO: override to print by commas instead of brackets (find a way to inherit method i.e in e02_IntegerTreeSetNode)
+//TODO: override to print by commas instead of brackets (create subclass of e02_IntegerTreeSetNode and override add())
 //      (if possible without modifying IntegerTreeNode)
     public String toString() {
         if(node==null) {
