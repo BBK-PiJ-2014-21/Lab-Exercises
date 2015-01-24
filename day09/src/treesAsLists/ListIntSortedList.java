@@ -1,15 +1,16 @@
-package e03;
+package treesAsLists;
 
-import e02.IntegerListNode;
-import e02.ListIntSet;
+import treesAsSets.IntegerListNode;
+import treesAsSets.ListIntSet;
 
 /**
  * This class inherits the methods to implement the interface from a previous exercise
- * (package e02 - ListIntSet), overriding just the add() method to accept duplicates. 
+ * (package treesAsSets - ListIntSet), overriding just the add() method to accept duplicates and
+ * TODO sorting the list! see if you can inherit a method from Day 7 or 8 (sorted list/queue)
  */
-public class LinkedIntSortedList extends ListIntSet implements IntSortedList {
+public class ListIntSortedList extends ListIntSet implements IntSortedList {
     
-    public LinkedIntSortedList() {
+    public ListIntSortedList() {
         super();
     }
     
