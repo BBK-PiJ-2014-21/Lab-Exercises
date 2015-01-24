@@ -42,7 +42,7 @@ public class TestStack {
         assertTrue("Stack is not empty", stack.isEmpty());
     }
     /**
-     * Pushing a String and peeking at it: both implementations passed the test
+     * Pushing a String and peeking at it: both implementations passed the test.
      */
     @Test
     public void pushAndPeek() {
@@ -52,7 +52,7 @@ public class TestStack {
     }
     /**
      * Ten push, ten pull: comparing each String;
-     * then peeking at empty stack: 
+     * then peeking at empty stack: both implementations passed the test.
      */
     @Test
     public void pushAndPop() {
