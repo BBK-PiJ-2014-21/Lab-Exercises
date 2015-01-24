@@ -1,4 +1,4 @@
-package e01_instanceCounter;// 1. Instance counter
+package instanceCounter;// 1. Instance counter
 
 public class Spy {
 	private static int spyCount;
@@ -12,7 +12,7 @@ public class Spy {
 	}
 	
 	public void die() {
-		System.out.println("e01_instanceCounter.Spy " + id + " has been detected and eliminated");
+		System.out.println("instanceCounter.Spy " + id + " has been detected and eliminated");
 		spyCount--;
 		System.out.println("Total number of spies: " + spyCount);
 	}

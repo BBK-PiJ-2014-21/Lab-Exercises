@@ -1,4 +1,4 @@
-package e03_to_e06_linkedLists;// 3. Singly-linked lists
+package linkedLists;// 3. Singly-linked lists
 
 public class Patient {
 	private String name;

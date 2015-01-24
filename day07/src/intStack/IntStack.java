@@ -1,4 +1,4 @@
-package e08_stacks;// 8. Stacks (*)
+package intStack;// 8. Stacks (*)
 
 public class IntStack {
 	private IntegerNode first;

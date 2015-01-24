@@ -1,4 +1,4 @@
-package e07_queues;// 07. Queues (*)
+package intQueue;// 07. Queues (*)
 
 public class IntegerNode {
 	int value;

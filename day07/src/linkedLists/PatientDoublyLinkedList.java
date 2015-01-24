@@ -1,9 +1,9 @@
-package e03_to_e06_linkedLists;// 3. Singly-linked lists
+package linkedLists;// 5. Doubly-linked lists
 
-public class PatientSinglyLinkedList implements LinkedList {
+public class PatientDoublyLinkedList implements LinkedList {
 	private Patient first;
 	
-	public PatientSinglyLinkedList() {
+	public PatientDoublyLinkedList() {
 		first = null;
 	}
 
@@ -16,23 +16,27 @@ public class PatientSinglyLinkedList implements LinkedList {
 			while(aux.getNext()!=null) {
 				aux = aux.getNext();
 			}
-			aux.setNext(newPatient);		
+			aux.setNext(newPatient);
+			newPatient.setPrevious(aux);
 		}
 	}
 	
 	public boolean delete(Patient patient) {
 		if(first==null) {
+			System.out.println("linkedLists.Patient to delete not found: the list is empty");
 			return false;
 		} else if(first==patient) {	
 			first = first.getNext();
+			first.setPrevious(null);
 		} else {
 			Patient aux = first;
 			while(true) {
 				if(aux.getNext()==null) {
-					System.out.println("e03_to_e06_linkedLists.Patient to delete not found");
+					System.out.println("linkedLists.Patient to delete not found");
 					return false;
 				} else	if(aux.getNext()==patient) {
 					aux.setNext(aux.getNext().getNext());
+					aux.getNext().setPrevious(aux);
 					break;
 				} else {
 					aux = aux.getNext();
@@ -41,23 +45,7 @@ public class PatientSinglyLinkedList implements LinkedList {
 		}
 		return true;
 	}
-
-	public Patient getLastPatient() {
-		if(first==null) {
-			System.out.println("The list is empty");
-			return null;
-		} else {
-			Patient aux = first;
-			while(true) {
-				if(aux.getNext()==null) {
-					return aux;
-				} else {
-					aux=aux.getNext();
-				}
-			}
-		}
-	}
-		
+	
 	public void printDetails(Patient patient) {
 		if(patient!=null) {
 			System.out.println(patient.getName() + ", " + patient.getAge() + ", " + patient.getIllness());
@@ -81,6 +69,23 @@ public class PatientSinglyLinkedList implements LinkedList {
 		}
 	}
 	
+	public void printListBackwards() {
+		if(first==null) {
+			System.out.println("The list is empty.");
+			return;
+		} else {	
+			Patient aux = first;
+			while(aux.getNext()!=null) {
+				aux = aux.getNext();
+			}
+			printDetails(aux);
+			while(aux.getPrevious()!=null) {
+				aux = aux.getPrevious();
+				printDetails(aux);
+			}
+		}
+	}	
+	
 	public int calculateLength() {  // 4. Queue length
 		int length = 0;
 		if(first!=null) {
@@ -93,5 +98,19 @@ public class PatientSinglyLinkedList implements LinkedList {
 		}
 		return length;
 	}	
+	
+	public Patient getLastPatient() {
+		if(first==null) {
+			System.out.println("The list is empty");
+			return null;
+		} else {
+			Patient aux = first;
+			while(aux.getNext()!=null) {
+				aux = aux.getNext();
+			}
+			return aux;
+		}
+	}
+			
 	
 }

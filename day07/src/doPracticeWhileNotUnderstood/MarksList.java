@@ -1,4 +1,4 @@
-package e02_doPracticeWhileNotUnderstood;// 2. do {practice} while (!understood);
+package doPracticeWhileNotUnderstood;// 2. do {practice} while (!understood);
 
 import java.util.Scanner;
 
