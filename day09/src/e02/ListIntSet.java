@@ -2,11 +2,19 @@ package e02;
 
 public class ListIntSet implements IntSet {
 	private IntegerListNode first;
-	
+    
 	public ListIntSet() {
 		first = null;
 	}
-	
+    
+    public IntegerListNode getNode() {
+        return first;
+    }
+    
+    public void setNode(IntegerListNode node) {
+        first = node;
+    }
+    
 	public void add(int n) {
 		if(first==null) {
 			first = new IntegerListNode(n);
