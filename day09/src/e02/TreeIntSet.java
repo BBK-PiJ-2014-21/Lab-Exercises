@@ -1,10 +1,5 @@
 package e02;
 
-/**
- * This class doesn't have a separated node class, it inherits directly
- * from {@see IntegerTreeNode} its properties as a Node and most methods
- * (already done in the previous exercise - package e01) which implements {@see IntSet}
- */
 public class TreeIntSet implements IntSet {
     private IntegerTreeSetNode first;
     
@@ -12,7 +7,6 @@ public class TreeIntSet implements IntSet {
 		first = null;
 	}
 
-    @Override
     public void add(int value) {
         if(first==null) {
             first = new IntegerTreeSetNode(value);
@@ -36,10 +30,13 @@ public class TreeIntSet implements IntSet {
             return first.containsVerbose(value);
         }
     }
-        
-    // TODO: override this method, should separate values by commas, not brackets (as per interface)
+
     public String toString() {
-        return first.toStringSimplified();
+        if (first == null) {
+            return "<The list is empty>";
+        } else {
+            return first.toString();
+        }
     }
 		
 }	
