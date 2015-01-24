@@ -1,4 +1,4 @@
-package e02;// 2.3 Trees as sets - Implementation as list
+package e02;
 
 public class IntegerListNode {
 	private int value;

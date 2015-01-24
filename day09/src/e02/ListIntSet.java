@@ -1,10 +1,10 @@
-package e02;// 2.3 Trees as sets - Implementation as list
+package e02;
 
 public class ListIntSet implements IntSet {
 	private IntegerListNode first;
 	
 	public ListIntSet() {
-		this.first = null;
+		first = null;
 	}
 	
 	public void add(int n) {
@@ -29,14 +29,14 @@ public class ListIntSet implements IntSet {
 			IntegerListNode aux = first;
 			while(aux.getNext()!=null) {
 				if(aux.getValue()==n) {
-					return false;
+					return true;
 				}
 				aux = aux.getNext();
 			}
 			if(aux.getValue()==n) {
-				return false;
-			} else {
 				return true;
+			} else {
+				return false;
 			}
 		}
 	}
@@ -49,15 +49,15 @@ public class ListIntSet implements IntSet {
 			while(aux.getNext()!=null) {
 				System.out.println(aux.getValue());
 				if(aux.getValue()==n) {
-					return false;
+					return true;
 				}
 				aux = aux.getNext();
 			}
 			System.out.println(aux.getValue());
 			if(aux.getValue()==n) {
-				return false;
-			} else {
 				return true;
+			} else {
+				return false;
 			}
 		}
 	}
@@ -65,7 +65,7 @@ public class ListIntSet implements IntSet {
 	public String toString() {
 		String s = "";
 		if(first==null) {
-			return s;
+			return "<The list is empty>";
 		} else {
 			IntegerListNode aux = first;
 			s = s + first.getValue();
@@ -73,9 +73,6 @@ public class ListIntSet implements IntSet {
 				aux = aux.getNext();				
 				s = s + ", " + aux.getValue();
 
-			}
-			if(!aux.equals(first)) {
-				s = s + ", " + aux.getValue();
 			}
 			return s;
 		}

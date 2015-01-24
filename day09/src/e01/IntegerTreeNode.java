@@ -1,9 +1,11 @@
-package e01;// 1. Integer Binary Tree
+// 1. Integer Binary Tree
+
+package e01;
 
 public class IntegerTreeNode {
-	int value;
-	IntegerTreeNode right;
-	IntegerTreeNode left;
+	private int value;
+	private IntegerTreeNode right;
+	private IntegerTreeNode left;
 	
 	
 	public IntegerTreeNode(int value) {
@@ -16,6 +18,22 @@ public class IntegerTreeNode {
 		return this.value;
 	}
 	
+    public IntegerTreeNode getRight() {
+        return right;
+    }
+    
+    public void setRight(IntegerTreeNode newNode) {
+        right = newNode;
+    }
+    
+    public IntegerTreeNode getLeft() {
+        return left;
+    }
+    
+    public void setLeft(IntegerTreeNode newNode) {
+        left = newNode;
+    }
+    
 	public void add(int newNumber) {
 		if(newNumber>this.value) {
 			if(right==null) {
@@ -146,7 +164,7 @@ public class IntegerTreeNode {
 			}
 		}
 	}
-	
+
 }
 		
 	
