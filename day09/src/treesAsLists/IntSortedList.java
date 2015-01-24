@@ -1,4 +1,4 @@
-package e03;
+package treesAsLists;
 
 public interface IntSortedList {
 	

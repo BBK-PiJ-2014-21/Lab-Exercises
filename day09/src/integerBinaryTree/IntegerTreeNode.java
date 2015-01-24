@@ -1,6 +1,6 @@
 // 1. Integer Binary Tree
 
-package e01;
+package integerBinaryTree;
 
 public class IntegerTreeNode {
 	private int value;

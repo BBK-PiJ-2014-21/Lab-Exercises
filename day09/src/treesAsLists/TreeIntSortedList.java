@@ -1,8 +1,8 @@
-package e03;
+package treesAsLists;
 
-import e01.IntegerTreeNode;
+import integerBinaryTree.IntegerTreeNode;
 /**
- * This implementation re-use the code in package e01 (IntegerTreeNode class)
+ * This implementation re-use the code in package integerBinaryTree (IntegerTreeNode class)
  * as all the methods were already implemented recursively on that class
  * (which is used here as the node). Duplicates are added towards the left branch.
  */
@@ -29,7 +29,7 @@ public class TreeIntSortedList implements IntSortedList {
         }
     }
 
-//TODO: override to print by commas instead of brackets (create subclass of e02_IntegerTreeSetNode and override add())
+//TODO: override to print by commas instead of brackets (create subclass of IntegerTreeSetNode and override add())
 //      (if possible without modifying IntegerTreeNode)
     public String toString() {
         if(node==null) {

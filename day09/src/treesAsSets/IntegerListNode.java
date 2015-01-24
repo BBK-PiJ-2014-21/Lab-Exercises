@@ -1,4 +1,4 @@
-package e02;
+package treesAsSets;
 
 public class IntegerListNode {
 	private int value;

@@ -1,4 +1,4 @@
-package e02;
+package treesAsSets;
 
 public class ListIntSet implements IntSet {
 	private IntegerListNode first;

@@ -1,4 +1,4 @@
-package e01;
+package integerBinaryTree;
 
 public class IntegerTreeNodeTest {
 	
