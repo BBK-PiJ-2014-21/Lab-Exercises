@@ -1,12 +1,3 @@
-/* π (**)
- * Pi, the ratio of a circle's circumference to its diameter, can be computed 
- * by adding the following terms:
- * π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...
- * Create a program that asks the user for a number n and then
- * calculates n of this infinite sum. How many terms do you need
- * to get the first three digits right (3.14)?
- * How many for the first 10 digits (3.13149265358... ...)?
- */
 
 System.out.print("Please enter a number: ");
 String s = System.console().readLine();

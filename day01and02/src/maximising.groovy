@@ -1,9 +1,3 @@
-/* 8. Maximising
- *	Write a program that read a (arbitrary long) sequence 
- *	of positive numbers. The sequence is ended when the users
- *	enters "-1". At that point, the program must output the 
- *	highest number in the sequence.
- */
 
 long n1 = 0;
 long n2 = 0;

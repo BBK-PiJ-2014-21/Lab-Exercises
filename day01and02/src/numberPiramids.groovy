@@ -1,16 +1,3 @@
-/* 12. Number piramids
- *	Write a program that output a number piramid like the one below.
- *	
- *	1
- *	22
- *	333
- *	4444
- *	55555
- *	666666
- *	7777777
- *	\ldots
- *
- */
 
 System.out.print("Please enter the number of lines: ");
 String s = System.console().readLine()

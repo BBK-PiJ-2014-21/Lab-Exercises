@@ -1,8 +1,4 @@
-/* 7. Naive sorting
- *	Write a program that reads three numbers and prints them in order,
- *	from lowest to highest.
- */
- 
+
 println("Please enter three numbers:");
 String s = System.console().readLine()
 long n1 = Integer.parseInt(s)

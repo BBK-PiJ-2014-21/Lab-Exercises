@@ -1,6 +1,3 @@
-/* 13. All the primes up to 1,000 (*)
- *	Write a program that prints on screen all prime numbers up to 1,000.
- */
 
 int dividend = 2;
 int divisor = 2;

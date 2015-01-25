@@ -1,23 +1,3 @@
-/* 11. Poker hands (*)
- *	Read five cards from the user. For each card, read the rank (1,2,3,4,5,6,7,8,9,10,J,Q,K)
- *	and the suit ("spades", "hearts", "diamonds", "clubs"). Each of the five cards must be valid
- *	before accepting the next one. Once the program has the five cards, it should tell the user
- *	what is the best hand she has got, as per the following list (from best to worst):
- *
- *	STRAIGHT FLUSH: all cards are of the same suite and their ranks are consecutive.
- *					note that they are probably not ordered as they were entered.
- *	POKER: four of the five cards have the same rank.
- *	FULL HOUSE: three of a kind plus two of a kind.
- *	FLUSH: all cards share the same suit, but are not consecutive.
- *	STRAIGHT: all cards are consecutive, but not of the same suit.
- *	THREE OF A KIND: three of the five cards have the same rank.
- *	TWO PAIRS: two pairs (see below).
- *	PAIR: two of the five cards have the same rank.
- *	NOTHING: any other situation.
- *
- *	If you ever launch an online poker business, this could be one (very small)
- *	piece of it.
- */	
 
 int rank1 = 0
 int rank2 = 0
