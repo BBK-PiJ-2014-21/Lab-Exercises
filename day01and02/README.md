@@ -67,14 +67,14 @@ Write a program that asks a number from the user, then says whether the number i
 Remember that a number that is divisible by any number apart from 1 and itself is prime.
 You can use the modulo operator (if **a%b** is zero, then **a** is divisible by **b**).
  
-(*created Groovy script* [PrimeNumbers] [1])
+(*created script* [primeNumbers.groovy] [1])
 
 ### 5. Multiplication
 
 Write a program that requests two numbers from the user and then outputs its product. 
 You cannot use the `*` operator.
 
-(*created Groovy script* [Multiplication] [2])
+(*created script* [multiplication.groovy] [2])
 
 ### 6. Division
 
@@ -82,20 +82,20 @@ Write a program that requests two numbers from the user and then outputs the quo
 e.g. if the user enters 7 and 3, your program should output something like "7 divided by 3 is 2, remainder 1".
 You cannot use the `/` or `%` operators.
 
-(*created Groovy script* [Division] [3])
+(*created script* [division.groovy] [3])
 
 ### 7. Naive sorting
 
 Write a program that reads three numbers and prints them in order, from lowest to highest.
 
-(*created Groovy script* [NaiveSorting] [4])
+(*created script* [naiveSorting.groovy] [4])
 
 ### 8. Maximising
 
 Write a program that read a (arbitrary long) sequence of positive numbers. The sequence is ended when the users
 enters `-1`. At that point, the program must output the highest number in the sequence.
 
-(*created Groovy script* [Maximising] [5])
+(*created script* [maximising.groovy] [5])
 
 ### 9. Going Up!
 
@@ -104,14 +104,14 @@ print "Yes" if the numbers were consecutive and increasing and "No" otherwise.
 Sequences "1,2,3,4,-1" and "5,6,7,8,9,10,11,-1" should output "Yes", but "2,3,5,6,7,-1", "10,9,8,7,-1", 
 and "1,1,2,3,4,5-1" should output "No".
 
-(*created Groovy script* [GoingUp] [6])
+(*created script* [goingUp.groovy] [6])
 
 ### 10. You said high, I said low...
 
 Modify your former program so that it outputs "Yes" when the numbers are consecutive, regardless of whether
 they go up or down. For example, both "2,3,4,5,6,-1" and "10,9,8,7-1" should now result in "Yes".
 
-(*created Groovy script* [YouSaidHighIsaidLow] [7])
+(*created script* [youSaidHighIsaidLow.groovy] [7])
 
 ### 11. Poker hands (*)
 
@@ -133,7 +133,7 @@ as per the following list (from best to worst):
 
 If you ever launch an online poker business, this could be one (very small) piece of it.
 
-(*created Groovy script* [PokerHands] [8])
+(*created script* [pokerHands.groovy] [8])
 
 ### 12. Number piramids
 
@@ -148,19 +148,19 @@ Write a program that output a number piramid like the one below.
 	7777777
 	\ldots
 
-(*created Groovy script* [NumberPiramids] [9])
+(*created script* [numberPiramids.groovy] [9])
 
 ### 13. All the primes up to 1,000 (*)
 
 Write a program that prints on screen all prime numbers up to 1,000.
 
-(*created Groovy script* [AllThePrimesUpTo1000] [10])
+(*created script* [allThePrimesUpTo1000.groovy] [10])
 
 ### 14. Up to 1,000 primes (*)
 
 Modify the program that you wrote for the former exercise so that it writes on screen the first 1,000 primes.
 
-(*created Groovy script* [UpTo1000primes] [11])
+(*created script* [upTo1000primes.groovy] [11])
 
 ### 15. Guess my number (*)
 
@@ -185,7 +185,7 @@ The output could be similar to the following example:
  (Hint: to get a random number between 0 and 1000, use the following line:)
 	`int numberToGuess = Math.abs(1000 * Math.random())`
 	
-(*created Groovy script* [GuessMyNumber] [12])
+(*created script* [guessMyNumber.groovy] [12])
 
 ### 16. Rock, Paper, Scissors (*)
 
@@ -195,7 +195,7 @@ They correspond to the selections made by 2 players playing the game of rock-pap
  Make the program accept inputs until one player's score is more than 3 points ahead of the other.
  Hint: remember that you can use .substring() to get the elements of a String.
 
-(*created Groovy script* [RockPaperScissors] [13])
+(*created script* [rockPaperScissors.groovy] [13])
 
 ### 17. Optimus Prime (**)
 
@@ -203,7 +203,7 @@ Write a program that reads an integer number from the user, and then outputs the
 If there are two prime numbers at the same distance, it should output both. 
 For instance, if the user enters 5116, the output should be 5113 *and* 5119.
 
-(*created Groovy script* [OptimusPrime] [14])
+(*created script* [optimusPrime.groovy] [14])
 
 ### 18. π (**)
 
@@ -215,7 +215,7 @@ Create a program that asks the user for a number n and then calculates n of this
 How many terms do you need to get the first three digits right (3.14)?
 How many for the first 10 digits (3.13149265358... ...)?
 
-(*created Groovy script* [Pi] [15])
+(*created script* [pi.groovy] [15])
 
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day01and02/src/primeNumbers.groovy
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day01and02/src/multiplication.groovy
