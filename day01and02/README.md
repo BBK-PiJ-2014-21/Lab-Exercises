@@ -120,7 +120,7 @@ Read five cards from the user. For each card, read the rank (1,2,3,4,5,6,7,8,9,1
 Once the program has the five cards, it should tell the user what is the best hand she has got, 
 as per the following list (from best to worst):
  * **Straight flush:** all cards are of the same suite and their ranks are consecutive.
- 					note that they are probably not ordered as they were entered.
+                       Note that they are probably not ordered as they were entered.
  * **Poker:** four of the five cards have the same rank.
  *  **Full House:** three of a kind plus two of a kind.
  * **Flush:** all cards share the same suit, but are not consecutive.
