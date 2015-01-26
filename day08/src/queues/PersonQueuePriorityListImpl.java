@@ -17,9 +17,12 @@ public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 				}
 				aux = aux.getNext();
 			}
+            if(oldest==null) {
+                return null;
+            }
 			Person previous = last;
 			if(aux.getAge()>=age) {	// person to retrieve is the last element
-				while(!previous.getNext().equals(aux)) {
+				while(!previous.equals(aux)) {
 					previous = previous.getNext();
 				}
 				previous.setNext(null);
