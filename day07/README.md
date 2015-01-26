@@ -10,13 +10,13 @@ Before the next day, you should have achieved the following learning goals:
 
 ### 1. Instance counter
 
-Complete the example given in the notes with a class called [Spy] [1]. Your class must have:
+Complete the example given in the notes with a class called [instanceCounter.Spy] [1]. Your class must have:
   * one and only one `static` variable, an `int` called `spyCount`.
   * an instance variable of type `int` for the spy's ID.
   * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints 
     on the screen the ID of this spy plus the total number of spies so far.
-  * a `die()` method that prints on the screen "Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far. 
-  *  a main method in which several objects `Spy` are created and some of them killed (their method `die()` is called).
+  * a `die()` method that prints on the screen "instanceCounter.Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far.
+  *  a main method in which several objects `instanceCounter.Spy` are created and some of them killed (their method `die()` is called).
    
   
 
@@ -79,7 +79,7 @@ patients" example as a starting point.
   5. Add a new element to the list. Try to delete an element that is NOT in the list.
   6. Traverse it forwards and backwards printing out the content of each element.
   
-Hint: First you need to add a new field to Patient for the pointer going "backwards". Then you need to modify
+Hint: First you need to add a new field to linkedLists.Patient for the pointer going "backwards". Then you need to modify
 the `add` and `delete` methods to make sure you do not have loose pointers.
 
 (*created class* [PatientDoublyLinkedList] [4])
@@ -157,7 +157,7 @@ Stack is empty
 ### 9. From array to list
 
 Create a static method that takes an array of integers and returns a linked list of integers in the same order
-as the original array. You can put this method in a class called [ListUtilities] [] so that you can easily use it
+as the original array. You can put this method in a class called [sortedLists.ListUtilities] [] so that you can easily use it
 for the following exercises.
 Initialising an array with 15-20 elements is very easy with curly-brackets-notations, so it is common to create
 an array and then convert it into a dynamic structure automatically.
@@ -184,7 +184,7 @@ The bubble sort algorithm is the simplest sorting algorithm there is:
   3. Now you have the highest element at the end of the list.
   4. Move back to the beginning and repeat the whole process until your list is sorted.
   5. Once you pass through the list without swapping elements, your list is sorted.
-Put your implementation in a static method in a class, maybe `ListUtilities.bubbleSort(List)`.
+Put your implementation in a static method in a class, maybe `sortedLists.ListUtilities.bubbleSort(List)`.
 The name of the algorithm comes from metaphorical bubbles always moving up in a liquid.
 Try your method with different lists and see how long it takes to sort them. You can use the static method 
 `System.currentTimeMillis()` to print on the screen the current time (measured in milliseconds since 1st January 1970).
@@ -196,7 +196,7 @@ Try your method with different lists and see how long it takes to sort them. You
 Cocktail sort is a combination of two bubble sorts. First the list is traversed in one direction to move the highest 
 element to the end, and then it is traversed in the opposite direction to move the lowest element to the beginning.
 This bidirectional process is repeated until there are no swaps in the list, which shows that the list is sorted.
-Implement cocktail sort in a static method in a class, maybe `ListUtilities.cocktailSort(List)`.
+Implement cocktail sort in a static method in a class, maybe `sortedLists.ListUtilities.cocktailSort(List)`.
 The name of the algorithm comes from a metaphorical cocktail shaker moving up and down, up and down...
 Try your method with the same lists as bubble sort and see how long it takes to sort them.
 
@@ -210,12 +210,12 @@ Then compare its performance with the other two methods. In order to see signifi
 
 (*to be implemented*)
 
-[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E01-InstanceCounter/Spy.java
-[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E02-DoPracticeWhileNotUnderstood/MarksList.java
-[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientSinglyLinkedList.java
-[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientDoublyLinkedList.java
-[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/PatientCircularSinglyList.java
-[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E07-Queues/IntQueueImpl.java
-[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E08-Stacks/IntStack.java
-[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/ListUtilities.java
-[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/IntegerList.java
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E01-InstanceCounter/instanceCounter.Spy.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E02-DoPracticeWhileNotUnderstood/doPracticeWhileNotUnderstood.MarksList.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientSinglyLinkedList.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientDoublyLinkedList.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientCircularSinglyList.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E07-Queues/intQueue.IntQueueImpl.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E08-Stacks/intStack.IntStack.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/sortedLists.ListUtilities.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/sortedLists.IntegerList.java

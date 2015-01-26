@@ -1,4 +1,4 @@
-Lab-Exercises
-=============
+PiJ 2014 - Lab-Exercises
+========================
 
-BBK Programming in Java 2014 - Module Lab Exercises
+Birkbeck Msc Computer Science 2014 (Programming in Java - Lab Exercises)

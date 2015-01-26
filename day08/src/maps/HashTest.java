@@ -8,7 +8,7 @@ public class HashTest {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Give me a string and I will calculate its hash code >> ");
 		int hash = scan.nextInt();
-		int smallhash = E05_maps.HashUtilities.shortHash(hash);
+		int smallhash = HashUtilities.shortHash(hash);
 		System.out.println("0 < " + smallhash + " < 1000");
 	}
 	

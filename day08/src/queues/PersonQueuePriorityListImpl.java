@@ -2,14 +2,18 @@ package queues;// 2. queues.Supermarket queue revisited (*)
 
 public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 
-	public Person retrieveOver(int age) {
+	private Person retrieveOver(int age) {
 		if(last==null) {
 			return null;
 		} else {
 			Person oldest = null;
 			if(last.getAge()>=age) {
-				oldest = last;
-			}
+                oldest = last;
+                if (last.getNext() == null) {  // just one Person in the list, to be retrieved
+                    last = null;
+                    return oldest;
+                }
+            }
 			Person aux = last;
 			while(aux.getNext()!=null) {
 				if(aux.getAge()>=age) {
@@ -17,24 +21,25 @@ public class PersonQueuePriorityListImpl extends PersonQueueLinkedListImpl {
 				}
 				aux = aux.getNext();
 			}
-			Person previous = last;
-			if(aux.getAge()>=age) {	// person to retrieve is the last element
-				while(!previous.getNext().equals(aux)) {
+            if(oldest==null) {  //  whole queue checked, no over-age Person found
+                return null;
+            }
+            Person previous = last;
+			if(aux.getAge()>=age) {	// Person to retrieve is the last element
+                while(!previous.getNext().equals(aux)) {
 					previous = previous.getNext();
 				}
 				previous.setNext(null);
 				return aux;
 			}
-			if(oldest!=null) {
-				if(last.equals(oldest)) {	// person to retrieve is the first element
-					last = oldest.getNext();
-				} else {
-					while(!previous.getNext().equals(oldest)) {
-						previous = previous.getNext();
-					}
-					previous.setNext(oldest.getNext());
-				}
-			}
+			if(last.equals(oldest)) {	// Person to retrieve is the first (if alone is already returned)
+				last = oldest.getNext();
+			} else {
+                while (!previous.getNext().equals(oldest)) {
+                    previous = previous.getNext();
+                }
+                previous.setNext(oldest.getNext());
+            }
 		return oldest;	
 		}
 	}
