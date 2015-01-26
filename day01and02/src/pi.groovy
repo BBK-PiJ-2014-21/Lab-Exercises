@@ -37,19 +37,21 @@ System.out.println("... it took " + n + " terms.");
 System.out.println();
 System.out.print("Would you like to calculate the terms needed to get the first ten digits right? > ");
 s = System.console().readline();
-boolean longwait = false;
+boolean longWaitAhead = false;
 if(s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")) {
-	System.out.print("Are you sure? It might take a while... >>> ");
+	System.out.println("Are you sure? It might take a while... ")
+    System.out.println("I'll tell you in advance it will take 1362989306 terms...")
+    System.out.println("... but if you want I'll calculate again?: >>")
 	if(s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")) {
 		System.out.println("Ok then.");
-		goingToCrash = true;
+		longWaitAhead = true;
 	}
 }
 
-if(goingToCrash) {		
+if(longWaitAhead) {
 	System.out.println("...");
-	pi=0
-	add=0
+	pi=0;
+	add=0;
 	n=0;
 	k=0;
 	while(true) {
