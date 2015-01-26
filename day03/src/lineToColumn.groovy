@@ -1,6 +1,5 @@
-/* 4. Line to column
 
-------------------------------------------------------
+// PRINT EACH LETTER ON A DIFFERENT LINE
 
 System.out.println("Please enter some text: ");
 String s = System.console().readLine();
@@ -9,13 +8,13 @@ for (n=0; n<s.length(); n++) {
 	char letter = s.charAt(n);
 	System.out.println(letter)
 	}
-	
-------------------------------------------------------
 
-*/
+System.out.println("=============================");
+
+// PRINT EACH WORD (AS DEFINED BY SPACES) ON A DIFFERENT LINE
 
 System.out.println("Please enter some text: ");
-String s = System.console().readLine();
+s = System.console().readLine();
 int a = 0;
 int b = 0;
 
