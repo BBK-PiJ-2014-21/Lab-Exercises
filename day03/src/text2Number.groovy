@@ -1,4 +1,3 @@
-// 11. Text2number
 
 System.out.print("Please enter a number: ");
 String number = System.console().readLine();

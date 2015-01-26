@@ -1,14 +1,3 @@
-// 15. Overlaps
-
-class Rectangle {
-	Point firstPoint;
-	Point secondPoint;	
-}
-
-class Point {
-	double x;
-	double y;
-}
 
 Point pointA = new Point();
 Point pointB = new Point();

@@ -1,6 +1,5 @@
-/* 2 - Command-line calculator (*)
-	 this doesn't work exactly from command line yet
-*/
+
+// TODO	- this doesn't work exactly from command line yet
 
 System.out.println("Command-line calculator for the four basic operations.");
 while (true) {
@@ -38,7 +37,7 @@ while (true) {
 	}	
 	print("Press q to quit, any other button to start again >> ");
 	String again = System.console().readLine();
-	if (again == "q") {
+	if (again.equals("q")) {
 		break;
 	} 
 }	

@@ -1,4 +1,3 @@
-// 9. Palindrome creator
 
 System.out.print("Please enter a text: ");
 String text = System.console().readLine();

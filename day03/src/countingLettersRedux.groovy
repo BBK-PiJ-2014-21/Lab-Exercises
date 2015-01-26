@@ -1,4 +1,3 @@
-// 7. Counting letters redux (*)
 
 System.out.print("Please write a text: ");
 String text = System.console().readLine();

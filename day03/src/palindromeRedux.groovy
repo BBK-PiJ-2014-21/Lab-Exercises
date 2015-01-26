@@ -1,4 +1,3 @@
-// Palindrome redux (*)
 
 System.out.println("Please enter your text: ");
 String s = System.console().readLine();

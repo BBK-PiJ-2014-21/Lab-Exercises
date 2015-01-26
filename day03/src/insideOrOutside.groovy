@@ -1,14 +1,3 @@
-// 14. Inside or outside
-
-class Rectangle {
-	Point firstPoint;
-	Point secondPoint;	
-}
-
-class Point {
-	double x;
-	double y;
-}
 
 boolean inside = true;
 Point pointA = new Point();

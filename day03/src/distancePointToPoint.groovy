@@ -3,11 +3,6 @@
 	and returns the two points which are closer the each other;
 */
 
-class Point {
-	double x;
-	double y;
-}
-
 Point point1 = new Point();
 System.out.print("Please enter the X coordinate of the first point: ");
 String s = System.console().readLine();

@@ -1,9 +1,8 @@
-/* 16. Mail server (*)
-	as per exercise instructions, this program is case-sensitive (e.g. "quit" is not accepted);
-	and will consider just the "@" char for validating the e-mail address 
-	(e.g. it won't check for a ".domain" at the end);
+/**
+ * as per exercise instructions, this program is case-sensitive (e.g. "quit" is not accepted); 
+ * and will consider just the "@" char for validating the e-mail address 
+ * (e.g. it won't check for a ".domain" at the end);
 */
-
 String s = "";
 String recipient = "";
 String sender = "";

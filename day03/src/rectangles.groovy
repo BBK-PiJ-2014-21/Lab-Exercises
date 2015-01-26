@@ -1,17 +1,6 @@
-// 13. Rectangle
 
-class Rectangle {
-	Point upLeft;
-	Point downRight;
-}
-
-class Point {
-	double x;
-	double y;
-}
-
-double side = 0.0;
-double base = 0.0;
+double side;
+double base;
 Point A = new Point();				// it will work also with swapped inputs
 Point B = new Point();				// (e.g. upRight and downLeft)
 System.out.print("Please enter the x coordinate of the point at the top-left corner: ");
@@ -40,4 +29,4 @@ if (R.upLeft.y == R.downRight.y || R.upLeft.x == R.downRight.x){
 } else if (side==base) {
 	System.out.println("This is a square rather than a rectangle.");
 }
-System.out.println("Perimenter is " + 2*(side+base) + ", area is " + base*side);
+System.out.println("Perimeter is " + 2*(side+base) + ", area is " + base*side);

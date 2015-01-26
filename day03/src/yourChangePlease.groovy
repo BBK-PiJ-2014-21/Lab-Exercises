@@ -1,5 +1,5 @@
-// 3. Your change, please
-// Unicode to print char '£' to be fixed (it outputs 'ú' for some unknown reason);
+
+// TODO Unicode to print char '£' to be fixed (it outputs 'ú' for some unknown reason);
 // could be enhanced to make a loop in case the amount entered is less than the price to pay;
 // could also be modified not to print the currency with amount zero.
 
@@ -15,7 +15,8 @@ if (payment>=cost) {
 	change = (payment-cost);
 }
 
-int fiftyPounds = change/50;									// create the currencies
+// CREATE THE CURRENCIES
+int fiftyPounds = change/50;
 double leftOver = change%50;
 int twentyPounds = leftOver/20;
 leftOver = leftOver%20;

@@ -1,4 +1,3 @@
-// 1 - Calculator
 
 System.out.print("Please enter the first number: ");
 String s = System.console().readLine()

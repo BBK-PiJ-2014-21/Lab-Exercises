@@ -1,4 +1,3 @@
-// 8. Palindrome
 
 System.out.println("Please enter a text: ")
 String text = System.console().readLine();

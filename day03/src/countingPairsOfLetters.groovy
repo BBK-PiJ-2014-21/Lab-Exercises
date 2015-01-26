@@ -1,4 +1,3 @@
-// 6. Counting pairs of letters (*)
 
 System.out.print("Please enter a short string: >> ");
 String shortString = System.console().readLine();
