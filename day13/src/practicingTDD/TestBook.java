@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 /**
  * JUnit test class for interface {@see Book}
  * This tests are built for a constructor which takes the String for the title first and for the author next. 
+ * It assumes the implementation to be tested to be called BookImpl.
  */
 public class TestBook {
     
