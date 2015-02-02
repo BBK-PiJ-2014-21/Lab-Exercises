@@ -10,16 +10,16 @@ Before the next day, you should have achieved the following learning goals:
 
 Write a simple application for keeping track of the books in a library. The functionality will be described
 incrementally by stages. At every stage, you must follow the following steps:
-1. Write (or update) the interface(s) for the new functionality required.
-2. Generate the tests for the functionality required at that stage. The tests may not even compile at this point.
-3. Write the bare minimum code of the classes implementing the interfaces to make the test-class(es) compile.
-   Check that the new tests fail while the old ones pass.
-4. Write the minimum code in the methods of the implementing class(es) that makes all the new tests pass.
-5. Refactor the code to make it clearer, if needed. Your first implementation may not be as clear as possible.
-   Think of the next programmer that will come after you: will they understand the code easily? Are variable names
-   clear and descriptive? Can you simplify those `for` loops and/or those `if...else` branches?
-6. Document the code if it has not been done yet. Update the JavaDoc documentation (on a separate www folder)
-   using the command `javadoc`. Use your browser to check that it works and is easy to read.
+  1. Write (or update) the interface(s) for the new functionality required.
+  2. Generate the tests for the functionality required at that stage. The tests may not even compile at this point.
+  3. Write the bare minimum code of the classes implementing the interfaces to make the test-class(es) compile.
+     Check that the new tests fail while the old ones pass.
+  4. Write the minimum code in the methods of the implementing class(es) that makes all the new tests pass.
+  5. Refactor the code to make it clearer, if needed. Your first implementation may not be as clear as possible.
+     Think of the next programmer that will come after you: will they understand the code easily? Are variable names
+     clear and descriptive? Can you simplify those `for` loops and/or those `if...else` branches?
+  6. Document the code if it has not been done yet. Update the JavaDoc documentation (on a separate www folder)
+     using the command `javadoc`. Use your browser to check that it works and is easy to read.
 
 #### 1.1
 
@@ -50,7 +50,7 @@ Because it is a mock object and not the real one, it can return trivial values (
 "Library name" and the ID can be always 13).
 
 (*expanded [User] [4] interface and [UserImpl] [6] implementation, created [Library] [7] interface 
-  to use Mockito in [TestUser] [5] *)
+  to use Mockito in [TestUser] [5]*)
   
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Book.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestBook.java
@@ -58,4 +58,4 @@ Because it is a mock object and not the real one, it can return trivial values (
 [4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/User.java
 [5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestUser.java
 [6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/UserImpl.java
-[7]:
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Library.java
