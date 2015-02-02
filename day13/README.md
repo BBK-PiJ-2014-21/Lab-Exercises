@@ -37,6 +37,25 @@ methods to get the name of the person and their ID, and to set the latter.
 
 (*created interface [User] [4], test class [TestUser] [5] and implementation class [UserImpl] [6]*)
 
+#### 1.3 
+
+Expand the class you have just created to allow users to register with a library. You will need two methods 
+`register(Library)` and `getLibrary`. The former method is the way to obtain the user-ID.
+**Important.** As you do not have a Library class yet, you will need a fake Library object to test your method
+`register(Library)`. This is called a *mock* object, and it is a common practice when writing testing code because
+it allows the programmer to test one class at a time -instead of testing several classes at the same time, which is
+more complex and thus error-prone-. The mock library object does not need to do anything apart from providing a name
+(so that your class can return it when you call `getLibrary()` and an ID when you call `getID()`.
+Because it is a mock object and not the real one, it can return trivial values (i.e. the name can be always 
+"Library name" and the ID can be always 13).
+
+(*expanded [User] [4] interface and [UserImpl] [6] implementation, created [Library] [7] interface 
+  to use Mockito in [TestUser] [5] *)
+  
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Book.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestBook.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/BookImpl.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/User.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestUser.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/UserImpl.java
+[7]:
