@@ -10,8 +10,11 @@ public interface User {
      * Setter for the library-ID of the user of the library.
      * All the IDs must be unique numbers.
      * The ID number should be assigned by the library after registration.
+     * 
+     * @param library the Library the user is applying for registration.
+     * @return true if the ID is correctly assigned, false otherwise (i.e. the username is already used)
      */
-    public void setID();
+    public boolean setID(Library library);
     /**
      * Getter for the name of the user of the library.
      * All the names must be unique. 
@@ -31,8 +34,9 @@ public interface User {
      * After registration the user should get an ID number from the library.
      * 
      * @param library the library the user is registering at.
+     * @return true if the registration is successful, false otherwise.                
      */
-    public void register(Library library);
+    public boolean register(Library library);
     /**
      * Getter for the library the user is registered at.
      *

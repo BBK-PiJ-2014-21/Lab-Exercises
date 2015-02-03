@@ -52,6 +52,24 @@ Because it is a mock object and not the real one, it can return trivial values (
 (*expanded [User] [4] interface and [UserImpl] [6] implementation, created [Library] [7] interface 
   to use Mockito in [TestUser] [5]*)
   
+ #### 1.4
+ 
+ Create a class Library for the library. Libraries have a name, set at construction time. They also have a "maximum
+ number of books borrowed by the same person" policy (e.g. max three books per user), which can be updated at any
+ time. Of course, they also have a method to get the maximum number of books to be borrowed at any time
+ (e.g. `getMaxBooksPerUser()`).
+ 
+ (*created class [LibraryImpl] [9] and test [TestLibrary] [10]*)
+ 
+ #### 1.5
+ 
+ Add a method `getId(String)` that returns the ID of a person for a given name in this library.
+ If the person does not have an ID yet, a new unique ID is created and returned.
+    Any subsequent calls to this method with the same name argument should return the same ID.
+
+(*added method to [LibraryImpl] [9]*)
+ 
+  
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Book.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestBook.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/BookImpl.java
@@ -59,3 +77,5 @@ Because it is a mock object and not the real one, it can return trivial values (
 [5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestUser.java
 [6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/UserImpl.java
 [7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Library.java
+[8]:
+[9]:
