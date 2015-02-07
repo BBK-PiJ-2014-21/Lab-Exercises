@@ -1,5 +1,8 @@
 package practicingTDD;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Class implementing the interface {@see Library}.
  */
@@ -7,12 +10,18 @@ public class LibraryImpl implements Library {
     private String name;
     private int limit;
     private UserName first;
+    private List<Book> shelf;
+    private int userCount;
+    private int borrowedCount;
     /**
      * Constructor for the Library. It has a field for the name, a field for the maximum number 
      * of books that can be borrowed per person (this can be changed later with a setter if needed),
      * and a Linked-List as internal data structure to have a database of {@see UserName}, which would 
      * be the users of the library. The class UserName will implement the ID-creation and data about the 
      * users of the library.
+     * The List of Books uses a java.util LinkedList to keep a list of Books belonging to the Library.
+     * When any changes occur (user registration, book borrowed) the relevant count field 
+     * (userCount, borrowedCount) is updated.
      * 
      * @param name the name of the library.
      * @param limit the maximum number of books that can be borrowed per person.
@@ -21,12 +30,16 @@ public class LibraryImpl implements Library {
         this.name = name;
         this.limit = limit;
         first = null;
+        shelf = new LinkedList<Book>();
+        userCount = 0;
+        borrowedCount = 0;
     }
     /**
      * {@inheritDoc}
      *  
      * @return the name of the Library.
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -40,9 +53,11 @@ public class LibraryImpl implements Library {
      * @param newUser the name of the user applying for registration.
      * @return true if the username is available, false otherwise.
      */ 
+    @Override
     public boolean checkName(String newUser) {
         if(first==null) {
             first = new UserName(newUser);
+            userCount++;
             return true;
         } else {
             if(first.getName().equals(newUser)) {
@@ -56,6 +71,7 @@ public class LibraryImpl implements Library {
                     aux = aux.getNext();
                 }
                 aux.setNext(new UserName(newUser));
+                userCount++;
                 return true;
             }
         }
@@ -69,6 +85,7 @@ public class LibraryImpl implements Library {
      * @param user the user of the Library.
      * @return the user's unique ID-number.
      */
+    @Override
     public int getID(String user) {
         int id = 0;
         if(first.getName().equals(user)) {
@@ -95,6 +112,7 @@ public class LibraryImpl implements Library {
      *  
      * @param limit
      */
+    @Override
     public void setMaxBooksPerUser(int limit) {
         this.limit = limit;
     }
@@ -103,8 +121,73 @@ public class LibraryImpl implements Library {
      *
      * @return the maximum number of books that can be borrowed by the users.
      */
+    @Override
     public int getMaxBooksPerUser() {
         return limit;
     }
+    /**
+     * {@inheritDoc} 
+     * 
+     * @param title the title of the new Book.
+     * @param author the author of the new Book.
+     */
+    @Override
+    public void addBook(String title, String author) {
+        Book newBook = new BookImpl(title, author);
+        shelf.add(newBook);
+    }
+    /*
+     * {@inheritDoc} 
+     * 
+     */
+    @Override
+    public Book takeBook(String title) {
+        for(int i=0; i<shelf.size(); i++) {
+            if (shelf.get(i).getTitle().equals(title)) {
+                Book bookToTake = shelf.get(i);
+                if (bookToTake.isTaken()) {
+                    return null;
+                } else {
+                    bookToTake.setTaken(true);
+                    borrowedCount++;
+                    return bookToTake;
+                }
+            }
+        }
+        System.out.println("This book is not yet part of this Library.");
+        return null;
+    }
+    /**
+     * {@inheritDoc}
+     *  
+     * @param book the book to be returned from the Library.
+     */
+    @Override
+    public void returnBook(Book book) {
+        book.setTaken(false);
+        borrowedCount--;
+    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getReaderCount() {
+        return userCount;
+    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getBookCount() {
+        return shelf.size();
+    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getBookBorrowedCount() {
+        return borrowedCount;
+    }
+    
     
 }

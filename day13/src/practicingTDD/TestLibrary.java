@@ -1,5 +1,7 @@
 package practicingTDD;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,18 +17,30 @@ import static org.mockito.Mockito.when;
  */
 public class TestLibrary {
     
-    // TODO finish this method
-    @Test
-    public void testName() {
-        Library l = mock(Library.class);
-        assertEquals(l.getName(), "National Library");
+    public Library getAlibrary() {
+        Library test = new LibraryImpl("Bartholomew's Library", 3);
+        return test;
     }
     
-    // TODO finish this and DO MORE TESTS AGAINST THE INTERFACE NOT THE IMPLEMENTATION
     @Test
-    public void testNameAvailability() {
-        Library l = new LibraryImpl("Bartholomew's Library", 3);
-        UserImpl user = new UserImpl("John");
+    public void testName() {
+        Library test = getAlibrary();
+        assertEquals(test.getName(), "Bartholomew's Library");
+    }
+    
+    @Test
+    public void testGetId() {
+        Library test = getAlibrary();
+        User user = new UserImpl("John");
+        user.register(test);
+        int id = test.getID("John");
+        assertTrue(id > 0);
+    }
+    
+    @Test
+    public void testCheckName() {
+        Library l = getAlibrary();
+        User user = new UserImpl("John");
         user.register(l);
         assertEquals(l.checkName("John"), false);
         assertEquals(l.checkName("Bob"), true);
@@ -40,4 +54,48 @@ public class TestLibrary {
         assertEquals(l.getMaxBooksPerUser(), 2);
     }
     
+    @Test
+    public void testAddBookShouldUpdateBookCount() {
+        Library l = getAlibrary();
+        assertEquals(l.getBookCount(), 0);
+        l.addBook("Just a book", "Anonymous");
+        assertEquals(l.getBookCount(), 1);
+    }
+    
+    @Test
+    public void testTakeBookNotInTheLibrary() {
+        Library l = getAlibrary();
+        assertNull(l.takeBook("This book is not added to the library"));
+    }
+    
+    @Test
+    public void testAddAndTakeBookShouldUpdateTakenBooksCount() {
+        Library l = getAlibrary();
+        assertEquals(l.getBookBorrowedCount(), 0);
+        l.addBook("A Title", "An Author");
+        l.takeBook("A Title");
+        assertEquals(l.getBookBorrowedCount(), 1);
+    }
+    
+    @Test
+    public void testReturnBookShouldUpdateBorrowedCount() {
+        Library l = getAlibrary();
+        l.addBook("Boo", "Auth");
+        assertEquals(l.getBookBorrowedCount(), 0);
+        Book book = l.takeBook("Boo");
+        assertEquals(l.getBookBorrowedCount(), 1);
+        l.returnBook(book);
+        assertEquals(l.getBookBorrowedCount(), 0);
+    }
+    
+    @Test
+    public void testAddUserShouldUpdateUserCount() {
+        Library l = getAlibrary();
+        assertEquals(l.getReaderCount(), 0);
+        User user = new UserImpl("Jimmy");
+        user.register(l);
+        assertEquals(l.getReaderCount(), 1);
+    }
+    
 }
+
