@@ -1,4 +1,7 @@
 package practicingTDD;
+
+import java.util.List;
+
 /**
  * Interface for the Library. It has a name to be set at construction time,
  * and a "maximum number of books borrowed by the same person" policy which
@@ -77,6 +80,24 @@ public interface Library {
      * @return the number of borrowed books in the library.
      */
     public int getBookBorrowedCount();
-    
-
+    /**
+     * A list of all the {@User}s of the Library that are currently borrowing books.
+     *  
+     * @return a list of the users borrowing books at the moment.
+     */
+    public List<User> getBorrowingUsersList();
+    /**
+     * A list of all the {@User}s of the Library, regardless if they are borrowing books or not.
+     *  
+     * @return a list of all the users of the Library.
+     */
+    public List<User> getUsersList();
+    /**
+     * Method for checking the name of the User who is borrowing a specific title.
+     *
+     * @param title the title of the {@see Book} of the Library.
+     * @return the name of the {@see User} who is borrowing the title,
+     * or null if either nobody is borrowing it or the title doesn't belong to the Library.
+     */
+    public String getBorrower(String title);
 }

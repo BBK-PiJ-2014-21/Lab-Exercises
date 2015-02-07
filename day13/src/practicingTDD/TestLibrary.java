@@ -97,5 +97,25 @@ public class TestLibrary {
         assertEquals(l.getReaderCount(), 1);
     }
     
+    @Test
+    public void testGetUsersList() {
+        Library l = getAlibrary();
+        User user = new UserImpl("Jimmy");
+        user.register(l);
+        assertEquals(l.getUsersList().get(0).getName(), "Jimmy");
+    }
+    
+    @Test
+    public void testGetBorrowingUsersList() {
+        Library l = getAlibrary();
+        l.addBook("Super-Cannes", "Ballard");
+        User user = new UserImpl("Timmy");
+        user.register(l);
+        user.takeBook("Super-Cannes");
+        assertEquals(l.getBorrower("Super-Cannes"), "Timmy");
+        assertEquals(l.getBorrowingUsersList().get(0).getName(), "Timmy");
+    }
+    
+    
 }
 
