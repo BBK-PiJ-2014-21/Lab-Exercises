@@ -1,5 +1,7 @@
 // 1. Don't Repeat Yourself
 
+package dry;
+
 import java.util.Scanner;
 
 public class ComparatorTest {

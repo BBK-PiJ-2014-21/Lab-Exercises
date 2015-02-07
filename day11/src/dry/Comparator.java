@@ -1,6 +1,6 @@
 /* 1. Don't Repeat Yourself
 
-public class Comparator {
+public class dry.Comparator {
 	public int getMax(int n, int m) {
 		if(n>m) {
 			return n;
@@ -26,6 +26,8 @@ public class Comparator {
 	}
 }
 */
+package dry;
+
 public class Comparator {
 	public int getMax(int n, int m) {
 		return (int)getMax((double)n,(double)m);
