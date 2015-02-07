@@ -68,8 +68,8 @@ MobilePhone myPhone = new SmartPhone();
 Compile your code again. Are there any problems? Why do this problems happen?
 What are the possible solutions?
 
-(*A variable of superclass `MobilePhone` doesn't have access to methods specific of the subclass `SmartPhone`
-- `browseWeb` and `findPosition`, and also `playGame` which is private in `MobilePhone` but public in `SmartPhone` -
+(*A variable of superclass `MobilePhone` doesn't have access to methods specific of the subclass `SmartPhone`;
+`browseWeb` and `findPosition`, and also `playGame` which is private in `MobilePhone` but public in `SmartPhone`. 
 One solution would be to declare the variable as `SmartPhone` (as done for exercise 2.1), 
 otherwise another solution could be to typecast the `MobilePhone` variable.*)
 
@@ -96,4 +96,8 @@ Create a `MobilePhone` object and then pass it to method `testPhone(Phone)`. Wha
 
 ### 3. Generic list
 
+
+[1] https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/Comparator.java
+[2] https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/ComparatorTest.java
+[3] https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/upcastingDowncasting/SmartPhoneLauncher.java
 
