@@ -1,3 +1,5 @@
+package makeDir;
+
 import java.io.*;
 
 public class Mkd {
