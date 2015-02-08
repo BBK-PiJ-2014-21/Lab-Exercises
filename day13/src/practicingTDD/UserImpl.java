@@ -47,6 +47,7 @@ public class UserImpl implements User {
             return false;
         } else {
             this.library = library;
+            this.library.getUsersList().add(this);
             return true;
         }
     }
@@ -73,6 +74,15 @@ public class UserImpl implements User {
                 return false;
             } else {
                 borrowed.add(book.getTitle());
+                boolean alreadyListed = false;
+                for(int i=0; i<library.getBorrowingUsersList().size(); i++) {
+                    if(library.getBorrowingUsersList().get(i).getName().equals(getName())) {
+                        alreadyListed = true;
+                    }
+                }
+                if(!alreadyListed) {
+                    library.getBorrowingUsersList().add(this);
+                }
                 return true;
             }
         }

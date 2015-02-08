@@ -1,6 +1,8 @@
 package practicingTDD;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Interface for the Library. It has a name to be set at construction time,
@@ -33,9 +35,9 @@ public interface Library {
     public boolean checkName(String name);
     /**
      * Setter for the maximum number of books that can be borrowed by the same person.
-     * It has to be set first at construction time. 
+     * It has to be set first at construction time, can be then changed with this method if needed.
      */
-    public void setMaxBooksPerUser(int n);
+    public ArrayList<User> setMaxBookPolicy(int n);
     /**
      * Getter for the maximum number of books that can be borrowed by the same person.
      * 

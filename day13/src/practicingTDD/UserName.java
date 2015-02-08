@@ -37,13 +37,13 @@ public class UserName {
      * @param name the username of the user.
      * @return an unique ID-number generated out of the username.
      */
-    //TODO check how will behave with weird String inputs
     public int calculateID(String name) {
         String value = "";
         String n = name.toLowerCase();
         for(int i=0; i<n.length(); i++) {
             value = value + (n.charAt(i) - 'Z');
         }
+        value = value.substring(0,8); // to avoid NumberFormatException for large outputs
         ID = Integer.parseInt(value);
         return ID;
     }
