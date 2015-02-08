@@ -18,5 +18,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="day08" />
+    <orderEntry type="module" module-name="day08" />
   </component>
 </module>
