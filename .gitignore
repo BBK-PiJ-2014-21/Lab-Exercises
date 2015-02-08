@@ -36,6 +36,10 @@
 ehthumbs.db
 Thumbs.db
 
+# Other #
+#########
+.txt
+
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm#
 ########################################################################
 META-INF/
