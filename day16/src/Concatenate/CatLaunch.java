@@ -1,3 +1,4 @@
+package concatenate;
 
 public class CatLaunch {
 	

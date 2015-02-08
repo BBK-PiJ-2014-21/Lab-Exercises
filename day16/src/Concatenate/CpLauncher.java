@@ -1,3 +1,5 @@
+package concatenate;
+
 public class CpLauncher {
 	
 	public static void main(Strin[] args) {

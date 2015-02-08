@@ -1,3 +1,5 @@
+package concatenate;
+
 import java.io.*;
 
 public class Cat {
