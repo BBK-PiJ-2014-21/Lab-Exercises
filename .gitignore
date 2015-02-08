@@ -36,51 +36,10 @@
 ehthumbs.db
 Thumbs.db
 
-<<<<<<< HEAD
-# Eclipse #
-###########
-
-=======
-# ECLIPSE #
-###########
-.settings
-.classpath
-.project
->>>>>>> 95582be7cef51f579419e513aac3799dce592627
-*.pydevproject
-.metadata
-.gradle
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-# External tool builders
-.externalToolBuilders/
-# Locally stored "Eclipse launch configurations"
-*.launch
-# CDT-specific
-.cproject
-# PDT-specific
-.buildpath
-# sbteclipse plugin
-.target
-# TeXlipse plugin
-.texlipse
-
-<<<<<<< HEAD
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
-=======
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm#
 ########################################################################
 META-INF/
 build.properties
->>>>>>> 95582be7cef51f579419e513aac3799dce592627
-*.iml
 ## Directory-based project format:
 .idea/
 # if you remove the above rule, at least ignore the following:
