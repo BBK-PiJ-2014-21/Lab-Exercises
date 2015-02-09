@@ -1,5 +1,4 @@
 package genericLists;
-
 /**
  * Generic linked list. It accepts duplicates.
  */
@@ -24,7 +23,7 @@ public class GenericDoublyLinkedList<T> {
      * @param newValue the new element which is to be added to the list.
      */
     public void add(T newValue) {
-        GenericNode<T> newNode = new GenericNode<T>(newValue);
+        GenericNode<T> newNode = new GenericNode<>(newValue);
         if (first == null) {
             first = newNode;
         } else {
@@ -43,7 +42,7 @@ public class GenericDoublyLinkedList<T> {
      * @return true if the value is found and deleted, false if not found or for an empty list.
      */
     public boolean delete(T value) {
-        GenericNode<T> node = new GenericNode<T>(value);
+        GenericNode<T> node = new GenericNode<>(value);
         if (first != null) {
             if (first.getValue().equals(node.getValue())) {
                 if(first.getNext()==null) {
