@@ -5,8 +5,8 @@ package genericLists;
  */
 public class GenericNode<T> {
     T value;
-    GenericNode next;
-    GenericNode previous;
+    GenericNode<T> next;
+    GenericNode<T> previous;
     
     public GenericNode(T value) {
         this.value = value;

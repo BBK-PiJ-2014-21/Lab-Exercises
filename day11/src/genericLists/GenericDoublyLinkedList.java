@@ -4,17 +4,17 @@ package genericLists;
  * Generic linked list. It accepts duplicates.
  */
 public class GenericDoublyLinkedList<T> {
-    private Node<T> first;
+    private GenericNode<T> first;
 
     public GenericDoublyLinkedList() {
         first = null;
     }
     
-    public Node<T> getFirst() {
+    public GenericNode<T> getFirst() {
         return first;
     }
     
-    public void setFirst(Node<T> newNode) {
+    public void setFirst(GenericNode<T> newNode) {
         first = newNode;
     }
     
@@ -24,11 +24,11 @@ public class GenericDoublyLinkedList<T> {
      * @param newValue the new element which is to be added to the list.
      */
     public void add(T newValue) {
-        Node<T> newNode = new Node<T>(newValue);
+        GenericNode<T> newNode = new GenericNode<T>(newValue);
         if (first == null) {
             first = newNode;
         } else {
-            Node<T> aux = first;
+            GenericNode<T> aux = first;
             while (aux.getNext() != null) {
                 aux = aux.getNext();
             }
@@ -43,7 +43,7 @@ public class GenericDoublyLinkedList<T> {
      * @return true if the value is found and deleted, false if not found or for an empty list.
      */
     public boolean delete(T value) {
-        Node<T> node = new Node<T>(value);
+        GenericNode<T> node = new GenericNode<T>(value);
         if (first != null) {
             if (first.getValue().equals(node.getValue())) {
                 if(first.getNext()==null) {
@@ -54,7 +54,7 @@ public class GenericDoublyLinkedList<T> {
                 }
                 return true;
             } else {
-                Node<T> aux = first;
+                GenericNode<T> aux = first;
                 while (aux.getNext() != null) {
                     if (aux.getNext().getValue().equals(node.getValue())) {
                         aux.setNext(aux.getNext().getNext());
@@ -81,7 +81,7 @@ public class GenericDoublyLinkedList<T> {
         int length = 0;
         if (first != null) {
             length = 1;
-            Node<T> aux = first;
+            GenericNode<T> aux = first;
             while(aux.getNext() != null) {
                 length++;
                 aux = aux.getNext();
@@ -100,7 +100,7 @@ public class GenericDoublyLinkedList<T> {
         if (first == null || index < 0 || index > size() - 1) {
             return null;
         } else {
-            Node<T> aux = first;
+            GenericNode<T> aux = first;
             while (i > 0) {
                 aux = aux.getNext();
                 i--;
@@ -120,7 +120,7 @@ public class GenericDoublyLinkedList<T> {
             if(first.getValue().equals(value)) {
                 return index;
             } else {
-                Node<T> aux = first;
+                GenericNode<T> aux = first;
                 while(aux.getNext()!=null) {
                     aux = aux.getNext();
                     index++;
@@ -143,7 +143,7 @@ public class GenericDoublyLinkedList<T> {
             if (first.getValue().equals(value)) {
                 return true;
             }
-            Node<T> aux = first;
+            GenericNode<T> aux = first;
             while (aux.getNext() != null) {
                 if (aux.getValue().equals(value)) {
                     return true;
