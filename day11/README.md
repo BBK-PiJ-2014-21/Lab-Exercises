@@ -141,7 +141,9 @@ method you developed in past weeks and base your map on an array.
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/Comparator.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/ComparatorTest.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/upcastingDowncasting/SmartPhoneLauncher.java
-[4]:
-[5]:
-[6]:
-
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/GenericDoublyLinkedList.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/GenericNode.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/Company.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/CompanyTest.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/commit/cdf47863bce0072a07dac1607e129a6af8db3c86
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericStack/NumberNode.java
