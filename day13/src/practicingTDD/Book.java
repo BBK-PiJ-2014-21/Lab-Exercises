@@ -20,4 +20,14 @@ public interface Book {
 	 * @return	the title of the Book
 	 */
 	public String getTitle();
+    /**
+     * Set the book as taken by/returned from a Library.
+     * 
+     * @param value the boolean value true if the book is currently taken by a Library, false otherwise.
+     */
+    public void setTaken(boolean value);
+    /**
+     * Return whether the Book is currently taken by a Library or if it's available.
+     */
+    public boolean isTaken();
 }

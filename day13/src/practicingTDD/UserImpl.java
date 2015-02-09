@@ -1,38 +1,91 @@
 package practicingTDD;
 
+import org.mockito.internal.matchers.Null;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Class implementing the interface {@see User}
+ * Class implementing the interface {@see User}.
  */
 public class UserImpl implements User {
     private String name;
-    private int id;
     private Library library;
+    private List<String> borrowed;
     
     public UserImpl(String name) {
         this.name = name;
         library = null;
+        borrowed = new ArrayList<String>();
     }
     
     public String getName() {
         return name;
     }
-
+    
     public int getID() {
-        return library.getID(name);
+        if(library==null) {
+            System.out.println(getName() + " is not registered with any library.");
+            return 0;
+        } else {
+            return library.getID(name);
+        }
     }
     
-    public void setID() {
-        id = library.getID(name);
+    public boolean setID(Library library) {
+        if(library==null || !this.library.equals(library)) {
+            return false;
+        } else {
+            library.getID(name);
+            return true;
+        }
     }
  
-    public void register(Library library) {
-        this.library = library;
-        setID();
+    public boolean register(Library library) {
+        if(!library.checkName(name)) {
+            System.out.println("Registration unsuccessful. Please try providing a different username.");
+            return false;
+        } else {
+            this.library = library;
+            this.library.getUsersList().add(this);
+            return true;
+        }
     }
-    // TODO NullPointerException if call a null library
+
     public String getLibrary() {
-        return library.getName();
+        if(library == null) {
+            return "<not registered>";
+        } else {
+            return library.getName();
+        }
     }
     
-    
+    public List<String> listBorrowed() {
+        return borrowed;
+    }
+
+    public boolean takeBook(String title) {
+        if(library==null) {
+            System.out.println(getName() + " is not registered with any library.");
+            return false;
+        } else {
+            Book book = library.takeBook(title);
+            if(book==null) {
+                return false;
+            } else {
+                borrowed.add(book.getTitle());
+                boolean alreadyListed = false;
+                for(int i=0; i<library.getBorrowingUsersList().size(); i++) {
+                    if(library.getBorrowingUsersList().get(i).getName().equals(getName())) {
+                        alreadyListed = true;
+                    }
+                }
+                if(!alreadyListed) {
+                    library.getBorrowingUsersList().add(this);
+                }
+                return true;
+            }
+        }
+    }    
+
 }
