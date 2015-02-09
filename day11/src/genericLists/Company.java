@@ -10,12 +10,12 @@ package genericLists;
  * adding a nino: if it is attempted to add a number already in the list, the request is ignored.
  */
 public class Company {
-    private DoublyLinkedList<String> employeeName;
-    private DoublyLinkedList<Integer> ninoList;
+    private GenericDoublyLinkedList<String> employeeName;
+    private GenericDoublyLinkedList<Integer> ninoList;
     
     public Company() {
-        employeeName = new DoublyLinkedList<String>();
-        ninoList = new DoublyLinkedList<Integer>();
+        employeeName = new GenericDoublyLinkedList<String>();
+        ninoList = new GenericDoublyLinkedList<Integer>();
     }
     
     public void add(String name, Integer nino) {

@@ -3,12 +3,21 @@ package genericLists;
 /**
  * Generic linked list. It accepts duplicates.
  */
-public class DoublyLinkedList<T> {
+public class GenericDoublyLinkedList<T> {
     private Node<T> first;
 
-    public DoublyLinkedList() {
+    public GenericDoublyLinkedList() {
         first = null;
     }
+    
+    public Node<T> getFirst() {
+        return first;
+    }
+    
+    public void setFirst(Node<T> newNode) {
+        first = newNode;
+    }
+    
     /**
      * Add an element to the list.
      *
