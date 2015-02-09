@@ -1,7 +1,7 @@
 package genericLists;
 
 /**
- *
+ * Generic linked list. It accepts duplicates.
  */
 public class DoublyLinkedList<T> {
     private Node<T> first;
@@ -9,78 +9,83 @@ public class DoublyLinkedList<T> {
     public DoublyLinkedList() {
         first = null;
     }
-
+    /**
+     * Add an element to the list.
+     *
+     * @param newValue the new element which is to be added to the list.
+     */
     public void add(T newValue) {
         Node<T> newNode = new Node<T>(newValue);
         if (first == null) {
             first = newNode;
-            return;
         } else {
-            Node aux = first;
+            Node<T> aux = first;
             while (aux.getNext() != null) {
-                if (aux.getNext().getValue().equals(newNode.getValue()))
-                    aux = aux.getNext();
+                aux = aux.getNext();
             }
             aux.setNext(newNode);
             newNode.setPrevious(aux);
         }
     }
-
+    /**
+     * Delete an element in the list. 
+     * 
+     * @param value the element to delete.
+     * @return true if the value is found and deleted, false if not found or for an empty list.
+     */
     public boolean delete(T value) {
         Node<T> node = new Node<T>(value);
-        if (first == null) {
-            return false;
-        } else if (first.getValue().equals(node.getValue())) {
-            if(first.getNext()!=null) {
-                first = first.getNext();
-                first.setPrevious(null);
-            } else {
-                first = null;
-            }
-            return true;
-        } else {
-            Node<T> aux = first;
-            while (aux.getNext() != null) {
-                if (aux.getNext().getValue().equals(node.getValue())) {
-                    aux.setNext(aux.getNext().getNext());
-                    if(aux.getNext()!=null) {
-                        aux.getNext().setPrevious(aux);
-                    }
-                    return true;
+        if (first != null) {
+            if (first.getValue().equals(node.getValue())) {
+                if(first.getNext()==null) {
+                    first = null;
                 } else {
-                    aux = aux.getNext();
+                    first = first.getNext();
+                    first.setPrevious(null);
+                }
+                return true;
+            } else {
+                Node<T> aux = first;
+                while (aux.getNext() != null) {
+                    if (aux.getNext().getValue().equals(node.getValue())) {
+                        aux.setNext(aux.getNext().getNext());
+                        if(aux.getNext()!=null) {
+                            aux.getNext().setPrevious(aux);
+                        }
+                        return true;
+                    } else {
+                        aux = aux.getNext();
+                    }
                 }
             }
-            return false;
         }
+        return false;
     }
-
+    /**
+     * Calculate the size of the list. Please note it doesn't just return a counter value, but it
+     * goes throughout the list each time this method is called, so it might not be very efficient 
+     * for long lists. 
+     *  
+     * @return the size of the list.
+     */
     public int size() {  // 4. Queue length
         int length = 0;
         if (first != null) {
             length = 1;
-            Node aux = first;
-            while (aux.getNext() != null) {
+            Node<T> aux = first;
+            while(aux.getNext() != null) {
                 length++;
                 aux = aux.getNext();
             }
         }
         return length;
     }
-
-    public T getLast() {
-        if (first == null) {
-            System.out.println("The list is empty");
-            return null;
-        } else {
-            Node<T> aux = first;
-            while (aux.getNext() != null) {
-                aux = aux.getNext();
-            }
-            return aux.getValue();
-        }
-    }
-
+    /**
+     * Returns the element at a specific index.
+     *   
+     * @param index the position of the value to return.
+     * @return the value at the position index, or null for an out of bounds search.
+     */
     public T get(int index) {
         int i = index;
         if (first == null || index < 0 || index > size() - 1) {
@@ -94,12 +99,15 @@ public class DoublyLinkedList<T> {
             return aux.getValue();
         }
     }
-    
+    /**
+     * Method which returns the index position of an element of the list.
+     *  
+     * @param value the value to search throughout the list.
+     * @return the index position of the value found, or -1 if either the value is not found or the list is empty.
+     */
     public int indexOf(T value) {
         int index = 0;
-        if(first==null) {
-            return -1;
-        } else {
+        if(first!=null) {
             if(first.getValue().equals(value)) {
                 return index;
             } else {
@@ -111,15 +119,18 @@ public class DoublyLinkedList<T> {
                         return index;
                     }
                 }
-                return -1;
             }
         }
+        return -1;
     }
-    
+    /**
+     * Boolean method to check if a value is contained in the list. 
+     * 
+     * @param value the value which is searched throughout the list.
+     * @return true if the value is in the list, false otherwise.
+     */
     public boolean contains(T value) {
-        if (first == null) {
-            return false;
-        } else {
+        if (first!=null) {
             if (first.getValue().equals(value)) {
                 return true;
             }
@@ -131,8 +142,11 @@ public class DoublyLinkedList<T> {
                     aux = aux.getNext();
                 }
             }
-            return false;
+            if(aux.getValue().equals(value)) {  // check last element
+                return true;
+            }
         }
+        return false;
     }
 
 }

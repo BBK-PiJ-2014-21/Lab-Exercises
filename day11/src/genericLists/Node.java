@@ -1,7 +1,7 @@
 package genericLists;
 
 /**
- *
+ * Generic node class to use as a field for the generic {@see DoublyLinkedList}.
  */
 public class Node<T> {
     T value;

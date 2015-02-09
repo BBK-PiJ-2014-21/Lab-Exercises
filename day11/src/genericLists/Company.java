@@ -5,8 +5,9 @@ package genericLists;
  * and one with their National Insurance Number.
  * Deletion of an element in a list (either the employee name or his NIN) should automatically cause 
  * the deletion of the corresponding value in the other list, so at the same index of both list
- * should be the complementary value.
- * Also this list
+ * should be the corresponding value.
+ * Also this class accepts duplicate names but not duplicate insurance numbers: it does a check before 
+ * adding a nino: if it is attempted to add a number already in the list, the request is ignored.
  */
 public class Company {
     private DoublyLinkedList<String> employeeName;
@@ -18,9 +19,7 @@ public class Company {
     }
     
     public void add(String name, Integer nino) {
-        if (ninoList.contains(nino)) {
-            return;
-        } else {
+        if (!ninoList.contains(nino)) {
             employeeName.add(name);
             ninoList.add(nino);
         }
