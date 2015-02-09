@@ -1,5 +1,7 @@
 package practicingTDD;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,17 +12,45 @@ import static org.junit.Assert.*;
  * It assumes the implementation to be tested to be called BookImpl.
  */
 public class TestBook {
+    private Book wilde;
+    
+    @Before
+    public void setUp() {
+        wilde = new BookImpl ("The Portrait of Dorian Gray", "Oscar Wilde");
+    }
+    
+    @After
+    public void tearDown() {
+        wilde = null;
+    }
     
     @Test
     public void testGetAuthor() {
-        Book book1 = new BookImpl("The Portrait of Dorian Gray", "Oscar Wilde");
-        assertEquals(book1.getAuthor(), "Oscar Wilde");
+        assertEquals(wilde.getAuthor(), "Oscar Wilde");
     }
     
     @Test
     public void testGetTitle() {
-        Book book1 = new BookImpl("The Portrait of Dorian Gray", "Oscar Wilde");
-        assertEquals(book1.getTitle(), "The Portrait of Dorian Gray");
+        assertEquals(wilde.getTitle(), "The Portrait of Dorian Gray");
     }
+    
+    @Test
+    public void testNewBookIsNotTaken() {
+        assertFalse(wilde.isTaken());
+    }
+    
+    @Test
+    public void testTakenAfterSetTaken() {
+        wilde.setTaken(true);
+        assertTrue(wilde.isTaken());
+    }
+    
+    @Test
+    public void testTakenAfterTwoSetTaken() {
+        wilde.setTaken(true);
+        wilde.setTaken(false);
+        assertFalse(wilde.isTaken());
+    }
+    
     
 }

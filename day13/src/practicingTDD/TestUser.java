@@ -49,10 +49,11 @@ public class TestUser {
     */
     
     @Test
-    public void testRegister() {
+    public void testGetIDTwice() {
         Library fake = createLibraryMock();
         user1.register(fake);
-        assertEquals(user1.getID(), 33);
+        int id = user1.getID();
+        assertEquals(user1.getID(), id);
     }
     
     @Test
@@ -70,6 +71,14 @@ public class TestUser {
         assertFalse(user2.register(lib));
     }
     
+    @Test
+    public void testListBorrowed() {
+        Library lib = new LibraryImpl("A Library", 6);
+        user1.register(lib);
+        lib.addBook("Blah", "Bleah");
+        user1.takeBook("Blah");
+        assertEquals(user1.listBorrowed().get(0), "Blah");
+    }
     
     
     
