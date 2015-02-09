@@ -14,7 +14,7 @@
 		Loop: Thread 9, iteration:9.
 	
 	MODE 1:
-		<unpredictable>
+		<unpredictable result>
 		
 */
 
