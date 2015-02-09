@@ -3,12 +3,12 @@ package genericLists;
 /**
  * Generic node class to use as a field for the generic {@see DoublyLinkedList}.
  */
-public class Node<T> {
+public class GenericNode<T> {
     T value;
-    Node next;
-    Node previous;
+    GenericNode next;
+    GenericNode previous;
     
-    public Node(T value) {
+    public GenericNode(T value) {
         this.value = value;
         next = null;
         previous = null;
@@ -22,19 +22,19 @@ public class Node<T> {
         this.value = value;
     }
     
-    public Node getNext() {
+    public GenericNode<T> getNext() {
         return next;
     }
     
-    public void setNext(Node<T> newNode) {
+    public void setNext(GenericNode<T> newNode) {
         next = newNode;
     }
     
-    public Node getPrevious() {
+    public GenericNode<T> getPrevious() {
         return previous;
     }
     
-    public void setPrevious(Node<T> newNode) {
+    public void setPrevious(GenericNode<T> newNode) {
         previous = newNode;
     }
 }
