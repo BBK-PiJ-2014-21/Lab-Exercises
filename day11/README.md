@@ -101,10 +101,49 @@ of its elements of any type.
     Once you have it ready, create a class `Company` that keeps two linked lists, one with the names of the employees
 and one with their National Insurance Number.
 
-(*created class*)
+(*created classes [GenericDoublyLinkedList] [4], [GenericNode] [5], [Company] [6] and [CompanyTest] [7]*)
 
+### 4. Sorted list (*)
+
+Extend your class from the former exercise to create a sorted list. You may need to override the method that adds
+new elements to the list. The subclass should be generic.
+
+(*to be implemented*)
+
+### 5. Generic stack
+
+Create a generic stack (with methods for pushing, popping, and checking emptiness) that only works with classes
+that extend `Number` (e.g. Integer and Double, but not String).
+
+(*created classes [GenericStack] [8] and [NumberNode] [9]* )
+
+### 6. Generic maps
+
+#### 6.1 Simple map (*)
+
+Create a generic simple map (with methods for putting a key-value pair, getting the value for a key, and removing
+a key). The key and the value may be any type, and they may be different. Each key can only be linked to one value.
+For simplicity, assume that your map can hold a maximum of 1000 pairs. This way, you can use the hashing method
+you developed in past weeks and base your map on an array.
+
+(*to be implemented*)
+
+#### 6.2 Hash table (*)
+
+Crete a generic map (with methods for putting a key-value pair, getting the value for a key, and removing a key).
+The key and the value may be any type, and they may be different. Under each key, the hash table can store any
+number of values associated to that key.
+    For simplicity, assume that your map can hold a maximum of 1000 pairs. This way, you can use the hashing 
+method you developed in past weeks and base your map on an array.
+
+(*to be implemented*)
 
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/Comparator.java
 [2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/dry/ComparatorTest.java
 [3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/upcastingDowncasting/SmartPhoneLauncher.java
-
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/GenericDoublyLinkedList.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/GenericNode.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/Company.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericLists/CompanyTest.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/commit/cdf47863bce0072a07dac1607e129a6af8db3c86
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day11/src/genericStack/NumberNode.java
