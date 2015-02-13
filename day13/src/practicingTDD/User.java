@@ -56,5 +56,9 @@ public interface User {
      * @param title
      */
     public boolean takeBook(String title);
+    /**
+     * * 
+     */
+    public boolean returnBook(String title);
     
 }
