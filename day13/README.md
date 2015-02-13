@@ -52,22 +52,22 @@ Because it is a mock object and not the real one, it can return trivial values (
 (*expanded [User] [4] interface and [UserImpl] [6] implementation, created [Library] [7] interface 
   to use Mockito in [TestUser] [5]*)
   
- #### 1.4
+#### 1.4
  
  Create a class Library for the library. Libraries have a name, set at construction time. They also have a "maximum
  number of books borrowed by the same person" policy (e.g. max three books per user), which can be updated at any
  time. Of course, they also have a method to get the maximum number of books to be borrowed at any time
  (e.g. `getMaxBooksPerUser()`).
  
- (*created class [LibraryImpl] [9] and test [TestLibrary] [10]*)
+ (*created class [LibraryImpl] [9] and test [TestLibrary] [8]*)
  
- #### 1.5
+#### 1.5
  
  Add a method `getId(String)` that returns the ID of a person for a given name in this library.
  If the person does not have an ID yet, a new unique ID is created and returned.
     Any subsequent calls to this method with the same name argument should return the same ID.
 
-(*added method to interface [Library] [7], tested on [TestLibrary] [10] and added to [LibraryImpl] [9]*)
+(*added method to interface [Library] [7], tested on [TestLibrary] [8] and added to [LibraryImpl] [9]*)
  
 #### 1.6
 
@@ -80,12 +80,12 @@ Expand your library class a bit further. Add three new methods:
 
 **returnBook(Book book)** Marks the book as not taken.
 
-   **Important.** At this point you have to make a *design decision:* should the information about the books
-"being taken" be stored in the book class or in the library class? If this information is part of the book, you must
-add some functionality to the Book class: maybe methods like `isTaken()` and `setTaken(boolean)`, and some private
-boolean field; if the responsibility lies on the library's camp, then you must add the adequate memory structures.
+   **Important.** At this point you have to make a *design decision:* should the information about the books "being 
+taken" be stored in the book class or in the library class? If this information is part of the book, you must add some 
+functionality to the Book class: maybe methods like `isTaken()` and `setTaken(boolean)`, and some private boolean field; 
+if the responsibility lies on the library's camp, then you must add the adequate memory structures.
  
-(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [10]*)
+(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [8]*)
   
 #### 1.7
 
@@ -97,7 +97,7 @@ Expand your library once more to include the following methods:
 
 **getBookBorrowedCount()** returns the number of borrowed books in this library.
 
-(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [10]*)
+(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [8]*)
 
 #### 1.8
 
@@ -114,7 +114,7 @@ Expand your library class one more time with two methods that return:
 	* the name of the person that is borrowing a specific given title at the moment; if nobody is borrowing
 	  the book, or the book does not exist in the library, you must return null (not an empty String).
 
-(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [10]*)
+(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [8]*)
 
 #### 1.10
 
@@ -124,7 +124,7 @@ For example, if the maximum policy is three books per user, Marge, Lisa, and Mag
 three books. If the policy is then set to a maximum of one book, the method must return the names of Lisa and Maggie 
 (so that the library can track them down and ask them to return the excess book).
  
-(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [10]*)
+(*added methods to [Library] [7] and [LibraryImpl] [9], tested on [TestLibrary] [8]*)
 
 #### 1.11
 
@@ -135,7 +135,7 @@ Once you have finished implementing all this functionality, write a small script
 	* Several users borrow books. The library is then asked who has some specific title, if anyone.
 	* The "maximum books" is reduced the one, then to zero, then it is increased to the original value.
 
-(*created class [TestScript] [11]*)
+(*created class [TestScript] [10]*)
 
 ### 2. Final is final
 
@@ -161,7 +161,7 @@ public class Person {
 
 Once you think you have found all the errors, try to compile the code and see if your intuition was right.
 
-*I can spot two errors: a missing opening bracket after method signature getName(), and the setter method setName(),
+*I can spot two errors: a missing opening bracket after method signature `getName()`, and the setter method `setName()`,
 which is an attempt to modify the value of the field `name`, not allowed because that field is declared `final`.*
 
 Compiling the code returns the following result:
@@ -181,5 +181,6 @@ java: cannot assign a value to final variable name
 [5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestUser.java
 [6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/UserImpl.java
 [7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/Library.java
-[8]:
-[9]:
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestLibrary.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/LibraryImpl.java
+[10]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day13/src/practicingTDD/TestScript.java
