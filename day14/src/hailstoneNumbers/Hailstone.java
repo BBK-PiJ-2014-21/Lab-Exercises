@@ -1,3 +1,5 @@
+package hailstoneNumbers;
+
 import java.util.ArrayList;
 /**
  *
@@ -10,12 +12,13 @@ public class Hailstone {
 	}
 	
 	public ArrayList<Integer> hailstoneCalc(int n) {
-	//	checkSize();
+        if(n<1) {
+            return null;
+        }
 		l.add(n);
 		if(n==1) {
 			return l;
 		} else {
-			l.add(n);
 			if(n%2==0) {
 				return hailstoneCalc(n/2);
 			} else {
@@ -23,14 +26,7 @@ public class Hailstone {
 			}
 		}
 	}
-	/*
-	private void checkSize() {
-		if(l[l.size()-1] != -1) {
-			l.ensureCapacity(l.size()*2);
-		}
-	}
-	*/
-		
+
 	public void printList() {
 		for(Integer number : l) {
 			System.out.println(number);

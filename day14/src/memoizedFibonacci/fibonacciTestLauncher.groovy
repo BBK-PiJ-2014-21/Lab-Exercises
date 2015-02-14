@@ -1,6 +1,5 @@
-package memoizedFibonacci
-import static memoizedFibonacci.FibonacciTest.*;
+package memoizedFibonacci;
 
-printStandardFibonacci()
-println("===================="); 
-printMemoizedFibonacci()
+FibonacciTest.printStandardFibonacci(30)
+println("====================")
+FibonacciTest.printMemoizedFibonacci(30)
