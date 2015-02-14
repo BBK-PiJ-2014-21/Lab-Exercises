@@ -41,6 +41,12 @@ public class PrimeDivisorTest {
     }
     
     @Test
+    public void testRemoveNullShouldReturnFalse() {
+        p.add(5);
+        assertFalse(p.remove(null));
+    }
+    
+    @Test
     public void testRemoveValueNotInTheListShouldReturnFalse() {
         assertFalse(p.remove(5));
     }
@@ -79,6 +85,14 @@ public class PrimeDivisorTest {
         p.remove(2);
         assertEquals(p.toString(), "[ 3 * 7 = 21 ]");
     }
+
+    @Test
+    public void testDuplicates() {
+        p.add(3);
+        p.add(2);
+        p.add(2);
+        assertEquals(p.size(), 3);
+    }
     
     @Test
     public void testDuplicatesToString() {
@@ -102,7 +116,17 @@ public class PrimeDivisorTest {
         p.add(3);
         p.add(3);
         p.remove(7);
-        assertEquals(p.toString(), "[ 2 * 3^3 = 18 ]");
+        assertEquals(p.size(), 4);
+    }
+    
+    @Test
+    public void testAddMultipleValuesAndRemoveValueNotInTheListShouldBeIgnoredToString() {
+        p.add(2);
+        p.add(3);
+        p.add(3);
+        p.add(7);
+        p.remove(8);
+        assertEquals(p.toString(), "[ 2 * 3^2 * 7 = 126 ]");
     }
     
 }

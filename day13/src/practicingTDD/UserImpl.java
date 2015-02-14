@@ -1,8 +1,7 @@
 package practicingTDD;
 
-import org.mockito.internal.matchers.Null;
-
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,12 +10,12 @@ import java.util.List;
 public class UserImpl implements User {
     private String name;
     private Library library;
-    private List<String> borrowed;
+    private List<Book> borrowed;
     
     public UserImpl(String name) {
         this.name = name;
         library = null;
-        borrowed = new ArrayList<String>();
+        borrowed = new ArrayList<Book>();
     }
     
     public String getName() {
@@ -61,19 +60,25 @@ public class UserImpl implements User {
     }
     
     public List<String> listBorrowed() {
-        return borrowed;
+        List<String> TitlesBorrowed = new LinkedList<String>();
+        for(int i=0; i<borrowed.size(); i++) {
+            TitlesBorrowed.add(borrowed.get(i).getTitle());
+        }
+        return TitlesBorrowed;
     }
 
     public boolean takeBook(String title) {
         if(library==null) {
-            System.out.println(getName() + " is not registered with any library.");
             return false;
         } else {
             Book book = library.takeBook(title);
             if(book==null) {
                 return false;
+            } else if (library.getMaxBooksPerUser()<=borrowed.size()) {
+                library.returnBook(book);
+                return false;
             } else {
-                borrowed.add(book.getTitle());
+                borrowed.add(book);
                 boolean alreadyListed = false;
                 for(int i=0; i<library.getBorrowingUsersList().size(); i++) {
                     if(library.getBorrowingUsersList().get(i).getName().equals(getName())) {
@@ -87,5 +92,30 @@ public class UserImpl implements User {
             }
         }
     }    
+    
+    public boolean returnBook(String title) {
+        if (library == null) {
+            return false;
+        } else {
+            boolean toReturn = false;
+            for(int i=0; i<borrowed.size(); i++) {
+                if(borrowed.get(i).getTitle().equals(title)) {
+                    library.returnBook(borrowed.get(i));
+                    borrowed.remove(i);
+                    toReturn = true;
+                    if(borrowed.isEmpty()) {
+                        for(int j=0; j<library.getBorrowingUsersList().size(); j++) {
+                            if(library.getBorrowingUsersList().get(j).equals(this)) {
+                                library.getBorrowingUsersList().remove(j);
+                            }
+                        }
+                    }
+                }
+            }
+            return toReturn;
+        }
+    }
 
 }
+
+    

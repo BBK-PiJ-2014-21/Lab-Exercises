@@ -49,7 +49,7 @@ in past weeks.
 The notes from Day 8 implemented a Stack interface in two different ways. Create a battery of tests that verify
 that the classes implementing the interface is working as expected. Use it to test both implementations.
 
-(*created class* [StackTest] [4] *on interface* [StringStack] [5] *testing* [ArrayStringStack] [6] *and* [PointerStringStack] [7])
+(*created class [StackTest] [4] on interface [StringStack] [5] testing [ArrayStringStack] [6] and [PointerStringStack] [7]*)
 
 #### 4.2 Queue
 

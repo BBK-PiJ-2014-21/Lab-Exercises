@@ -1,6 +1,15 @@
 import java.util.List;
 import java.util.ArrayList;
-	
+
+/*
+
+java: incompatible types: Exception cannot be converted to java.lang.Throwable
+
+java: cannot find symbol
+    symbol: method printStackTrace()
+    location: variable ex of type Exception
+
+
 public class Exception {
 
 	public void launch(int newElement) {
@@ -19,5 +28,7 @@ public class Exception {
 		Exception e = new Exception();
 		e.launch(2);
 	}
-	
+
 }
+
+*/

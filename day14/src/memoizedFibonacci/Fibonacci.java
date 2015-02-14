@@ -12,7 +12,6 @@ package memoizedFibonacci;
 	public int recFibonacci(int n) {
 		if(n==0) {
             return 0;
-            
         } else if(n==1) {
 			return 1;
 		} else {
@@ -21,7 +20,9 @@ package memoizedFibonacci;
 	}
 	
 	public int memoFibonacci(int n) {
-        if(precalculated==null) {
+        if(n<1) {
+            return 0;
+        } else if(precalculated==null) {
             initPrecalculatedArray(n);
 		}
         if(precalculated[n] != -1) {
@@ -34,18 +35,12 @@ package memoizedFibonacci;
 	}
 
 	private void initPrecalculatedArray(int size) {
-        if(size==0) {
-            precalculated = new int[1];
-        } else {
-            precalculated = new int[size+1];
-        }
+        precalculated = new int[size+1];
         for (int i = 0; i < precalculated.length; i++) {
             precalculated[i] = -1;    // to indicate "not calculated yet"
         }
         precalculated[0] = 0;    // F(0)
-        if (precalculated.length > 1) {
-            precalculated[1] = 1;    // F(1)
-        }
+        precalculated[1] = 1;    // F(1)
     }
 	
 }
