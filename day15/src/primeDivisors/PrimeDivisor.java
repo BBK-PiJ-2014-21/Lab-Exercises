@@ -6,7 +6,7 @@ package primeDivisors;
  */
 public interface PrimeDivisor {
     /**
-     * Add an element to the list. It has to be a valid prime number. 
+     * Add an element to the list. It has to be a valid prime number.
      * 
      * @param value the prime number to be added to the list
      * @throws NullPointerException if a null number is passed as parameter.
@@ -23,5 +23,10 @@ public interface PrimeDivisor {
      * The caret stands for multiple elements of a same value.
      */
     public String toString();
+    /**
+     * 
+     * @return the size of the list.
+     */
+    public int size();
     
 }
