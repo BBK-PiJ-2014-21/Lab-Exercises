@@ -1,3 +1,4 @@
+package matrices
 // 3. Creating matrices - test
 
 // testing constructor, prettyPrint(), toString(), setRow()

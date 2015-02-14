@@ -1,4 +1,4 @@
-// 1. Dividing integers
+package dividingIntegers;// 1. Dividing integers
 
 public class Calculator {
 

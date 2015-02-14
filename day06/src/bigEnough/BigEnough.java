@@ -1,4 +1,4 @@
-// 7. Big enough (*)
+package bigEnough;// 7. Big enough (*)
 
 //  should change this code and use ArrayList();
 

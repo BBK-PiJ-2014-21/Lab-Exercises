@@ -1,11 +1,9 @@
-/* 3. Creating matrices
+package matrices;/* 3. Creating matrices
 
 	should find some method to replace inelegant and long for-ifs code 
 	for setRow() and setColumn() (some parser for Strings)
 
 */
-
-import java.util.Arrays;
 
 public class Matrix {
 	private int[][] matrix;

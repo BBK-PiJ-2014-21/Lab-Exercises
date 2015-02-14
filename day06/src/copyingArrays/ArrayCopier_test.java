@@ -1,4 +1,4 @@
-// 2. Copying arrays - test
+package copyingArrays;// 2. Copying arrays - test
 
 import java.util.Arrays;
 

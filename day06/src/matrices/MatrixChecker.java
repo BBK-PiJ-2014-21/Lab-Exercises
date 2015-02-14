@@ -1,4 +1,4 @@
-// 5. Symmetry looks pretty
+package matrices;// 5. Symmetry looks pretty
 // could be enhanced to handle uneven arrays
 
 import java.util.Arrays;

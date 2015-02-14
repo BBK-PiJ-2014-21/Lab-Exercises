@@ -1,4 +1,4 @@
-// 1. Dividing integer - test
+package dividingIntegers;// 1. Dividing integer - test
 
 public class Calculator_test {
 	public static void main(String[] args) {

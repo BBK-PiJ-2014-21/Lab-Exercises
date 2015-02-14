@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/E03-04-05-Matrices" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/E06-AntiAircraftAim" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/E07-BigEnough" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

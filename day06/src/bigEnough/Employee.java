@@ -1,4 +1,4 @@
-// 7. Big enough (*) - Employee List class
+package bigEnough;// 7. Big enough (*) - Employee List class
 
 import java.util.Arrays;
 

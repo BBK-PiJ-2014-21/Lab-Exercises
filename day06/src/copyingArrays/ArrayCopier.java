@@ -1,4 +1,4 @@
-// 2. Copying arrays
+package copyingArrays;// 2. Copying arrays
 
 public class ArrayCopier {
 	
