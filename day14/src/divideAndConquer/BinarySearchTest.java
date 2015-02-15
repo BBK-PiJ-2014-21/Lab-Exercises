@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static divideAndConquer.Mergesort.mergeSort;
 import static org.junit.Assert.*;
 
 /**
@@ -63,10 +64,33 @@ public class BinarySearchTest {
         assertTrue(b.binarySearch(list, 100));
     }
     
+    @Test
+    public void testGetRandomList() {
+        list = getRandomList(100);
+        assertEquals(list.size(), 100);
+    }
+    
+    @Test
+    public void testSortNElementsList() {
+        list = getRandomList(2);
+        printList(list);
+        System.out.println();
+        printList(mergeSort(list));
+    }
+    
     public static void printList(List<Integer> list) {
         for(Integer i : list) {
             System.out.println(i);
         }
+    }
+    
+    public List<Integer> getRandomList(int n) {
+        List<Integer> list = new ArrayList<>();
+        while (n > 0) {
+            list.add((int) Math.abs(1000 * Math.random()+1));
+            n--;
+        }
+        return list; 
     }
     
 }
