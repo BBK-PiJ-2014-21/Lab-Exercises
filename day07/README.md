@@ -17,8 +17,6 @@ Complete the example given in the notes with a class called [instanceCounter.Spy
     on the screen the ID of this spy plus the total number of spies so far.
   * a `die()` method that prints on the screen "instanceCounter.Spy XX has been detected and eliminated" (where XX is the spy's ID), decrements the spy counter and prints on the screen the total number of spies so far.
   *  a main method in which several objects `instanceCounter.Spy` are created and some of them killed (their method `die()` is called).
-   
-  
 
 Observe how the static variable is accessed by different objects both to increment and to decrement it.
 
