@@ -62,7 +62,7 @@ in order, maybe you can implement one of the sorting algorithms in the following
 to order a list of random numbers. Remember that you can create a random integer between 0 and N-1 with
 `Math.abs(N * Math.random())`).
 
-(*created class [BinarySearch] [6] and [BinarySearchTest] [7]*)
+(*created class [BinarySearch] [6] and [DivideAndConquerTest] [7]*)
 
 ### 5. Mergesort
 
@@ -81,13 +81,13 @@ Example with five elements:
 [3, 7, 2]       [9, 1]      (subproblem)
 [3, 7]  [2]      [9] [1]    (subproblem)
 [3] [7] [2]     [9] [1]     (subproblem)
-[3, 7]  [2]     [ 9] [1]     (integration of [3] and [7])
+[3, 7]  [2]     [ 9] [1]    (integration of [3] and [7])
     [2, 3, 7] [9] [1]       (integration of [3, 7] and [2])
     [2, 3, 7] [1, 9]        (integration of [9] and [1])
     [1, 2, 3, 7, 9]         (integration of [2, 3, 7] and [1, 9])
 ```
 
-(*to be implemented*)
+(*created class [Mergesort] [8] and updated [DivideAndConquerTest] [7]*)
 
 ### 6. Quicksort
 
@@ -115,7 +115,7 @@ Example with five elements:
     [1,2, 3, 7, 9]           (integration of the sublists of pivot 3)
 ```
 
-(*to be implemented*)
+(*created class [Quicksort] [9] and updated [DivideAndConquerTest] [7]*)
 
 ### 7. Finding the roots of a polynomial (*)
 
@@ -158,3 +158,13 @@ plane usually works with precision up to one milimeter, and the measurements for
 in quantum physics require the best precision that is achievable by state-of-the-art technology.
 
 (*to be implemented*)
+
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/memoizedFibonacci/Fibonacci.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/memoizedFibonacci/FibonacciTest.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/memoizedFibonacci/fibonacciTestLauncher.groovy
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/hailstoneNumbers/Hailstone.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/hailstoneNumbers/HailstoneTest.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/divideAndConquer/BinarySearch.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/divideAndConquer/DivideAndConquerTest.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/divideAndConquer/Mergesort.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day14/src/divideAndConquer/Quicksort.java
