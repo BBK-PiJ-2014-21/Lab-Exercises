@@ -1,5 +1,7 @@
 package primeDivisors;
 
+import divideAndConquer.Mergesort;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,9 +21,10 @@ public class PrimeDivisorList implements PrimeDivisor {
      * @param value the prime number to be added to the list
      * @return true if the number is successfully added, false otherwise.
      * @throws IllegalArgumentException if a non-prime number is added as a parameter.
+     * @throws NullPointerException if a null value is entered as a parameter.
      */
     @Override
-    public boolean add(Integer value) throws IllegalArgumentException {
+    public boolean add(Integer value) {
         if (!isPrime(value)) {
             throw new IllegalArgumentException();
         } else {
@@ -49,7 +52,7 @@ public class PrimeDivisorList implements PrimeDivisor {
      */
     @Override
     public String toString() {
-        Collections.sort(list);
+        list = Mergesort.mergeSort(list);
         String values = "[ ";
         if (list.isEmpty()) {
             return values + "]";
