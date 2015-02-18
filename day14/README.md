@@ -28,9 +28,9 @@ Is it easy to do this both iteratively and recursively? Is this similar to a for
 ### 3. Hailstone numbers
 
 The sequence hailstone numbers is defined as follows:
-    * If the number *n* is even, the next number is n/2
-    * If the number is odd, the next number is 3n + 1
-    
+  * If the number *n* is even, the next number is n/2
+  * If the number is odd, the next number is 3n + 1
+ 
 It is thought that this sequence always converges to 1 (this is the Collatz conjecture, not demonstrated yet).
 Write a method that returns a list of integers (hint: you can use `List<Integer>` and `ArrayList<Integer>`)
 with the sequence of hailstone numbers that starts at some given natural number provided by the user.
@@ -41,19 +41,17 @@ with the sequence of hailstone numbers that starts at some given natural number 
 
 The most basic example of divide-and-conquer strategies is the binary search. This is used to look for an element
 *in a sorted list*.
-    We can find an element in a list by traversing through the whole list and checking whether each element is the
+  We can find an element in a list by traversing through the whole list and checking whether each element is the
 one we are looking for. The number of comparisons that we need by using this algorithm is proportional to the
 length of the list. If we know that the list is sorted, we can do better with a divide-and-conquer strategy, like the
 one defined by repeating these steps:
-    * **Initial action::** If the list is empty, it does not contain the element and we have finished. 
-    If it is not empty, check the middle element, i.e. the element at `list.size()/2`. If it is the element we are looking for, we have finished.
-    * **Subproblem:** If the element we are looking for is before the middle element, the next list to search into is the first half of the original list; otherwise, it is the second half.
-    * **Integration:** No need for integration in this case. Just repeat looking into half-lists until the subset 
-    is only one element long. At that point, either the element is the one we are looking for or the list does not contain it.
+  * **Initial action::** If the list is empty, it does not contain the element and we have finished. If it is not empty, check the middle element, i.e. the element at `list.size()/2`. If it is the element we are looking for, we have finished.
+  * **Subproblem:** If the element we are looking for is before the middle element, the next list to search into is the first half of the original list; otherwise, it is the second half.
+  * **Integration:** No need for integration in this case. Just repeat looking into half-lists until the subset is only one element long. At that point, either the element is the one we are looking for or the list does not contain it.
 
 Implement a binary search algorithm for a list of integer numbers. The method returns true if the list contains
 the element and false otherwise.
-    You can use the classes in the Java Collection Library. Search for numbers in lists with 10, 100, and 1000
+   You can use the classes in the Java Collection Library. Search for numbers in lists with 10, 100, and 1000
 elements; how many comparisons do you need in each case? (Hint: instead on entering manually 1000 elements
 in order, maybe you can implement one of the sorting algorithms in the following exercises and then use them
 to order a list of random numbers. Remember that you can create a random integer between 0 and N-1 with
@@ -65,10 +63,8 @@ to order a list of random numbers. Remember that you can create a random integer
 
 Mergesort is a popular sorting algorithm that employs a divide-and-conquer strategy. You can implement a Merge-sort 
 for lists by following the following steps:
-    * **Subproblem:** If the list contains 0 or 1 element, it is sorted and you can return it. 
-    If not, then divide the list into two lists of the same length (± 1). Then sort the lists (i.e. apply mergesort to each sublist).
-    * **Integration:** When both sublists are returned sorted, check the first element of both sublists; remove the one
-    that comes first (e.g. the lowest integer of the two) and add it to the result list. Repeat this process until all elements in both sublists have been added to the result list. Return the result list.
+  * **Subproblem:** If the list contains 0 or 1 element, it is sorted and you can return it. If not, then divide the list into two lists of the same length (± 1). Then sort the lists (i.e. apply mergesort to each sublist).
+  * **Integration:** When both sublists are returned sorted, check the first element of both sublists; remove the one that comes first (e.g. the lowest integer of the two) and add it to the result list. Repeat this process until all elements in both sublists have been added to the result list. Return the result list.
 
 Example with five elements:
 
@@ -89,12 +85,10 @@ Example with five elements:
 
 Quicksort is another sorting algorithm that also employs a divide-and-conquer strategy. It works well in most usual
 computers because of the low-level interactions between registers and the main memory, which make it very popular
-and widely used.
-    You can implement a Quicksort for lists by following the following steps:
-    * **Initial action:** If the list contains 0 or 1 element, it is sorted and you can return it. Otherwise, choose one element as "pivot" (usually the first one).
-    * **Subproblem:** Divide the list into two lists: the first list contains the elements before the pivot (e.g. the integers lower than the pivot) and the second one contains the elements after the pivot. 
-    Then sort both lists (i.e. apply quicksort to each sublist, choosing a new pivot, etc).
-    * **Integration:** When both sublists are returned sorted, simply concatenate them (first list, then pivot, then second list) and return the result.
+and widely used. You can implement a Quicksort for lists by following the following steps:
+  * **Initial action:** If the list contains 0 or 1 element, it is sorted and you can return it. Otherwise, choose one element as "pivot" (usually the first one).
+  * **Subproblem:** Divide the list into two lists: the first list contains the elements before the pivot (e.g. the integers lower than the pivot) and the second one contains the elements after the pivot. Then sort both lists (i.e. apply quicksort to each sublist, choosing a new pivot, etc).
+  * **Integration:** When both sublists are returned sorted, simply concatenate them (first list, then pivot, then second list) and return the result.
 
 Example with five elements:
 
