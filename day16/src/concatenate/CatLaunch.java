@@ -7,9 +7,9 @@ public class CatLaunch {
 		if(args.length==0) {
 			System.out.println("No filename entered");
 		} else {
-			for(int i=0; i<args.length; i++) {
-				System.out.println(args[i].toUpperCase());
-				cat.getFile(args[i]);
+			for(String out : args) {
+				System.out.println(out.toLowerCase());
+				cat.getFile(out);
 				System.out.println();
 			}
 		}

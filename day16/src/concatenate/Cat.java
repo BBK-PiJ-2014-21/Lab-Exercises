@@ -6,21 +6,19 @@ public class Cat {
 	
 	public void getFile(String filename) {
 		File file = new File("." + File.separator + filename);
-		if(!file.exists()) {
-			System.out.println("The file does not exist");
-		} else {
-			readFile(file);
-		}
+		readFile(file);
 	}
 	
-	public void readFile(File file) {
+	private void readFile(File file) {
 		BufferedReader in = null;
 		try {
-			in = new BufferedReader(new FileReader(file));
-			String line;
-			while((line = in.readLine())!= null) {
-				System.out.println(line);
-			}
+            in = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = in.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println("File " + file + " does not exist");
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		} finally {
@@ -29,7 +27,7 @@ public class Cat {
 	}
 	
 	
-	public void closeReader(Reader reader) {
+	private void closeReader(Reader reader) {
 		try {
 			if(reader!=null) {
 				reader.close();
