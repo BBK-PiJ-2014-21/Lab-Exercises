@@ -10,13 +10,12 @@ public class CopyFile {
 		File inputFile = new File(input);
 		File outputFile = new File(output);
 		BufferedReader in = null;
-		if(!outputFile.exists() || (outputFile.exists() && overWrite())) {
+        PrintWriter out = null;
+		if(!outputFile.exists() || (outputFile.exists() && overWrite(outputFile))) {
 			try {
 				in = new BufferedReader(new FileReader(inputFile));
 				String line;
-				while((line = in.readLine())!=null) {
-					System.out.println(line);
-				}
+				out = new PrintWriter(new BufferedWriter(new FileWriter(outputFile)));
 			} catch (FileNotFoundException ex) {
 				System.out.println("File " + inputFile + " not found.");
 			} catch (IOException ex) {
@@ -25,19 +24,26 @@ public class CopyFile {
 		}
 	}	
 	
-	public boolean overWrite() {
-		System.out.println("Would you like to overwrite " + output + "?");
+	private boolean overWrite(File file) {
+		System.out.println("Would you like to overwrite " + file + "?");
+        Scanner sc = new Scanner(System.in);
 		while(true) {
 			System.out.print(">> ");
-			String result = sc.next();
+			String result = sc.nextLine();
 			if(result.equalsIgnoreCase("y") || result.equalsIgnoreCase("yes")) {
 				return true;
-			} else if (result.equalsIgnoreCase("n") || result.equalsIgnoreCase("no")) {
-				return false;
-			} else {
-				continue;
-			}
+			} else if (result.equalsIgnoreCase("n") || result.equalsIgnoreCas e("no")) {
+                return false;
+            }
 		}
 	}
+    
+    private void writeToFile(File output) {
+        try {
+            PrintWriter out = new PrintWriter(output);
+            
+        }
+        
+    }
 		
 }
