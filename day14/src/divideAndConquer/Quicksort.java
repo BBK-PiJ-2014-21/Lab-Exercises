@@ -8,16 +8,16 @@ import java.util.List;
  */
 public class Quicksort {
     
-    public static List<Integer> quickSort(List<Integer> list) {
+    public static <T extends Comparable<? super T>> List<T> quickSort(List<T> list) {
            if(list.size()<1) {
                return list;
            } else {
-               Integer pivot = list.get(0);
-               List<Integer> list1 = new ArrayList<>();
-               List<Integer> list2 = new ArrayList<>();
-               List<Integer> result = new ArrayList<>();
+               T pivot = list.get(0);
+               List<T> list1 = new ArrayList<>();
+               List<T> list2 = new ArrayList<>();
+               List<T> result = new ArrayList<>();
                for (int i = 1; i < list.size(); i++) {
-                   if (list.get(i) < pivot) {
+                   if (list.get(i).compareTo(pivot)<=0) {
                        list1.add(list.get(i));
                    } else {
                        list2.add(list.get(i));
@@ -25,11 +25,11 @@ public class Quicksort {
                }
                list1 = quickSort(list1);
                list2 = quickSort(list2);
-               for (int i : list1) {
+               for (T i : list1) {
                    result.add(i);
                }
                result.add(pivot);
-               for (int i : list2) {
+               for (T i : list2) {
                    result.add(i);
                }
                return result;
