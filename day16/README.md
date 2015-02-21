@@ -116,7 +116,7 @@ exactly like the originals.
 [4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/concatenate/CatLaunch.java
 [5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/concatenate/CopyFile.java
 [6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/concatenate/CpLauncher.java
-{7}: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/concatenate/CpDirLauncher.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/concatenate/CpDirLauncher.java
 [8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/transliterate/Tr.java
 [9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/transliterate/TrLaunch.java
 [10]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day16/src/sort/Sort.java
