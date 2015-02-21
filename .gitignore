@@ -39,6 +39,7 @@ Thumbs.db
 # Other #
 #########
 *.txt
+*.csv
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm#
 ########################################################################
