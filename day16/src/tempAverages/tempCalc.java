@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *
  */
-public class tempCalc {
+public class TempCalc {
     
     public void calcAverage(File file) {
         BufferedReader in = null;

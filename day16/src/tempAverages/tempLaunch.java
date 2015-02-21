@@ -6,11 +6,11 @@ import java.util.Scanner;
 /**
  *
  */
-public class tempLaunch {
+public class TempLaunch {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        tempCalc c = new tempCalc();
+        TempCalc c = new TempCalc();
         System.out.println("Please enter the name or path to the CSV file");
         String s = sc.next();
         File file = new File(s);
