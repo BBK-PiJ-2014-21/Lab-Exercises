@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 /**
  * TDD for interface {@see PrimeDivisor}. 
  * This tests assume the implementation name to be PrimeDivisorList.
- * As per interface, this tests assume also the number to be stored already sorted after add() method. 
+ * As per interface, this tests assume also the numbers to be stored already sorted after add() method.
  */
 public class PrimeDivisorTest {
     private PrimeDivisor p;

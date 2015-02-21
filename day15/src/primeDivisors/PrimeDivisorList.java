@@ -14,14 +14,15 @@ public class PrimeDivisorList implements PrimeDivisor {
         list = new ArrayList<>();
     }
     /**
-     *
+     * {@inheritDoc}
      *  
      * @param value the prime number to be added to the list
      * @return true if the number is successfully added, false otherwise.
      * @throws IllegalArgumentException if a non-prime number is added as a parameter.
+     * @throws NullPointerException if a null value is passed as parameter.
      */
     @Override
-    public boolean add(Integer value) throws IllegalArgumentException {
+    public boolean add(Integer value) throws IllegalArgumentException, NullPointerException {
         if (!isPrime(value)) {
             throw new IllegalArgumentException();
         } else {
