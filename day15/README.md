@@ -74,10 +74,10 @@ OUTPUT:
   		}24-25      Exception in thread "launch" java.lang.IndexOutOfBoundsException...
   		26-27}
 ```
-OUTPUT:
-4
-5
-6
+OUTPUT:  
+4  
+5  
+6  
 
 *c) userInput is 4.*
 ```
@@ -87,9 +87,9 @@ OUTPUT:
   		}24-25		Exception in thread "launch" java.lang.IndexOutOfBoundsException...
   		26-27}
 ```
-OUTPUT:
-6
-
+OUTPUT:  
+6  
+  
 *d) userInput is 6.*
 ```
   		1{2-8};		[1, 2, 3, 4, 5, 6]
@@ -97,9 +97,9 @@ OUTPUT:
   		}24-25		Exception in thread "launch" java.lang.IndexOutOfBoundsException...
   		26-27}
 ```
-OUTPUT:
-<empty>
-
+OUTPUT:  
+*empty*  
+  
 ### 2. Exception
 
 Read the following code and check whether there is anything wrong with it. Then write some similar code and
