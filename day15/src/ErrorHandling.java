@@ -1,7 +1,7 @@
 // 3. Error handling on user input
 
-import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class ErrorHandling {
 	
@@ -13,41 +13,38 @@ public class ErrorHandling {
 	}
 
 	public void launch() {
-		boolean valid = false;
-		int n = 0;
+        boolean valid = false;
+		long n = 0;
 		while(!valid) {
-			System.out.println("How many numbers you want to enter? ");
-			n = intNumberFormatException();
-			if(n<=0) {
-				System.out.println("Please enter a positive number.");
-			} else {
-				valid = true;
-			}
-		}
-		launch(n);
+            System.out.print("How many numbers you want to enter? >>");
+            n = inputMismatch();
+            if (n < 1) {
+                System.out.println("Please enter a positive number.");
+            } else {
+                valid = true;
+            }
+        }
+        launch(n);
 	}
 	
-	public void launch(int total) {
-		int i = total;
-		int n = 0;
+	public void launch(long total) {
+		long i = total;
 		int sum = 0;
 		while(i>0) {
-			n = intNumberFormatException();
+			long n = inputMismatch();
 			sum+=n;
 			i--;
 		}
 		System.out.println("Average = " + sum/total);
 	}
 	
-	public int intNumberFormatException() {
-		int n = 0;
+	public long inputMismatch() {
+		long n = 0;
 		System.out.print("Please enter a number: ");
 		try {
 			Scanner sc = new Scanner(System.in);
-			n = sc.nextInt();
-		} catch(NumberFormatException ex) {
-			System.out.println("That is not a number");
-		} catch(InputMismatchException e) {
+			n = sc.nextLong();
+		} catch(InputMismatchException ex) {
 			System.out.println("That is not a number");
 		}
 		return n;

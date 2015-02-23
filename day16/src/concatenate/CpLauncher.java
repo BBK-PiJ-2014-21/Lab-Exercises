@@ -2,12 +2,12 @@ package concatenate;
 
 public class CpLauncher {
 	
-	public static void main(Strin[] args) {
+	public static void main(String[] args) {
 		CopyFile cp = new CopyFile();
 		if(args.length<2) {
-			System.out.println("You need to enter at least two filenames.");
+			System.out.println("You need to enter at least two file names.");
 		} else {
-			cp.readInput(args[0], args[1]);
+			cp.copyToFile(args[0], args[1]);
 		}
 	}
 	

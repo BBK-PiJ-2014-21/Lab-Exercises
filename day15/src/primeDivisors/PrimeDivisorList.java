@@ -16,15 +16,18 @@ public class PrimeDivisorList implements PrimeDivisor {
         list = new ArrayList<>();
     }
     /**
-     *
-     *  
+     * {@inheritDoc}
+     * 
+     * The values in this list are added unsorted, and keeped like that.
+     * The sorting will happen after calling the toString() method.
+     *   
      * @param value the prime number to be added to the list
      * @return true if the number is successfully added, false otherwise.
      * @throws IllegalArgumentException if a non-prime number is added as a parameter.
      * @throws NullPointerException if a null value is entered as a parameter.
      */
     @Override
-    public boolean add(Integer value) {
+    public boolean add(Integer value) throws IllegalArgumentException, NullPointerException {
         if (!isPrime(value)) {
             throw new IllegalArgumentException();
         } else {
@@ -33,8 +36,9 @@ public class PrimeDivisorList implements PrimeDivisor {
         }
     }
     /**
+     * {@inheritDoc}
      * 
-     * 
+     * @param value the element to be removed from the list. 
      * @return true if the number is found and successfully removed, false otherwise.
      */
     @Override
@@ -46,9 +50,11 @@ public class PrimeDivisorList implements PrimeDivisor {
         }
     }
     /**
+     * {@inheritDoc}
+     * 
+     * This method applies mergesort to sort the values just before printing them. 
      *
-     *
-     * @return
+     * @return a String representation of the List of primes.
      */
     @Override
     public String toString() {
@@ -88,7 +94,12 @@ public class PrimeDivisorList implements PrimeDivisor {
             return values + " ]";
         }
     }
-    
+    /**
+     * Check whether a number is a prime or not.
+     * 
+     * @param n the number to be checked.
+     * @return true if the number is a prime, false otherwise.
+     */
     public boolean isPrime(Integer n) {
         if(n<2) {
             return false;
@@ -103,7 +114,11 @@ public class PrimeDivisorList implements PrimeDivisor {
         return true;
         }
     }
-    
+    /**
+     * The size of the List.
+     *  
+     * @return the size of the List.
+     */
     public int size() {
         return list.size();
     }
