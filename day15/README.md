@@ -56,7 +56,7 @@ Incorporate this code into a simple class to verify your answers.
   		20-21*		[] get(0) = EX THROWN
   		}24-25		Exception in thread "launch" java.lang.IndexOutOfBoundsException... 
   		26-27}
-  		
+
 OUTPUT:
  2
  3
@@ -134,7 +134,7 @@ Modify the program so that it first asks how many numbers the user wants to ente
 computer should complain if the user enters something that is not a number in both cases. Use methods to prevent code 
 repetitions.
 
-(*modified class [ErrorHe]*)
+(*modified class [ErrorHandling] [1]*)
 
 ### 4. More patients
 
@@ -142,7 +142,7 @@ Write a class that asks for data (name and year of birth) about new patients in 
 of `Patient`. The constructor of `Patient` must throw an `IllegalArgumentException` if the age of the patient is
 negative or greater than 130.
 
-(**)
+(*created class [MorePatients] [2] and [MorePatientsTest] [3]*)
 
 ### 5. Prime divisors
 
@@ -156,7 +156,7 @@ for a list containing one 2, two 3, and one 7.
 Use the TDD methodology to create the class (interface, tests,implementation). You can base your class on classes and 
 interfaces from the Java Collections Library.
 
-(*to be implemented*)
+(*created interface [PrimeDivisor] [4] and test [PrimeDivisorTest] [5], then implementation [PrimeDivisorList] [6]*)
 
 ### 6. Your first exceptions
 
