@@ -1,4 +1,4 @@
-// 4. More patients
+package morePatients;// 4. More patients
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

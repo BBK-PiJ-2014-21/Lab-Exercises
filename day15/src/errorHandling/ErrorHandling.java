@@ -1,4 +1,4 @@
-// 3. Error handling on user input
+package errorHandling;// 3. Error handling on user input
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
