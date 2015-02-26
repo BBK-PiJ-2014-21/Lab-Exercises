@@ -64,7 +64,7 @@ while(true) {
 			break;
 		case "0" :
 			System.out.println("Goodbye.");	
-			System.exit(0);
+			break;
 		default :
 			System.out.println("Invalid input.");
 	}

@@ -1,35 +1,6 @@
-/* 3. A bit more practice with doubles
-	to fix: double values should be rounded
-*/
+// 3. A bit more practice with doubles
 
-class Mortgage {
-	double cost = 0;
-	double rate = 0;
-	int years = 0;
-	double totalAmount = 0;
-	double yearlyPayment = 0;
-	
-	double getTotalAmount() {
-		totalAmount = cost*(1+rate/100)
-		return totalAmount;
-		
-	}
-	
-	double getYearlyPayment() {
-		double yearlyPayment = totalAmount/years;
-		return yearlyPayment;
-	
-	}
-
-	double getYearsToCleanInterest(Mortgage mortgage) {
-		mortgage.getTotalAmount();
-		mortgage.getYearlyPayment();
-		double yearsToCleanInterest = (mortgage.totalAmount-cost)/mortgage.yearlyPayment;
-		return(yearsToCleanInterest);
-	
-	}
-
-}
+// TODO double values should be rounded
 
 Mortgage myMortgage = new Mortgage();
 System.out.print("Please enter the total amount borrowed: ");
