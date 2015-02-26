@@ -1,47 +1,20 @@
 // 6. More on points
 
-class Point {
-	double x;
-	double y;
-
-	double distanceTo(Point point) {
-		double distance = Math.sqrt(Math.pow((this.x-point.x),2) + Math.pow((this.y-point.y),2));
-		return distance;
-	}
-	
-	double distanceToOrigin() {
-		Point origin = new Point();
-		origin.x = 0.0;
-		origin.y = 0.0;
-		return distanceTo(origin);
-	}
-	
-	void moveTo(double x, double y) {
-		this.x = x;
-		this.y = y;
-	}
-	
-	void moveTo(Point point) {
-		this.x = point.x;
-		this.y = point.y;
-	}
-	
-	Point clone() {
-		Point newPoint = new Point();
-		newPoint.x = this.x;
-		newPoint.y = this.y;
-		return newPoint;
-	}
-	
-	Point opposite() {
-		Point newPoint = new Point();
-		newPoint.x = this.x * -1;
-		newPoint.y = this.y * -1;
-		return newPoint;
-	}
-		
-	
-}
-
-
-		
+Point origin = new Point()
+origin.x = 0.0
+origin.y = 0.0
+Point twoThree = new Point()
+twoThree.x = 2.0
+twoThree.y = 3.0
+Point minusOneZero = new Point()
+minusOneZero.x = -1.0
+minusOneZero.y = 0.0
+println("distance of (0,0) to (2,3) = " + origin.distanceTo(twoThree))
+println("distance of (2,3) to origin = " + twoThree.distanceToOrigin())
+twoThree.moveTo(origin)
+println("distance of (2,3) moved to origin to (0,0) =  " + twoThree.distanceTo(origin))
+originClone = origin.clone()
+println("distance of (-1,0) to (0,0) cloned = " + minusOneZero.distanceTo(originClone))
+println("distance of opposite of (-1,0) to (0,0) = " + minusOneZero.opposite().distanceTo(origin))
+origin.moveTo(3,3) 
+println("distance of (0,0) moved to (3,3) from (0,0) cloned = " + origin.distanceTo(originClone))
