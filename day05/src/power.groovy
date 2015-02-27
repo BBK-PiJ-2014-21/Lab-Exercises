@@ -1,9 +1,8 @@
 /* 5. Power
+	    implemented to work with negative powers as well.
+TODO	need to add a time counter to prove difference in time execution between the two methods.
 
-	implemented to work with negative powers as well.
-	need to add a time counter to prove difference in time execution between
-*/ 	the two methods.
-
+*/
 public class Power {
 	
 	static double powRecursive(int base, int exponent) {
