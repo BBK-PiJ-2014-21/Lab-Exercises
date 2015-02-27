@@ -1,6 +1,14 @@
-## 1 Recursive code, line by line
+## Day Five
 
-### a)
+### Learning Goals
+
+Before the next day, you should have achieved the following learning goals:
+  * Be able to write recursive for simple problems.
+  * Understand what a recursive method looks like, and how it differs from an iterative method.
+  
+### 1. Recursive code, line by line
+
+#### a)
 
 What number would the following method print on screen if you called `printNumber(6)`?
 
@@ -83,8 +91,7 @@ So the final output will be:
 6
 ```
 
-
-### b)
+#### b)
 
 Do you see anything wrong with the following code? How would you fix it?
 
@@ -99,8 +106,7 @@ The base case here will cover just an even input: if an odd number is passed to 
 this recursive method will cause a stack overflow. The `==` on the base case could be replaced to 
 a `<=`, so it will return as soon as the result is equal or less than zero.
 
-
-### c)
+#### c)
 
 Do you see anything wrong with the following code? How would you fix it?
 
@@ -124,7 +130,7 @@ before the recursive calls:
 		return result;
 	}
 
-### d) McCarthy's 91 function
+#### d) McCarthy's 91 function
 
 Calculate the result of calling this method with arguments 50, 73, and 95. 
 Note that the recursion on line 5 is a double.
@@ -186,4 +192,101 @@ until a number larger than 100 is reached; then two recursions bounce back and f
 92 to 103 etc.) until 100 to 111 is reached: then one layer is "closed" (101 back again to 91), 
 and the mechanism would start again until the first layer is finally closed at 91.
 
+### 2. Classics
 
+#### 2.1 a) Factorial
+Write a small program with a method that calculates the factorial of an integer number as seen in the notes.
+Is it easy to do this both iteratively and recursively? Try both ways and see which is more natural for you. If
+one takes too long, try the other way.
+
+(*created script [factorial.groovy] [1]*)
+
+#### 2.2 b) Fibonacci
+
+Write a small program with a method that calculates the n(th) element of the Fibonacci sequence as seen in the notes.
+Is it easy to do this both iteratively and recursively? Try both ways and see which is more natural for you. If
+one takes too long, try the other way.
+When doing it recursively, do it with and without memoization. Compare the time that is needed in each case
+to find F(40) or F(45).
+
+(*created script [fibonacci.groovy] [2]*)
+
+#### 2.3 c) Hanoi towers
+
+A legend says that, somewhere in the East, near Hanoi, there is a temple. In the temple, there are three posts. In
+the posts, there are 64 discs of 64 different sizes. When the world was created, all the discs were in the first post;
+when all the discs are moved to the last post, the world will end.
+The monks in the temple move the discs between posts, but they must obey two simple rules. First, only one
+disc can be moved at a time, from one post to another post (it cannot be left anywhere else). Last, but not least,
+a disc can only be placed on top of a bigger disc, never on top of a smaller disc. The smallest disc can be placed
+on any post (all other discs are bigger); the biggest disc can only be placed on an empty post.
+Create a method that calculates the number of moves necessary to move a set of n Hanoi disks from the initial
+post to the last post.
+
+(*created script [hanoiTowers.groovy] [3]*)
+
+### 3. Paper sizes (*)
+
+A Din-A0 sheet of paper is 841mm × 1189mm (its surface is one square meter). Successive measurements of paper
+are defined recursively as "half" or "double" the preceding size. Therefore, a Din-A1 sheet of paper is half of
+Din-A0, or 594mm × 841mm; while a Din-A00 is double of Din-A0, or 1189mm× 1682mm.
+Create a method that takes a String parameter representing a size (e.g. "A4", "A00000") and prints on screen
+the size of the corresponding sheet of paper. For simplicity, you can ignore rounding errors when calculating smaller
+sizes.
+Hint: note that two consecutive sizes always share one side and only the other one is multiplied or divided by
+two, e.g. the short side of Din-A2 is as long as the long side of Din-A3, while the long side of Din-A2 is twice as
+long as the short side of Din-A3.
+
+(*created script [paperSizes.groovy] [4]*)
+
+### 4. Palindrome
+
+Create a program with a (recursive) method that takes a String parameter and returns true if the String is a
+palindrome and false otherwise. Compare this recursive version with the iterative version you wrote in past weeks.
+Which one seems clearer to you?
+
+(*created script [palindrome.groovy] [5]*)
+
+### 5. Power
+
+Create a class with a static method pow that takes to integers (base and exponent) and calculates the power,
+e.g. pow(2,3) calculates 23.
+Is it easy to do this both iteratively and recursively?
+
+(*created [power.groovy] [6]*)
+
+### 6. Eight Dames (*)
+
+Create a method that calculates the solution to the problem of the eight Dames: "given a chess board, and knowing
+that the Dame can reach any tile horizontally, vertically, or diagonally, place 8 Dames on the board so that none
+of them can reach the others by doing only one move". You can return the solution as an array of 8x8 booleans
+where eight tiles are true (those with the Dames on them) and the others are false.
+For extra complexity, make your method return all the possibilities in which the problem can be solved (this
+may take a long time).
+
+(*to be implemented*)
+
+### 7. Hanoi Redux (**)
+
+The legend of the Towers of Hanoi has inspired countless variations as mind games. Here is one of them: if we have
+three posts and 64 discs, where all the even-numbered discs are on the leftmost post while the odd-numbered discs
+are on the rightmost post, how many moves do we need to exchange the discs following the Hanoi rules for disc
+movement?
+Write a method that calculates the number of moves necessary to exchange *n* discs.
+
+(*to be implemented*)
+
+### 8. How big is your stack? (*)
+
+Write a method that calculates the maximum size of the stack (measured in method calls) by forcing a `StackOverflowError`.
+Use different methods, which different number and types of local variables, and see how the number of maximum
+function calls changes.
+
+(*created [howBigIsYourStack.groovy] [7]*)
+
+[1]:
+[2]:
+[3]:
+[4]:
+[5]:
+[6]:
