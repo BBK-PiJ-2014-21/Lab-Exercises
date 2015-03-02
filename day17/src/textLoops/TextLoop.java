@@ -1,4 +1,4 @@
-/* 1. Text loops
+package textLoops;/* 1. Text loops
 	
 	MODE 0:	
 		Loop: Thread 0, iteration:0.
