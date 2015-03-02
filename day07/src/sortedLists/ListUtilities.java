@@ -1,4 +1,6 @@
-package sortedLists;// 9. From array to list
+package sortedLists;
+
+// 9. From array to list
 
 public class ListUtilities {
 
@@ -17,11 +19,28 @@ public class ListUtilities {
 		}
 		return intList;
 	}
-
+    // TODO TO TEST
 	public static void bubbleSort(IntegerList intList) {	// 11. Bubble sort (*) not completed
-		if(first==null || first.getNext()==null) {
-			return;
-		} else {
-			
-	
+        if(intList.size()<2) {
+            return;
+        } else {
+            boolean finish = false;
+            while(!finish) {
+                finish = true;
+                IntNode previous = intList.getFirst();
+                IntNode aux = intList.getFirst();
+                while(aux.getNext()!=null) {
+                    aux = aux.getNext();
+                    if (previous.getValue() > aux.getValue()) {
+                        finish = false;
+                        int temp = previous.getValue();
+                        previous.setValue(aux.getValue());
+                        aux.setValue(temp);
+                    }
+                    previous = previous.getNext();
+                }
+            }
+        }
+    }
+
 }

@@ -1,4 +1,6 @@
-package sortedLists;// 9. From array to list
+package sortedLists;
+
+// 9. From array to list
 
 public class IntegerList {
 	private IntNode first;
@@ -9,6 +11,10 @@ public class IntegerList {
 		size = 0;
 	}
 	
+    public IntNode getFirst() {
+        return first;
+    }
+    
 	public void add(int value) {	// add the value at the end of the list
 		IntNode newNode = new IntNode(value);
 		if(first==null) {
@@ -20,6 +26,7 @@ public class IntegerList {
 			}
 			last.setNext(newNode);
 		}
+        size++;
 	}
 	
 	public void push(int value) {	// push the value at the beginning of the list
@@ -30,11 +37,13 @@ public class IntegerList {
 			newNode.setNext(first);
 			first = newNode;
 		}
+        size++;
 	}
 	
 	public void insert(int value) {	// 10. A sorted list (insert the value towards the beginning if smaller,
 		IntNode newNode = new IntNode(value);		// towards the end if larger, keeping the list sorted
-		if(first==null) {							
+		size++;
+        if(first==null) {							
 			first = newNode;
 		} else if(first.getValue()>newNode.getValue()) {
 			newNode.setNext(first);
@@ -58,6 +67,10 @@ public class IntegerList {
 		}
 	}
 	
+    public int size() {
+        return size;
+    }
+    
 	public void prettyPrint() {
 		if(first==null) {
 			System.out.println("The list is empty.");
