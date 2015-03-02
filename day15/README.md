@@ -59,11 +59,11 @@ Incorporate this code into a simple class to verify your answers.
   		26-27}
 ```
 OUTPUT:  
- **2
+ **2  
  3  
  4  
- 5
- 6**
+ 5  
+ 6**  
 
 *b) userInput is 2.*
 ```
@@ -76,9 +76,9 @@ OUTPUT:
   		26-27}
 ```
 OUTPUT:  
-**4
+**4  
 5  
-6**
+6**  
 
 *c) userInput is 4.*
 ```
@@ -89,7 +89,7 @@ OUTPUT:
   		26-27}
 ```
 OUTPUT:  
-**6**
+**6**  
   
 *d) userInput is 6.*
 ```
