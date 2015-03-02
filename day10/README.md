@@ -47,7 +47,7 @@ public class PhoneLauncher {
 }
 ```
 
-(*created class [OldPhone] [1], [MobilePhone] [2], [SmartPhone] [3] and [PhoneLauncher] [4] *)
+(*created class [OldPhone] [1], [MobilePhone] [2], [SmartPhone] [3] and [PhoneLauncher] [4]*)
 
 ### 2. Overriding
 
