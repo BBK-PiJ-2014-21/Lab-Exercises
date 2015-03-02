@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class CopyFile {
 	
 	public void copyToFile(String input, String output) {   // (a)
-		Scanner sc = new Scanner(System.in);
 		File inputFile = new File(input);
 		File outputFile = new File(output);
 		BufferedReader in = null;
