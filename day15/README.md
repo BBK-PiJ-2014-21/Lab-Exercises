@@ -59,10 +59,11 @@ Incorporate this code into a simple class to verify your answers.
   		26-27}
 ```
 OUTPUT:  
- 2  
+ **2
  3  
  4  
  5
+ 6**
 
 *b) userInput is 2.*
 ```
@@ -75,9 +76,9 @@ OUTPUT:
   		26-27}
 ```
 OUTPUT:  
-4  
+**4
 5  
-6  
+6**
 
 *c) userInput is 4.*
 ```
@@ -88,7 +89,7 @@ OUTPUT:
   		26-27}
 ```
 OUTPUT:  
-6  
+**6**
   
 *d) userInput is 6.*
 ```
@@ -98,7 +99,7 @@ OUTPUT:
   		26-27}
 ```
 OUTPUT:  
-*empty*  
+**_empty_**
   
 ### 2. Exception
 
@@ -172,7 +173,7 @@ thown out of a try block”.
 Assuming you do all of the above inside the `launch()` method of your class, did you have to make any changes
 to the method’s declaration?
 
-(*to be implemented*)
+(*created classes [MyCheckedException] [7], [MyRunTimeException] [8] and [Launcher] [9]*)
 
 ### 7. Hierarchies of classes, hierarchies of exceptions
 
@@ -182,7 +183,7 @@ your hierarchy. Inherit B from A and override the method so it throws an excepti
 Repeat by inheriting class C from B. In the `launch()` method of another class, create a C and upcast it to A, then
 call the method.
 
-(*to be implemented*)
+(*created Exceptions and Classes A, B, C in package [hierarchies] [10] with class [Launcher] [11]*)
 
 ### 8. Exaggerating list (*)
 
@@ -198,6 +199,17 @@ especially in the following two cases:
     (according to the interface documentation).
     * The list does not support methods `removeAll()` and `retainAll()`.
 
-(*to be implemented*)
+(*created class [ExaggeratingList] [12], to be completed*)
 
-[1]:
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/errorHandling/ErrorHandling.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/morePatients/MorePatients.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/morePatients/MorePatientsTest.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/primeDivisors/PrimeDivisor.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/primeDivisors/PrimeDivisorTest.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/primeDivisors/PrimeDivisorList.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/yourFirstExceptions/MyCheckedException.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/yourFirstExceptions/MyRuntimeException.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/yourFirstExceptions/Launcher.java
+[10]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/tree/master/day15/src/hierarchies
+[11]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/hierarchies/Launcher.java
+[12]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day15/src/exaggeratingList/ExaggeratingList.java
