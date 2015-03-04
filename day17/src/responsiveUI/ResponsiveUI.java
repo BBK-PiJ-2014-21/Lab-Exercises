@@ -1,7 +1,5 @@
 package responsiveUI;
 
-import org.junit.runners.Parameterized;
-
 import java.util.Scanner;
 
 /**
@@ -19,27 +17,40 @@ public class ResponsiveUI implements Runnable {
 
     @Override
     public void run() {
-        while(true) {
+        boolean finished = false;
+        while (!finished) {
             try {
                 Thread.sleep(time);
                 list.add(taskN);
+                finished = true;
             } catch (InterruptedException ex) {
-                // back to main
+                // back to try block unless finished
             }
         }
     }
 
     public static void main(String[] args) {
         list = new TasksList();
-        Scanner sc = null;
-        Thread t;
-        for (int i = 0; i <= 10; i++) {
-            sc = new Scanner(System.in);
-            System.out.print("Enter the duration (in ms) of task " + i + ": ");
+        Scanner sc = new Scanner(System.in);
+        Thread[] threads = new Thread[10];
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter the duration (in ms) of task " + (i+1) + ": ");
             int time = sc.nextInt();
-            t = new Thread(new ResponsiveUI(time, i));
-            t.start();
+            threads[i] = new Thread(new ResponsiveUI(time, i+1));
+            System.out.println(threads[i].getName() + " started");
+            threads[i].start();
             list.printList();
         }
+        for (Thread t : threads) {
+            while (t.isAlive()) {
+                try {
+                    t.join();
+                } catch (InterruptedException ex) {
+                    //
+                }
+            }
+        }
+        list.printList();
+        System.out.println("Goodbye");
     }
 }
