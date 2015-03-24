@@ -1,6 +1,6 @@
 package dividingIntegers;// 1. Dividing integer - test
 
-public class Calculator_test {
+public class TestCalculator {
 	public static void main(String[] args) {
 		Calculator c = new Calculator();
 		c.add(1,1);

@@ -1,6 +1,6 @@
-package bigEnough;// 7. Big enough (*)
+package bigEnough;
 
-//  should change this code and use ArrayList();
+//  TODO should change this code and use ArrayList();
 
 import java.util.Scanner;
 

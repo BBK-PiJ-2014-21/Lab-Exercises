@@ -164,12 +164,12 @@ Once you think you have found all the errors, try to compile the code and see if
 *I can spot two errors: a missing opening bracket after method signature `getName()`, and the setter method `setName()`,
 which is an attempt to modify the value of the field `name`, not allowed because that field is declared `final`.*
 
-Compiling the code returns the following result:
+*Compiling the code returns the following result:*
 ```
 java: ";" expected
 java: class, interface, or enum expected
 ```
-after fixing the bracket on `getName()`, compiling the code returns the following result:
+*after fixing the bracket on `getName()`, compiling the code returns the following result:*
 ```
 java: cannot assign a value to final variable name
 ```

@@ -41,7 +41,7 @@ boolean longWaitAhead = false;
 if(s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")) {
 	System.out.println("Are you sure? It might take a while... ")
     System.out.println("I'll tell you in advance it will take 1362989306 terms...")
-    System.out.println("... but if you want I'll calculate again?: >>")
+    System.out.println("... but if you want I'll calculate again?: >> ")
 	if(s.equalsIgnoreCase("y") || s.equalsIgnoreCase("yes")) {
 		System.out.println("Ok then.");
 		longWaitAhead = true;

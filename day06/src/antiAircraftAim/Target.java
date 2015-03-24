@@ -1,4 +1,4 @@
-package antiAircraftAim;// 6. - Anti-Aircraft Aim
+package antiAircraftAim;
 
 public class Target {
 	private int[][][] matrix;

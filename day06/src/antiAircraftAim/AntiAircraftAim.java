@@ -1,4 +1,4 @@
-package antiAircraftAim;// 6. Anti-Aircraft Aim
+package antiAircraftAim;
 
 public class AntiAircraftAim {
 	public static void main(String[] args) {

@@ -26,7 +26,7 @@ What number would the following method print on screen if you called `printNumbe
 <i>9</i>	}
 </pre>
 
-This should be the flow of execution for input `printNumbers(6);`:
+*This should be the flow of execution for input `printNumbers(6);`:*
 
 <pre>
 <b>printNumbers(6)</b>
@@ -102,9 +102,9 @@ Do you see anything wrong with the following code? How would you fix it?
 		return n + " " + buggyMethod(n-2);
 	}
 	
-The base case here will cover just an even input: if an odd number is passed to the parameter `n`, 
+*The base case here will cover just an even input: if an odd number is passed to the parameter `n`,
 this recursive method will cause a stack overflow. The `==` on the base case could be replaced to 
-a `<=`, so it will return as soon as the result is equal or less than zero.
+a `<=`, so it will return as soon as the result is equal or less than zero.*
 
 #### c)
 
@@ -118,9 +118,9 @@ Do you see anything wrong with the following code? How would you fix it?
 		return result;
 	}
 
-The base case here comes after the recursive methods calls, so it will never be reached: 
+*The base case here comes after the recursive methods calls, so it will never be reached:
 there will be a stack overflow for any input. The code could be changed moving the base case
-before the recursive calls:
+before the recursive calls:*
 
 	String doggyMethod(int n) {
 		if (n <= 0) {
@@ -146,7 +146,7 @@ Note that the recursion on line 5 is a double.
 	(Hint: If you get too confused, maybe writing a slightly modified version of this code 
 	that prints the numbers on screen can help.)
 
-This is the calculation for input `50`:
+*This is the calculation for input `50`:*
 
 	mcCarthy91(50)
 	mcCarthy91(mcCarthy91(61)
@@ -186,11 +186,11 @@ This is the calculation for input `50`:
 	mcCarthy91(110)
 	91
 
-The mechanism is the same for input `73` and `95` - actually, for any input which is less or equal than 101,
+*The mechanism is the same for input `73` and `95` - actually, for any input which is less or equal than 101,
 it seems like the result would be **91** (hence the name). Several layers will open up adding 11 to the input 
 until a number larger than 100 is reached; then two recursions bounce back and forward by -10 to +11 (e.g 91 to 102, 
 92 to 103 etc.) until 100 to 111 is reached: then one layer is "closed" (101 back again to 91), 
-and the mechanism would start again until the first layer is finally closed at 91.
+and the mechanism would start again until the first layer is finally closed at 91.*
 
 ### 2. Classics
 

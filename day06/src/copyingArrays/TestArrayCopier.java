@@ -2,7 +2,7 @@ package copyingArrays;// 2. Copying arrays - test
 
 import java.util.Arrays;
 
-public class ArrayCopier_test {
+public class TestArrayCopier {
 	public static void main(String[] args) {
 		ArrayCopier a = new ArrayCopier();
 		int[] sameSizeSource = {5,6,7,8};

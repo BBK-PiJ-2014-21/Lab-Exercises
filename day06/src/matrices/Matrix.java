@@ -1,6 +1,6 @@
 package matrices;/* 3. Creating matrices
 
-	should find some method to replace inelegant and long for-ifs code 
+	TODO should find some method to replace inelegant and long for-ifs code
 	for setRow() and setColumn() (some parser for Strings)
 
 */
@@ -156,7 +156,7 @@ public class Matrix {
 		and stop at the row where some input is wrong,
 		should probably be rewritten to discard changes
 		for all the rows as soon as it finds an input error
-		(see line 65 of Matrix_test.groovy)
+		(see line 65 of testMatrix.groovy
 */
 	
 	public void setMatrix(String s) {

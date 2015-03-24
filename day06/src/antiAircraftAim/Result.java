@@ -1,4 +1,4 @@
-package antiAircraftAim;// 6. - Anti-Aircraft Aim
+package antiAircraftAim;
 
 public enum Result {
 		HIT, FAIL_LEFT, FAIL_RIGHT, FAIL_LOW,

@@ -2,9 +2,8 @@
 
 ### 1. Ternary operator
 
-```
 Read the following code and, without executing it first, explain what it does.
-	
+```
 	int currentYear = 2012
 	print "When were you born (year)?"
 	String str = System.console().readLine();
@@ -12,14 +11,13 @@ Read the following code and, without executing it first, explain what it does.
 	int ageAprox = currentYear - birthYear;
 	String result = (ageAprox > 17) ? "" : "not "
 	println "It seems you are " + result + "an adult."
-
-Hint: look at section “The Ternary Operator”.
 ```
+Hint: look at section “The Ternary Operator”.
 	
-This piece of code will ask the user to enter the year of birth,
+*This piece of code will ask the user to enter the year of birth,
 then it will compute the approximate age in 2012 (without considering the month).
 If the result is less or equal to `17`, it will print `It seems you are not an adult.`, 
-otherwise it will print `It seems you are an adult.`
+otherwise it will print `It seems you are an adult.`*
 
 ### 2. Ende Homage
 
@@ -31,13 +29,13 @@ Is there anything wrong with the following piece of code (hint: yes)? What does 
 		println i
 		}
 	
-This piece of code will **not** execute anything. It will just assign the value `10` to the variable `int`;
-being `10` greater than `5` the while loop will never start.
+*This piece of code will **not** execute anything. It will just assign the value `10` to the variable `int`;
+being `10` greater than `5` the while loop will never start.*
 
 ### 3. Yet another loop
 
-```
 What does the following piece of code do?
+```
 	String str = System.console().readLine()
 	int i = Integer.parseInt(str)
 	while (i < 10) {
@@ -51,15 +49,14 @@ What does the following piece of code do?
 		}
 	}
 	println "finished"
-
-Hint: the reserved word break exits the current loop.
 ```
+Hint: the reserved word break exits the current loop.
 
-This piece of code will take a number `n` as input: if this is larger or equal to `10`,
+*This piece of code will take a number `n` as input: if this is larger or equal to `10`,
 it will print `finished`; otherwise it will ask for *10-n* times for another number as input:
 if this is equal to `0` it will stop the loop and print `finished`;
 otherwise it will print the new number (unless this is equal to `1`) until the (*10-n*)th time,
-after that it will go out of the loop and print `finished`.
+after that it will go out of the loop and print `finished`.*
 
 ### 4. Prime numbers
 
@@ -192,7 +189,7 @@ Write a program that reads 2 characters from either the keyboard or a file.
 The characters are either PP, PR, PS, RP, RR, RS, SP, or SS. 
 They correspond to the selections made by 2 players playing the game of rock-paper-scissors. 
  Make the program accept inputs until one player's score is more than 3 points ahead of the other.
- Hint: remember that you can use .substring() to get the elements of a String.
+ Hint: remember that you can use `.substring()` to get the elements of a String.
 
 (*created script* [rockPaperScissors.groovy] [13])
 
