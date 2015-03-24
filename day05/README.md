@@ -284,9 +284,10 @@ function calls changes.
 
 (*created [howBigIsYourStack.groovy] [7]*)
 
-[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/fibonacci.groovy
-[2]: 
-[3]:
-[4]:
-[5]:
-[6]:
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/factorial.groovy
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/fibonacci.groovy
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/hanoiTowers.groovy
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/paperSizes.groovy
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/palindrome.groovy
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/power.groovy
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day05/src/howBigIsYourStack.groovy
