@@ -29,7 +29,7 @@ Is there anything wrong with the following piece of code (hint: yes)? What does 
 		println i
 		}
 	
-*This piece of code will* _not_ *execute anything. It will just assign the value* `10` *to the variable* `int`;
+*This piece of code will* **not** *execute anything. It will just assign the value* `10` *to the variable* `int`;
 *being* `10` *greater than* `5` *the while loop will never start.*
 
 ### 3. Yet another loop
