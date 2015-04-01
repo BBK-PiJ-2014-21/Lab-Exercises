@@ -16,8 +16,8 @@ Hint: look at section “The Ternary Operator”.
 	
 *This piece of code will ask the user to enter the year of birth,
 then it will compute the approximate age in 2012 (without considering the month).
-If the result is less or equal to `17`, it will print `It seems you are not an adult.`, 
-otherwise it will print `It seems you are an adult.`*
+If the result is less or equal to* `17`, *it will print* `It seems you are not an adult.`,
+*otherwise it will print* `It seems you are an adult.`
 
 ### 2. Ende Homage
 
@@ -29,8 +29,8 @@ Is there anything wrong with the following piece of code (hint: yes)? What does 
 		println i
 		}
 	
-*This piece of code will **not** execute anything. It will just assign the value `10` to the variable `int`;
-being `10` greater than `5` the while loop will never start.*
+*This piece of code will **not** execute anything. It will just assign the value* `10` *to the variable* `int`;
+*being* `10` *greater than* `5` *the while loop will never start.*
 
 ### 3. Yet another loop
 
@@ -53,9 +53,9 @@ What does the following piece of code do?
 Hint: the reserved word break exits the current loop.
 
 *This piece of code will take a number `n` as input: if this is larger or equal to `10`,
-it will print `finished`; otherwise it will ask for *10-n* times for another number as input:
+it will print `finished`; otherwise it will ask for 10-n times for another number as input:
 if this is equal to `0` it will stop the loop and print `finished`;
-otherwise it will print the new number (unless this is equal to `1`) until the (*10-n*)th time,
+otherwise it will print the new number (unless this is equal to `1`) until the 10-n(th) time,
 after that it will go out of the loop and print `finished`.*
 
 ### 4. Prime numbers
