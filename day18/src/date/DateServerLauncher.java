@@ -6,9 +6,6 @@ import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-/**
- *
- */
 public class DateServerLauncher {
 
     public static void main(String[] args) {
@@ -18,9 +15,7 @@ public class DateServerLauncher {
         try {
             LocateRegistry.createRegistry(1090);
             DateServer server = new DateServer();
-            String registryHost = "//localhost/";
-            String serviceName = "date";
-            Naming.rebind(registryHost + serviceName, server);
+            Naming.rebind("date", server);
         } catch (MalformedURLException ex) {
             ex.printStackTrace();
         } catch (RemoteException ex) {

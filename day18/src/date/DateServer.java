@@ -15,7 +15,9 @@ public class DateServer extends UnicastRemoteObject implements DateService {
 
     @Override
     public Calendar date() {
-        return Calendar.getInstance();
+        Calendar date = Calendar.getInstance();
+        System.out.println(date.getTime());
+        return date;
     }
     
 
