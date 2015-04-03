@@ -7,7 +7,7 @@ public class EchoClient {
 
     public static void main(String[] args) throws RemoteException {
         if (System.getSecurityManager() == null) {
-            System.setSecurityManager(new RMISecurityManager());
+            System.setSecurityManager(new SecurityManager());
         }
         try {
             Remote service = Naming.lookup("//127.0.0.1:1099/echo");
