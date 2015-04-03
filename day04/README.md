@@ -157,7 +157,7 @@ following methods:
 Two methods in a class can have the same name (identifier) as long as their parameters are different. This is
 called *method overloading* and we will see more of that in the future.
 
-(*created class [Point] [5], script [moreOnPoints.groovy] [6] to be implemented*)
+(*created class [Point] [5] and script [moreOnPoints.groovy] [6]*)
 
 ### 7. Integer
 

@@ -55,3 +55,7 @@ when those users did connect to the server.
 A similar service has traditionally listened at port 79.
 
 (*to be implemented*)
+
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/tree/master/day21/src/echo
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/tree/master/day21/src/date
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/tree/master/day21/src/calculator

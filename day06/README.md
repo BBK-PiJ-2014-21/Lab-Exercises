@@ -91,7 +91,7 @@ Make a class MatrixChecker with three methods:
 Add some methods to your Matrix class from the other exercise to perform tests on the matrices you create
 using the methods from MatrixChecker. (Hint: these methods will need to create objects of type MatrixChecker).
 
-(*created class [MatrixChecker] [7] and updated [Matrix] [5]*)
+(*created class [MatrixChecker] [6] and updated [Matrix] [5]*)
 
 ### 6. Anti-aircraft aim (*)
 
@@ -136,7 +136,7 @@ Here they come! Try to bring the plane down!
 Enter a coordinate X:
 ```
 
-(*created class [Target] [8], enum class [Result] [9] and class [AntiAircraftAim] [10]*)
+(*created class [Target] [7], enum class [Result] [8] and class [AntiAircraftAim] [9]*)
 
 ### 7. Big enough (*)
 
@@ -150,7 +150,17 @@ those employees whose ID is even or their names start with "S".
 a small array, if it gets full create an array twice as big, copy all data to the new array, and discard the old 
 array, etc).
 
-(*created classes [Employee] [11] and [BigEnough] [12]*)
+(*created classes [Employee] [10] and [BigEnough] [11]*)
 
 [1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/dividingIntegers/Calculator.java
-[2]: 
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/dividingIntegers/TestCalculator.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/copyingArrays/ArrayCopier.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/copyingArrays/TestArrayCopier.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/matrices/Matrix.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/matrices/MatrixChecker.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/antiAircraftAim/Target.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/antiAircraftAim/Result.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/antiAircraftAim/AntiAircraftAim.java
+[10]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/bigEnough/Employee.java
+[11]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day06/src/bigEnough/BigEnough.java
+
