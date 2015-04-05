@@ -172,11 +172,11 @@ program must register it and say it unless it is waiting for the user to enter d
 
 Note that several tasks may end in between two user inputs.
 
-(**)
+(*created classes [ResponsiveUI] [1] and [TasksList] [2]*)
 
 ### 5. Parallel computation
 
-Look at the attached program [ComputationLauncher] [] for an example of a heavy computation being performed in
+Look at the attached program [ComputationLauncher] [3] for an example of a heavy computation being performed in
 sequence or in parallel using more than one processor at the same time. In an old machine with two processors,
 the output looks like:
 	
@@ -194,7 +194,7 @@ four processors? You can see how many processors (or cores) your machine has by 
 
 ### 6. Immutability (*)
 
-Look at the attached program [ImmutableExample] []. Read it carefully. Do you see any flaws? If yes, what would you
+Look at the attached program [ImmutableExample] [4]. Read it carefully. Do you see any flaws? If yes, what would you
 change to make the program work without problems?
 	What would you change to make the IDCard class immutable?
 
@@ -221,7 +221,7 @@ at least methods `add(Integer)` (to add new Integers) and `get(int)` (to get the
 	the list is "not sorted", the list must be fully sorted before it can return; no additional elements can be added
 	until the call of `get(int)` returns.
 
-(**)
+(*created class [ThreadedIntegerList] [5]*)
 
 #### 7.2 b)
 
@@ -229,7 +229,7 @@ Create another self-ordering list in which the `add()` method launches a new thr
 the new integer at the right position. (Hint: if the new element has to be placed at the beginning of the list, there
 is no need to launch a thread only for that).
 
-(**)
+(*created class [ThreadedIntegerListTwo] [6]*)
 
 ### 8. Dining philosophers (*)
 
@@ -244,4 +244,12 @@ by only one philosopher at a time. Verify that a naive synchronisation strategy 
 	(Hint: during development, it may be helpful to implement a monitoring class (waiter?) that checks what the 
 philosophers are doing, e.g. how many forks they have grabbed).
 
-(**)
+(*created classes in package [diningPhilosophers] [7]*)
+
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/responsiveUI/ResponsiveUI.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/responsiveUI/TasksList.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/examples/ComputationLauncher.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/examples/ImmutableExample.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/selfOrderingList/ThreadedIntegerList.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day17/src/selfOrderingList/ThreadedIntegerListTwo.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/tree/master/day17/src/diningPhilosophers
