@@ -53,30 +53,43 @@ public class Philosopher implements Runnable {
                 System.out.println(getName() + " is thinking...");
                 Thread.sleep((long) Math.random() * 10000);  // "think" for a random amount of ms
                 Thread.sleep(5000);
-   //             if(ID!=0) {
+                if(ID!=0) {
                     eatLefty();
-   //             } else {
-   //                 eatRighty();
-   //             }
+                } else {
+                    eatRighty();
+                }
             }
         } catch(InterruptedException ex) {
             //
         }
     }
 
-    public void eatLefty() {
+    private void takeLeft() {
         try {
             while(!getLeftFork()) {
-                System.out.println(getName() + " can't take fork[" + ID + "]");
+                System.out.println(getName() + " can't take his left fork");
                 Thread.sleep(100);
             }
-            System.out.println(getName() + " has taken fork[" + ID + "]");
-            Thread.sleep(50);  // this really help deadlock
+            System.out.println(getName() + " has taken his left fork");
+        } catch (InterruptedException ex) {
+            //
+        }
+    }
+
+    private void takeRight() {
+        try {
             while(!getRightFork()) {
-                System.out.println(getName() + " can't take fork[" + (ID+1)%table.getForks().length + "]");
+                System.out.println(getName() + " can't take his right fork");
                 Thread.sleep(100);
             }
-            System.out.println(getName() + " has taken fork[" + (ID+1)%table.getForks().length + "]");
+            System.out.println(getName() + " has taken his right fork");
+        } catch (InterruptedException ex) {
+            //
+        }
+    }
+
+    private void eat() {
+        try {
             System.out.println(getName() + " is eating...");
             Thread.sleep((long) Math.random() * 5000);
             System.out.println(getName() + " has finished eating");
@@ -86,23 +99,23 @@ public class Philosopher implements Runnable {
         }
     }
 
-    public void eatRighty() {
+    private void eatRighty() {
         try {
-            while(!getRightFork()) {
-                System.out.println(getName() + " can't take fork[" + (ID+1)%table.getForks().length + "]");
-                Thread.sleep(100);
-            }
-            System.out.println(getName() + " has taken fork[" + (ID+1)%table.getForks().length + "]");
-            Thread.sleep(50);  // this really help deadlock
-            while(!getLeftFork()) {
-                System.out.println(getName() + " can't take fork[" + ID + "]");
-                Thread.sleep(100);
-            }
-            System.out.println(getName() + " has taken fork[" + ID + "]");
-            System.out.println(getName() + " is eating...");
-            Thread.sleep((long) Math.random() * 5000);
-            System.out.println(getName() + " has finished eating");
-            dropForks();
+            takeRight();
+            Thread.sleep(50);  // this really helps deadlock
+            takeLeft();
+            eat();
+        } catch (InterruptedException ex) {
+            //
+        }
+    }
+
+    private void eatLefty() {
+        try {
+            takeLeft();
+            Thread.sleep(50);  // this really helps deadlock
+            takeRight();
+            eat();
         } catch (InterruptedException ex) {
             //
         }
