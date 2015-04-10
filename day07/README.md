@@ -10,7 +10,7 @@ Before the next day, you should have achieved the following learning goals:
 
 ### 1. Instance counter
 
-Complete the example given in the notes with a class called [instanceCounter.Spy] [1]. Your class must have:
+Complete the example given in the notes with a class called **Spy**. Your class must have:
   * one and only one `static` variable, an `int` called `spyCount`.
   * an instance variable of type `int` for the spy's ID.
   * a constructor method that receives the ID of the spy as an argument, increases `spyCount(int)` by one, and prints 
@@ -208,12 +208,12 @@ Then compare its performance with the other two methods. In order to see signifi
 
 (*to be implemented*)
 
-[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E01-InstanceCounter/instanceCounter.Spy.java
-[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E02-DoPracticeWhileNotUnderstood/doPracticeWhileNotUnderstood.MarksList.java
-[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientSinglyLinkedList.java
-[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientDoublyLinkedList.java
-[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E03-04-05-06-Singly-Doubly-Circular-Lists/linkedLists.PatientCircularSinglyList.java
-[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E07-Queues/intQueue.IntQueueImpl.java
-[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E08-Stacks/intStack.IntStack.java
-[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/sortedLists.ListUtilities.java
-[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/E09-10-11-12-13-ArrayToList-Sorted-Bubble-Cocktail-QuickSort/sortedLists.IntegerList.java
+[1]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/instanceCounter/Spy.java
+[2]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/doPracticeWhileNotUnderstood/MarksList.java
+[3]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/linkedLists/PatientSinglyLinkedList.java
+[4]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/linkedLists/PatientDoublyLinkedList.java
+[5]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/linkedLists/PatientCircularSinglyList.java
+[6]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/intQueue/IntQueueImpl.java
+[7]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/intStack/IntStack.java
+[8]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/sortedLists/ListUtilities.java
+[9]: https://github.com/BBK-PiJ-2014-21/Lab-Exercises/blob/master/day07/src/sortedLists/IntegerList.java

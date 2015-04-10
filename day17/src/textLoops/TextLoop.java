@@ -18,7 +18,7 @@ package textLoops;/* 1. Text loops
 		
 */
 
-public class TextLoop implements Runnable {
+public class  TextLoop implements Runnable {
 	public static final int COUNT = 10;
 
 	private final String name;
