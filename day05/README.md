@@ -187,7 +187,7 @@ Note that the recursion on line 5 is a double.
 	91
 
 *The mechanism is the same for input `73` and `95` - actually, for any input which is less or equal than 101,
-it seems like the result would be **91** (hence the name). Several layers will open up adding 11 to the input 
+it seems like the result would be* **91** *(hence the name). Several layers will open up adding 11 to the input 
 until a number larger than 100 is reached; then two recursions bounce back and forward by -10 to +11 (e.g 91 to 102, 
 92 to 103 etc.) until 100 to 111 is reached: then one layer is "closed" (101 back again to 91), 
 and the mechanism would start again until the first layer is finally closed at 91.*
