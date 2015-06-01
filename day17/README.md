@@ -62,8 +62,7 @@ MODE 0 (main thread):
   		[...]
   		Loop: Thread 9, iteration:9.
 
-MODE 1 (multiple threads):
-	<unpredictable result>
+MODE 1 (multiple threads): unpredictable result
 
 ### 2. Counting
 
