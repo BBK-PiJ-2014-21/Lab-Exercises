@@ -102,7 +102,7 @@ Write a program that asks the user for the total amount borrowed for a mortgage,
 back, and the interest rate (in this exercise, we assume it is a fixed rate). The program can then calculate how
 much must be paid at the end
 ```
-t = c ·(1 + r/100)
+t = c x (1 + r/100)
 ```
 where *t* is the total, *c* is the cost, and *r* is the rate as a percentage. The program should print:
   * The total amount to be paid
