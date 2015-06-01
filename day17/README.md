@@ -51,16 +51,16 @@ Compile and execute this code several times. Do you get the result you expected?
 get the same result in 'mode 0'? And in 'mode 1'?
 
 MODE 0 (main thread):  
-  		*Loop: Thread 0, iteration:0.  
-  		Loop: Thread 0, iteration:1.  
+  		*Loop: Thread 0, iteration:0.*  
+  		*Loop: Thread 0, iteration:1.*  
+  		[...]    
+  		*Loop: Thread 0, iteration:9.*    
+  		*Loop: Thread 1, iteration:0.*  
+  		*Loop: Thread 1, iteration:1.*  
   		[...]  
-  		Loop: Thread 0, iteration:9.  
-  		Loop: Thread 1, iteration:0.  
-  		Loop: Thread 1, iteration:1.  
+  		*Loop: Thread 9, iteration:0.*    
   		[...]  
-  		Loop: Thread 9, iteration:0.  
-  		[...]  
-  		Loop: Thread 9, iteration:9.  *
+  		*Loop: Thread 9, iteration:9.*    
   
 MODE 1 (multiple threads): *unpredictable result*
 
