@@ -50,19 +50,19 @@ Look at the following code (comments omitted for brevity). What will the output 
 Compile and execute this code several times. Do you get the result you expected? Run it several times. Do you always
 get the same result in 'mode 0'? And in 'mode 1'?
 
-MODE 0 (main thread):  
-  		*Loop: Thread 0, iteration:0.*  
-  		*Loop: Thread 0, iteration:1.*  
+**MODE 0 (main thread):**    
+  		Loop: Thread 0, iteration:0.  
+  		Loop: Thread 0, iteration:1.  
   		[...]    
-  		*Loop: Thread 0, iteration:9.*    
-  		*Loop: Thread 1, iteration:0.*  
-  		*Loop: Thread 1, iteration:1.*  
+  		Loop: Thread 0, iteration:9.    
+  		Loop: Thread 1, iteration:0.  
+  		Loop: Thread 1, iteration:1.  
   		[...]  
-  		*Loop: Thread 9, iteration:0.*    
+  		Loop: Thread 9, iteration:0.    
   		[...]  
-  		*Loop: Thread 9, iteration:9.*    
+  		Loop: Thread 9, iteration:9.    
   
-MODE 1 (multiple threads): *unpredictable result*
+**MODE 1 (multiple threads):** *unpredictable result.*
 
 ### 2. Counting
 
@@ -117,7 +117,7 @@ executed by one thread at the time. They might be stopped before executing the f
 so it might look like they're interfering between each other (if that happens a thread might declare that it stopped 
 at a count which is a larger number than the one at which it actually stopped, as it reads the counter after another 
 thread has already increased it. But apart from that declaration, the actual increase of the counter happens one at
-the time, so it should increase gradually up to 10000.*)
+the time, so it should increase gradually up to 10000*).
 
 ### 3. Bank account
 
